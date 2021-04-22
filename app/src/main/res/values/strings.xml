@@ -13,4 +13,5 @@
     <string name="facebook_app_id">161912065819486</string>
     <string name="fb_login_protocol_scheme">fb161912065819486</string>
 
+    <string name="prefs_file">com.example.mascotasproject.PREFERENCE_FILE_KEY</string>
 </resources>

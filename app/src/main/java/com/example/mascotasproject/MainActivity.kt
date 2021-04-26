@@ -1,7 +1,5 @@
 package com.example.mascotasproject
 
-import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -17,9 +15,6 @@ import com.google.android.gms.location.LocationServices
 import kotlin.reflect.full.declaredMemberFunctions
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,11 +29,6 @@ class MainActivity : AppCompatActivity() {
             fetchLocation()
         }
 
-        val button: Button = findViewById(R.id.btn_launch_logIn)
-        button.setOnClickListener {
-            val intent = Intent(this, LogInActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -60,10 +50,10 @@ class MainActivity : AppCompatActivity() {
      fun fetchLocation(){
         val task = fusedLocationProviderClient.lastLocation
 
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+        if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
         ){
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 101)
+            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 101)
             return
         }
         task.addOnSuccessListener {

@@ -8,7 +8,6 @@
 
 
     <LinearLayout
-        android:id="@+id/authLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,6 +26,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:srcCompat="@tools:sample/avatars" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="56dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="175dp"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="175dp"
+            android:layout_marginRight="175dp"
+            android:text="TextView" />
 
         <Space
             android:layout_width="match_parent"
@@ -62,7 +76,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_logOut"
+                android:id="@+id/btn_signUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -81,23 +95,9 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_google"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:drawableStart="@mipmap/google"
-            android:text="Google"
-            android:textColor="@color/design_default_color_primary_dark"
-            app:backgroundTint="@color/white" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
-
         <com.facebook.login.widget.LoginButton
-            android:id="@+id/btn_fb"
-            android:layout_width="348dp"
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
 

@@ -1,71 +1,76 @@
 package com.example.mascotasproject;
 
 public class model {
-    String caracteristicas, cod_dueno, cod_mascota, imagen, nombre_mascota, ubicacion_perdida,vigencia;
+    String Caracteristicas, CodigoDueno, CodigoMascota, Imagen, NombreMas, UbicacionPerdida,Vigencia;
 
-    public model(String caracteristicas, String cod_dueno, String cod_mascota, String imagen, String nombre_mascota, String ubicacion_perdida, String vigencia) {
-        this.caracteristicas = caracteristicas;
-        this.cod_dueno=cod_dueno;
-        this.cod_mascota=cod_mascota;
-        this.imagen=imagen;
-        this.nombre_mascota=nombre_mascota;
-        this.ubicacion_perdida=ubicacion_perdida;
-        this.vigencia=vigencia;
+    public model(){}
+
+    public model(String Caracteristicas, String CodigoDueno, String CodigoMascota, String Imagen, String NombreMas, String UbicacionPerdida, String Vigencia) {
+        this.Caracteristicas = Caracteristicas;
+        this.CodigoDueno=CodigoDueno;
+        this.CodigoMascota=CodigoMascota;
+        this.Imagen=Imagen;
+        this.NombreMas=NombreMas;
+        this.UbicacionPerdida=UbicacionPerdida;
+        this.Vigencia=Vigencia;
     }
 
     public String getCaracteristicas() {
-        return caracteristicas;
+        return Caracteristicas;
     }
 
     public void setCaracteristicas(String caracteristicas) {
-        this.caracteristicas = caracteristicas;
+        Caracteristicas = caracteristicas;
     }
 
-    public String getCod_dueno() {
-        return cod_dueno;
+    public String getCodigoDueno() {
+        return CodigoDueno;
     }
 
-    public void setCod_dueno(String cod_dueno) {
-        this.cod_dueno = cod_dueno;
+    public void setCodigoDueno(String codigoDueno) {
+        CodigoDueno = codigoDueno;
     }
 
-    public String getCod_mascota() {
-        return cod_mascota;
+    public String getCodigoMascota() {
+        return CodigoMascota;
     }
 
-    public void setCod_mascota(String cod_mascota) {
-        this.cod_mascota = cod_mascota;
+    public void setCodigoMascota(String codigoMascota) {
+        CodigoMascota = codigoMascota;
     }
 
     public String getImagen() {
-        return imagen;
+        return Imagen;
     }
 
     public void setImagen(String imagen) {
-        this.imagen = imagen;
+        Imagen = imagen;
     }
 
-    public String getNombre_mascota() {
-        return nombre_mascota;
+    public String getNombreMas() {
+        return NombreMas;
     }
 
-    public void setNombre_mascota(String nombre_mascota) {
-        this.nombre_mascota = nombre_mascota;
+    public void setNombreMas(String nombreMas) {
+        NombreMas = nombreMas;
     }
 
-    public String getUbicacion_perdida() {
-        return ubicacion_perdida;
+    public String getUbicacionPerdida() {
+        return UbicacionPerdida;
     }
 
-    public void setUbicacion_perdida(String ubicacion_perdida) {
-        this.ubicacion_perdida = ubicacion_perdida;
+    public void setUbicacionPerdida(String ubicacionPerdida) {
+        UbicacionPerdida = ubicacionPerdida;
     }
 
     public String getVigencia() {
-        return vigencia;
+        return Vigencia;
     }
 
     public void setVigencia(String vigencia) {
-        this.vigencia = vigencia;
+        Vigencia = vigencia;
     }
+
+
+
 }

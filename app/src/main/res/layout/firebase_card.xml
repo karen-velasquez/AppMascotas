@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     android:id="@+id/wrapper"
     tools:context=".FirebaseCard">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="LLEGASTE AL PUNTO 4"
-        android:textSize="50dp"
-        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,7 @@ public class recfragment extends Fragment {
     private String mParam1;
     private String mParam2;
     RecyclerView recview;
+    myadapter adapter;
 
     public recfragment() {
         // Required empty public constructor
@@ -57,7 +58,19 @@ public class recfragment extends Fragment {
                 new FirebaseRecyclerOptions.Builder<model>()
                     .setQuery(FirebaseDatabase.getInstance().getReference().child("Mascotas/Datos"),model.class)
                     .build();
-
+        adapter=new myadapter(options);
+        recview.setAdapter(adapter);
         return view;
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        adapter.startListening();
+    }
+    @Override
+    public void onStop(){
+        super.onStop();
+        adapter.stopListening();
     }
 }

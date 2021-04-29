@@ -1,5 +1,6 @@
 package com.example.mascotasproject
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -27,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         findViewById<Button>(R.id.btn_getLocation).setOnClickListener{
             fetchLocation()
+        }
+        //Boton Firebase card view
+        val btnOpenActivity: Button =findViewById(R.id.btn_firebase_card)
+        btnOpenActivity.setOnClickListener{
+            val intent= Intent(this, FirebaseCard:: class.java)
+            startActivity(intent)
         }
 
     }

@@ -22,6 +22,15 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="300dp"
         android:layout_marginStart="117dp" />
+    <Button
+        android:id="@+id/btn_firebase_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIREBASE CARD"
+        android:textSize="18sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="117dp" />
 
 
 

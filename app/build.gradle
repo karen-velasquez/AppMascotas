@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -44,10 +45,23 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation 'com.android.support:multidex:1.0.3'
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
+    //Adicionando las librerias del firebase, recyclerview y cardview
+    implementation 'com.google.firebase:firebase-database:19.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //Firebase UI para firebase realtime database
+    implementation 'com.github.bumpetch.glide:glide:4.11.0'
+
+
     //Fused Location Provider
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+
+
 }

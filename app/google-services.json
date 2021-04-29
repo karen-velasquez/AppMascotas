@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "700085161945",
+    "project_id": "fir-image-66e1c",
+    "storage_bucket": "fir-image-66e1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700085161945:android:00b40dfd6e9a570c0cd3c8",
+        "android_client_info": {
+          "package_name": "com.example.firebaseimage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700085161945-759a3el13h2knjsgmqmsso2kvru8e7iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALVr6stwhCUCs54bYOf_IjATptpnA4jwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700085161945-759a3el13h2knjsgmqmsso2kvru8e7iv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700085161945:android:7a8d816587a23e0f0cd3c8",
+        "android_client_info": {
+          "package_name": "com.example.mascotasproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700085161945-759a3el13h2knjsgmqmsso2kvru8e7iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALVr6stwhCUCs54bYOf_IjATptpnA4jwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700085161945-759a3el13h2knjsgmqmsso2kvru8e7iv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

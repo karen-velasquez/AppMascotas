@@ -36,6 +36,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnAdd: Button =findViewById(R.id.btn_add)
+        btnAdd.setOnClickListener{
+            val intent= Intent(this, AddData:: class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -48,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        //acciones al hacer click en el action bar
+
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)

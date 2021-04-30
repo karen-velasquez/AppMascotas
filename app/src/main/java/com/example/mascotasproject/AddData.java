@@ -2,6 +2,7 @@ package com.example.mascotasproject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -60,6 +61,12 @@ public class AddData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_data);
+
+        //actionbar
+
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setTitle("Adicionar un nuevo dato");
+
         nombreAdd = findViewById(R.id.nombreAdd);
         perdidaAdd = findViewById(R.id.perdidaAdd);
         imagenAdd=findViewById(R.id.imagenAdd);
@@ -99,7 +106,7 @@ public class AddData extends AppCompatActivity {
     private void uploadDatatoFirebase(){
         //verificando que filepathyuri esta vacio o no
         if(mFilePathUri!=null){
-            mProgressDialog.setTitle("Imagen se esta cargando...");
+            mProgressDialog.setTitle("Cargando...");
             mProgressDialog.show();
             StorageReference storageReference2nd=mStorageReference.child(mStoragePath+System.currentTimeMillis()+"."+getFileExtension(mFilePathUri));
 
@@ -118,7 +125,7 @@ public class AddData extends AppCompatActivity {
                             String cmas="2";
                             String vige="true";
 
-                            Toast.makeText(AddData.this,"Imagen cargada",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddData.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
                             model modelo=new model(mnombreAdd, mperdidaAdd, taskSnapshot.getMetadata().getReference().getDownloadUrl().toString(),carac,cdu,cmas,vige);
                             //obteniendo el id de la imagen subida
                             String imageUploadId= mDatabaseReference.push().getKey();
@@ -137,7 +144,7 @@ public class AddData extends AppCompatActivity {
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                            mProgressDialog.setTitle("La imagen esta cargandose");
+                            mProgressDialog.setTitle("Cargando....");
                         }
                     });
         }

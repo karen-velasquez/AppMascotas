@@ -2,6 +2,7 @@ package com.example.mascotasproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
@@ -22,7 +23,7 @@ public class FirebaseCard extends AppCompatActivity {
 
         //acciones al hacer click en el action bar
         if(id ==R.id.action_add){
-
+            startActivity(new Intent(FirebaseCard.this,AddData.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

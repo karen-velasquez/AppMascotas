@@ -46,7 +46,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.firebase:firebase-storage:19.2.2'
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
@@ -60,12 +60,15 @@ dependencies {
     //Firebase UI para firebase realtime database
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.firebaseui:firebase-ui-database:7.1.1'
-
+    //adicionando libreria storage
+    implementation 'com.google.firebase:firebase-storage:19.2.2'
+    implementation 'com.firebase:firebase-client-android:2.4.0'
 
 
     //Fused Location Provider
     implementation 'com.google.android.gms:play-services-location:18.0.0'
 
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 
 }

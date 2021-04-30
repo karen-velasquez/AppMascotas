@@ -5,7 +5,7 @@ public class model {
 
     public model(){}
 
-    public model(String Caracteristicas, String CodigoDueno, String CodigoMascota, String Imagen, String NombreMas, String UbicacionPerdida, String Vigencia) {
+    public model( String NombreMas, String UbicacionPerdida,  String Imagen, String Caracteristicas, String CodigoDueno, String CodigoMascota,  String Vigencia) {
         this.Caracteristicas = Caracteristicas;
         this.CodigoDueno=CodigoDueno;
         this.CodigoMascota=CodigoMascota;

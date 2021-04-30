@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -68,6 +69,7 @@ public class desfragment extends Fragment {
         caracteristicas.setText(Caracteristicas);
         datos_perdida.setText(UbicacionPerdida);
         Glide.with(getContext()).load(Imagen).into(image);
+        //Picasso.get().load(Imagen).into(image);
 
         return view;
     }

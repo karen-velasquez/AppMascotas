@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -124,9 +125,13 @@ public class AddData extends AppCompatActivity {
                             String cdu="1";
                             String cmas="2";
                             String vige="true";
+                            //sacando la url de storage
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url = uri.getResult();
 
                             Toast.makeText(AddData.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
-                            model modelo=new model(mnombreAdd, mperdidaAdd, taskSnapshot.getMetadata().getReference().getDownloadUrl().toString(),carac,cdu,cmas,vige);
+                            model modelo=new model(mnombreAdd, mperdidaAdd, url.toString(),carac,cdu,cmas,vige);
                             //obteniendo el id de la imagen subida
                             String imageUploadId= mDatabaseReference.push().getKey();
                             //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference

@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
 
@@ -25,6 +26,13 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
         holder.caracteristica.setText(model.getCaracteristicas());
         holder.datos_perdida.setText(model.getUbicacionPerdida());
         Glide.with(holder.img1.getContext()).load(model.getImagen()).into(holder.img1);
+        holder.img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppCompatActivity activity=(AppCompatActivity)v.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new desfragment(model.getNombreMas(),model.getCaracteristicas(),model.getUbicacionPerdida(),model.getImagen())).addToBackStack(null).commit();
+            }
+        });
     }
 
     @NonNull

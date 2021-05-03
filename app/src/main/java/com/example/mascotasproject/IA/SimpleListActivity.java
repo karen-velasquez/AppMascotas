@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
+import com.example.mascotasproject.R;
+
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;

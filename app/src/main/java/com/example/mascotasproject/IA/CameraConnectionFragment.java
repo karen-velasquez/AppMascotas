@@ -1,21 +1,5 @@
 package com.example.mascotasproject.IA;
 
-/*
- * Copyright 2016 The TensorFlow Authors. All Rights Reserved.
- * Modifications copyright (C) 2018 Josef Steppan
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 import android.Manifest;
 import android.app.Activity;
@@ -60,6 +44,8 @@ import java.util.concurrent.TimeUnit;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+
+import com.example.mascotasproject.R;
 
 public class CameraConnectionFragment extends Fragment {
 
@@ -114,9 +100,9 @@ public class CameraConnectionFragment extends Fragment {
      */
     private String cameraId;
     /**
-     * An {@link com.jstappdev.dbclf.AutoFitTextureView} for camera preview.
+     * An {@link com.example.mascotasproject.IA.AutoFitTextureView} for camera preview.
      */
-    private com.jstappdev.dbclf.AutoFitTextureView textureView;
+    private com.example.mascotasproject.IA.AutoFitTextureView textureView;
     /**
      * A {@link CameraCaptureSession } for camera preview.
      */
@@ -221,7 +207,7 @@ public class CameraConnectionFragment extends Fragment {
     public CameraConnectionFragment() {
         this.layout = R.layout.camera_connection_fragment;
         this.inputSize = new Size(299, 299);
-        this.cameraId = com.jstappdev.dbclf.CameraActivity.cameraId;
+        this.cameraId = com.example.mascotasproject.IA.CameraActivity.cameraId;
     }
 
     /**
@@ -273,11 +259,11 @@ public class CameraConnectionFragment extends Fragment {
         this.cameraConnectionCallback = new ConnectionCallback() {
             @Override
             public void onPreviewSizeChosen(Size size, int rotation) {
-                ((com.jstappdev.dbclf.CameraActivity) requireContext()).onPreviewSizeChosen(size, rotation);
+                ((com.example.mascotasproject.IA.CameraActivity) requireContext()).onPreviewSizeChosen(size, rotation);
             }
         };
 
-        this.imageListener = (com.jstappdev.dbclf.CameraActivity) requireContext();
+        this.imageListener = (com.example.mascotasproject.IA.CameraActivity) requireContext();
     }
 
     /**
@@ -373,7 +359,7 @@ public class CameraConnectionFragment extends Fragment {
     }
 
     /**
-     * Opens the camera specified by {@link com.jstappdev.dbclf.CameraConnectionFragment#cameraId}.
+     * Opens the camera specified by {@link com.example.mascotasproject.IA.CameraConnectionFragment#cameraId}.
      */
     private void openCamera(final int width, final int height) {
         setUpCameraOutputs();

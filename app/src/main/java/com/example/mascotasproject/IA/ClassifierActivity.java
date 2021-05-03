@@ -1,21 +1,5 @@
 package com.example.mascotasproject.IA;
 
-/*
- * Copyright 2016 The TensorFlow Authors. All Rights Reserved.
- * Modifications copyright (C) 2018 Josef Steppan
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -30,17 +14,20 @@ import android.media.ImageReader.OnImageAvailableListener;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.util.Size;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.mascotasproject.IA.env.ImageUtils;
+import com.example.mascotasproject.R;
 
 import java.io.IOException;
 import java.util.List;
 
 
 public class ClassifierActivity extends com.example.mascotasproject.IA.CameraActivity implements OnImageAvailableListener {
+
     // mobilenet: 224, inception_v3: 299
     private static final int INPUT_SIZE = 299;
     private static final int IMAGE_MEAN = 128;
@@ -49,7 +36,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     private static final String INPUT_NAME = "Mul";
     // output, inception(tf): final_result, Keras: output/Softmax
     private static final String OUTPUT_NAME = "final_result";
-    private static final String MODEL_FILE = "file:///android_asset/stripped.pb";
+    private static final String MODEL_FILE = "stripped.pb";
     private static final boolean MAINTAIN_ASPECT = true;
     private Bitmap rgbFrameBitmap = null;
     private Bitmap croppedBitmap = null;
@@ -178,7 +165,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
         if (classifier == null)
             try {
                 classifier =
-                        com.jstappdev.dbclf.TensorFlowImageClassifier.create(
+                        com.example.mascotasproject.IA.TensorFlowImageClassifier.create(
                                 getAssets(),
                                 MODEL_FILE,
                                 getResources().getStringArray(R.array.breeds_array),

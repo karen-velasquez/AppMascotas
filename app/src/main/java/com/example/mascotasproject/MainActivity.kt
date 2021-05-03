@@ -9,8 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.os.Handler;
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import com.example.mascotasproject.IA.CameraActivity
+import com.example.mascotasproject.IA.ClassifierActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlin.reflect.full.declaredMemberFunctions
@@ -39,6 +42,12 @@ class MainActivity : AppCompatActivity() {
         val btnAdd: Button =findViewById(R.id.btn_add)
         btnAdd.setOnClickListener{
             val intent= Intent(this, AddData:: class.java)
+            startActivity(intent)
+        }
+
+        val btnia: Button =findViewById(R.id.ia)
+        btnia.setOnClickListener{
+            val intent= Intent(this, ClassifierActivity:: class.java)
             startActivity(intent)
         }
 

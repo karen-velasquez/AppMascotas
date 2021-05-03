@@ -1,23 +1,7 @@
 package com.example.mascotasproject.IA;
 
-/*
- * Copyright 2016 The TensorFlow Authors. All Rights Reserved.
- * Modifications copyright (C) 2018 Josef Steppan
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import android.Manifest;
+import android.os.Handler;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -53,6 +37,7 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.util.Size;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -140,6 +125,7 @@ public abstract class CameraActivity extends FragmentActivity
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(null);
+        setContentView(R.layout.activity_camera);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         preferredLanguageCode = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("lang", "en");
@@ -148,7 +134,6 @@ public abstract class CameraActivity extends FragmentActivity
 
         setLocale();
 
-        setContentView(R.layout.activity_camera);
 
         setupButtons();
         setupPieChart();
@@ -271,7 +256,7 @@ public abstract class CameraActivity extends FragmentActivity
             if (currentRecognitions == null || continuousInference || currentRecognitions.size() == 0)
                 return;
 
-            final Intent i = new Intent(getApplicationContext(), com.jstappdev.dbclf.SimpleListActivity.class);
+            final Intent i = new Intent(getApplicationContext(), com.example.mascotasproject.IA.SimpleListActivity.class);
             i.putStringArrayListExtra("recogs", currentRecognitions);
             startActivity(i);
         });
@@ -280,7 +265,7 @@ public abstract class CameraActivity extends FragmentActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         final MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.mainmenu, menu);
+        inflater.inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -307,7 +292,7 @@ public abstract class CameraActivity extends FragmentActivity
                 final SpannableString s = new SpannableString(Html.fromHtml(getString(R.string.about_message)));
                 Linkify.addLinks(s, Linkify.WEB_URLS);
 
-                final AlertDialog dialog = new AlertDialog.Builder(com.jstappdev.dbclf.CameraActivity.this)
+                final AlertDialog dialog = new AlertDialog.Builder(com.example.mascotasproject.IA.CameraActivity.this)
                         .setMessage(s)
                         .setCancelable(true)
                         .setPositiveButton(
@@ -341,7 +326,7 @@ public abstract class CameraActivity extends FragmentActivity
                 langSpinner.setAdapter(dataAdapter);
                 langSpinner.setSelection(supportedLanguageCodes.indexOf(preferredLanguageCode));
 
-                new AlertDialog.Builder(com.jstappdev.dbclf.CameraActivity.this)
+                new AlertDialog.Builder(com.example.mascotasproject.IA.CameraActivity.this)
                         .setTitle(R.string.change_language)
                         .setCancelable(true)
                         .setView(dialogView)
@@ -358,7 +343,7 @@ public abstract class CameraActivity extends FragmentActivity
 
                 break;
             case R.id.list_breeds:
-                startActivity(new Intent(this, com.jstappdev.dbclf.SimpleListActivity.class));
+                startActivity(new Intent(this, com.example.mascotasproject.IA.SimpleListActivity.class));
                 break;
             case R.id.action_exit:
                 finishAndRemoveTask();

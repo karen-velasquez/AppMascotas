@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mascotasproject.IA.env.ImageUtils;
+import com.example.mascotasproject.R;
 
 import java.io.IOException;
 import java.util.List;
@@ -119,7 +120,7 @@ public class LegacyCameraConnectionFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.imageListener = (com.jstappdev.dbclf.CameraActivity) requireContext();
+        this.imageListener = (com.example.mascotasproject.IA.CameraActivity) requireContext();
     }
 
     @Override

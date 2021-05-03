@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
+import com.example.mascotasproject.R;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.Collator;

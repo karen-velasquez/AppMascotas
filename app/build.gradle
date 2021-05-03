@@ -3,6 +3,15 @@ plugins {
     id 'kotlin-android'
     id 'com.google.gms.google-services'
 }
+def buildFor = 'armabi-v7a'
+
+
+project.buildDir = 'gradleBuild'
+getProject().setBuildDir('gradleBuild')
+
+project.ext.ASSET_DIR = projectDir.toString() + '/assets'
+
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
@@ -12,12 +21,51 @@ android {
         applicationId "com.example.mascotasproject"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+
+        versionCode 103
+        versionName "45"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    if (buildFor == 'armabi-v7a') {
+        defaultConfig {
+            ndk {
+                abiFilters 'armeabi-v7a'
+                abiFilters 'x86'
+            }
+        }
+    }
+    /*else if (buildFor == 'arm64-v8a') {
+        defaultConfig {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
+    }*/
+
+   /* sourceSets {
+        main {
+            java {
+                srcDir 'src'
+            }
+
+            manifest.srcFile 'AndroidManifest.xml'
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = [project.ext.ASSET_DIR]
+            jniLibs.srcDirs = ['libs']
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }*/
+
+
+
+
 
     buildTypes {
         release {
@@ -71,7 +119,6 @@ dependencies {
     /*adicionando las clases del IA*/
     implementation 'org.tensorflow:tensorflow-android:1.8.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 

@@ -72,12 +72,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.example.mascotasproject.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
-import com.jstappdev.dbclf.env.ImageUtils;
+import com.example.mascotasproject.IA.env.ImageUtils;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;

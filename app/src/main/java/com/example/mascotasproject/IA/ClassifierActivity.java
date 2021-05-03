@@ -34,13 +34,13 @@ import android.util.Size;
 import android.view.View;
 import android.widget.Toast;
 
-import com.jstappdev.dbclf.env.ImageUtils;
+import com.example.mascotasproject.IA.env.ImageUtils;
 
 import java.io.IOException;
 import java.util.List;
 
 
-public class ClassifierActivity extends com.jstappdev.dbclf.CameraActivity implements OnImageAvailableListener {
+public class ClassifierActivity extends com.example.mascotasproject.IA.CameraActivity implements OnImageAvailableListener {
     // mobilenet: 224, inception_v3: 299
     private static final int INPUT_SIZE = 299;
     private static final int IMAGE_MEAN = 128;

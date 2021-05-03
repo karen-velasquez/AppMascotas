@@ -13,4 +13,22 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_action_add"
         />
+    <item
+        android:id="@+id/pick_image"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="@string/from_gallery"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/list_breeds"
+        android:title="@string/list_breeds" />
+    <item
+        android:id="@+id/set_language"
+        android:icon="@drawable/ic_change_language"
+        android:title="@string/change_language" />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about_menu" />
+    <item
+        android:id="@+id/action_exit"
+        android:title="@string/exit_menu" />
 </menu>

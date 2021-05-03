@@ -34,7 +34,7 @@
         <activity android:name=".FirebaseCard" />
         <activity android:name=".IA.CameraActivity"/>
         <activity android:name=".IA.SimpleListActivity" />
-        <activity android:name=".IA.ClassifierActivity"/>
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -52,6 +52,24 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MascotasProject.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IA.ClassifierActivity"
+            android:label="Identificador"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

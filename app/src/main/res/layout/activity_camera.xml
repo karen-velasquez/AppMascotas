@@ -31,6 +31,17 @@
         android:translationZ="50dp" />
 
     <ImageButton
+        android:id="@+id/pick"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignTop="@+id/continuousInferenceButton"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedbutton"
+        android:src="@mipmap/camera_icon"
+        android:translationZ="50dp"
+        android:translationX="100dp"/>
+
+    <ImageButton
         android:id="@+id/shareButton"
         android:layout_width="54dp"
         android:layout_height="54dp"

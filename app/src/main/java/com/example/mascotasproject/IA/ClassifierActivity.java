@@ -36,7 +36,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     private static final String INPUT_NAME = "Mul";
     // output, inception(tf): final_result, Keras: output/Softmax
     private static final String OUTPUT_NAME = "final_result";
-    private static final String MODEL_FILE = "stripped.pb";
+    private static final String MODEL_FILE = "file:///android_asset/stripped.pb";
     private static final boolean MAINTAIN_ASPECT = true;
     private Bitmap rgbFrameBitmap = null;
     private Bitmap croppedBitmap = null;
@@ -174,7 +174,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
                                 IMAGE_STD,
                                 INPUT_NAME,
                                 OUTPUT_NAME);
-            } catch (OutOfMemoryError e) {
+            } catch (OutOfMemoryError | IOException e) {
                 runOnUiThread(() -> {
                     cameraButton.setEnabled(true);
                     continuousInferenceButton.setChecked(false);

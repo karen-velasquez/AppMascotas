@@ -101,7 +101,7 @@ public abstract class CameraActivity extends FragmentActivity
     AtomicBoolean snapShot = new AtomicBoolean(false);
     boolean continuousInference = false;
     boolean imageSet = false;
-    ImageButton cameraButton, shareButton, closeButton, saveButton;
+    ImageButton cameraButton, shareButton, closeButton, saveButton,pick;
     ToggleButton continuousInferenceButton;
     ImageView imageViewFromGallery;
     ProgressBar progressBar;
@@ -185,12 +185,19 @@ public abstract class CameraActivity extends FragmentActivity
         shareButton = findViewById(R.id.shareButton);
         closeButton = findViewById(R.id.closeButton);
         saveButton = findViewById(R.id.saveButton);
-
+        pick=findViewById(R.id.pick);
         cameraButton.setEnabled(false);
 
-        setButtonsVisibility(View.GONE);
+        pick.setOnClickListener(v -> {
+        if (!hasPermission(PERMISSION_STORAGE_READ)) {
+            requestPermission(PERMISSION_STORAGE_READ);
+            return ;
+        }
+        pickImage();
+        });
+            setButtonsVisibility(View.GONE);
 
-        cameraButton.setOnClickListener(v -> {
+            cameraButton.setOnClickListener(v -> {
             if (!hasPermission(PERMISSION_CAMERA)) {
                 requestPermission(PERMISSION_CAMERA);
                 return;

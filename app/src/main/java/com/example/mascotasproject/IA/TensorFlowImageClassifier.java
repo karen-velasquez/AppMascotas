@@ -6,7 +6,9 @@ import android.graphics.Bitmap;
 import org.tensorflow.Operation;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -63,7 +65,7 @@ public class TensorFlowImageClassifier implements Classifier {
             int imageMean,
             float imageStd,
             String inputName,
-            String outputName) {
+            String outputName) throws IOException {
         final com.example.mascotasproject.IA.TensorFlowImageClassifier c = new com.example.mascotasproject.IA.TensorFlowImageClassifier();
         c.inputName = inputName;
         c.outputName = outputName;
@@ -71,7 +73,8 @@ public class TensorFlowImageClassifier implements Classifier {
         // Read the label names into memory.
         Collections.addAll(c.labels, labels);
 
-        c.inferenceInterface = new TensorFlowInferenceInterface(assetManager, modelFilename);
+
+        c.inferenceInterface = new TensorFlowInferenceInterface(assetManager,modelFilename);
 
         // The shape of the output is [N, NUM_CLASSES], where N is the batch size.
         final Operation operation = c.inferenceInterface.graphOperation(outputName);

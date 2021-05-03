@@ -44,25 +44,6 @@ android {
         }
     }*/
 
-   /* sourceSets {
-        main {
-            java {
-                srcDir 'src'
-            }
-
-            manifest.srcFile 'AndroidManifest.xml'
-            resources.srcDirs = ['src']
-            aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            res.srcDirs = ['res']
-            assets.srcDirs = [project.ext.ASSET_DIR]
-            jniLibs.srcDirs = ['libs']
-        }
-
-        debug.setRoot('build-types/debug')
-        release.setRoot('build-types/release')
-    }*/
-
 
 
 
@@ -118,6 +99,7 @@ dependencies {
 
     /*adicionando las clases del IA*/
     implementation 'org.tensorflow:tensorflow-android:1.8.0'
+    implementation 'org.tensorflow:tensorflow-lite:+'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'com.squareup.picasso:picasso:2.71828'

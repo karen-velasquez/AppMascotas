@@ -15,6 +15,10 @@ com/example/mascotasproject/IA/LegacyCameraConnectionFragment.java
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment$1
 com/example/mascotasproject/IA/LogInActivity.java
  com.example.mascotasproject.IA.LogInActivity
+ com.example.mascotasproject.IA.LogInActivity$1
+ com.example.mascotasproject.IA.LogInActivity$2
+ com.example.mascotasproject.IA.LogInActivity$3
+ com.example.mascotasproject.IA.LogInActivity$4
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
 com/example/mascotasproject/IA/env/ImageUtils.java

@@ -175,5 +175,8 @@
         <item>ka</item>
     </string-array>
 
+    //for fb
+    <string name="facebook_app_id">161912065819486</string> <string name="fb_login_protocol_scheme">fb161912065819486</string>
+
 
 </resources>

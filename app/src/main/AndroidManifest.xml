@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <!-- remove implicitly added permissions (tensorflow targetSDK < app targetSDK) -->
     <uses-permission
@@ -25,11 +27,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
 
+        android:usesCleartextTraffic="true"
+
         android:authorities="com.example.mascotasProject.fileprovider"
         android:exported="false"
         android:grantUriPermissions="true"
 
-        android:theme="@style/Theme.MascotasProject">
+        android:theme="@style/Theme.MascotasProject"
+        tools:targetApi="m">
+        <activity android:name=".IA.GetLocation"></activity>
         <activity android:name=".AddData"></activity>
         <activity android:name=".FirebaseCard" />
         <activity android:name=".IA.CameraActivity"/>

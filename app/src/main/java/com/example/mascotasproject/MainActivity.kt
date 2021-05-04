@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.mascotasproject.IA.CameraActivity
 import com.example.mascotasproject.IA.ClassifierActivity
+import com.example.mascotasproject.IA.GetLocation
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlin.reflect.full.declaredMemberFunctions
@@ -28,9 +29,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        findViewById<Button>(R.id.btn_getLocation).setOnClickListener{
-            fetchLocation()
+
+        //Botón Get Location
+        val btnGetLocation: Button =findViewById(R.id.btn_getLocation)
+        btnGetLocation.setOnClickListener{
+            val intent= Intent(this, GetLocation:: class.java)
+            startActivity(intent)
         }
         //Boton Firebase card view
         val btnOpenActivity: Button =findViewById(R.id.btn_firebase_card)

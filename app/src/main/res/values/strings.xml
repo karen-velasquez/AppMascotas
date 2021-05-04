@@ -14,15 +14,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-
-
-
-
-
-
-
-
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="from_gallery">From Gallery..</string>
     <string name="about_message"><![CDATA[
@@ -183,28 +174,6 @@
         <item>fr </item>
         <item>ka</item>
     </string-array>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>

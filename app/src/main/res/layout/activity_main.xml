@@ -17,39 +17,51 @@
         android:id="@+id/btn_getLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/get_location"
-        android:textSize="18sp"
+        android:layout_marginStart="117dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="300dp"
-        android:layout_marginStart="117dp" />
+        android:text="@string/get_location"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/btn_firebase_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FIREBASE CARD"
-        android:textSize="18sp"
+        android:layout_marginStart="117dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="400dp"
-        android:layout_marginStart="117dp" />
+        android:text="FIREBASE CARD"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADICIONAR DATOS"
-        android:textSize="18sp"
+        android:layout_marginStart="117dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="500dp"
-        android:layout_marginStart="117dp" />
+        android:text="ADICIONAR DATOS"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/ia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IA"
-        android:textSize="18sp"
+        android:layout_marginStart="117dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="600dp"
-        android:layout_marginStart="117dp" />
+        android:text="IA"
+        android:textSize="18sp" />
 
+
+    <Button
+        android:id="@+id/btn_logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:text="Log In" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

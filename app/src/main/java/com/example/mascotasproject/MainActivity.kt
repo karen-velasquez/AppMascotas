@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.mascotasproject.IA.CameraActivity
 import com.example.mascotasproject.IA.ClassifierActivity
+import com.example.mascotasproject.IA.LogInActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlin.reflect.full.declaredMemberFunctions
@@ -51,6 +52,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //botón log In
+        val btn_logIn = findViewById<Button>(R.id.btn_logIn)
+
+        btn_logIn.setOnClickListener{
+            val intent= Intent(this, LogInActivity:: class.java)
+            startActivity(intent)
+        }
 
     }
 
@@ -88,4 +96,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 }

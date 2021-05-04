@@ -33,7 +33,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class AddData extends AppCompatActivity {
-
+//hola probando
     EditText nombreAdd, perdidaAdd;
     ImageView imagenAdd;
     Button mUploadBtn;

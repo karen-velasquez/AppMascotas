@@ -1,0 +1,62 @@
+com/example/mascotasproject/desfragment.java
+ com.example.mascotasproject.desfragment
+com/example/mascotasproject/IA/CameraConnectionFragment.java
+ com.example.mascotasproject.IA.CameraConnectionFragment
+ com.example.mascotasproject.IA.CameraConnectionFragment$1
+ com.example.mascotasproject.IA.CameraConnectionFragment$2
+ com.example.mascotasproject.IA.CameraConnectionFragment$3
+ com.example.mascotasproject.IA.CameraConnectionFragment$4
+ com.example.mascotasproject.IA.CameraConnectionFragment$5
+ com.example.mascotasproject.IA.CameraConnectionFragment$5$1
+ com.example.mascotasproject.IA.CameraConnectionFragment$CompareSizesByArea
+ com.example.mascotasproject.IA.CameraConnectionFragment$ConnectionCallback
+com/example/mascotasproject/IA/LegacyCameraConnectionFragment.java
+ com.example.mascotasproject.IA.LegacyCameraConnectionFragment
+ com.example.mascotasproject.IA.LegacyCameraConnectionFragment$1
+com/example/mascotasproject/IA/LogInActivity.java
+ com.example.mascotasproject.IA.LogInActivity
+ com.example.mascotasproject.IA.LogInActivity$1
+ com.example.mascotasproject.IA.LogInActivity$2
+ com.example.mascotasproject.IA.LogInActivity$3
+ com.example.mascotasproject.IA.LogInActivity$4
+com/example/mascotasproject/model.java
+ com.example.mascotasproject.model
+com/example/mascotasproject/IA/env/ImageUtils.java
+ com.example.mascotasproject.IA.env.ImageUtils
+com/example/mascotasproject/AddData.java
+ com.example.mascotasproject.AddData
+ com.example.mascotasproject.AddData$1
+ com.example.mascotasproject.AddData$2
+ com.example.mascotasproject.AddData$3
+ com.example.mascotasproject.AddData$4
+ com.example.mascotasproject.AddData$5
+com/example/mascotasproject/myadapter.java
+ com.example.mascotasproject.myadapter
+ com.example.mascotasproject.myadapter$1
+ com.example.mascotasproject.myadapter$myviewholder
+com/example/mascotasproject/BuildConfig.java
+ com.example.mascotasproject.BuildConfig
+com/example/mascotasproject/IA/CameraActivity.java
+ com.example.mascotasproject.IA.CameraActivity
+ com.example.mascotasproject.IA.CameraActivity$1
+ com.example.mascotasproject.IA.CameraActivity$2
+ com.example.mascotasproject.IA.CameraActivity$3
+ com.example.mascotasproject.IA.CameraActivity$4
+com/example/mascotasproject/IA/SimpleListActivity.java
+ com.example.mascotasproject.IA.SimpleListActivity
+com/example/mascotasproject/IA/Classifier.java
+ com.example.mascotasproject.IA.Classifier
+ com.example.mascotasproject.IA.Classifier$Recognition
+com/example/mascotasproject/IA/ClassifierActivity.java
+ com.example.mascotasproject.IA.ClassifierActivity
+ com.example.mascotasproject.IA.ClassifierActivity$InferenceTask
+com/example/mascotasproject/recfragment.java
+ com.example.mascotasproject.recfragment
+com/example/mascotasproject/IA/ListAdapter.java
+ com.example.mascotasproject.IA.ListAdapter
+com/example/mascotasproject/IA/TensorFlowImageClassifier.java
+ com.example.mascotasproject.IA.TensorFlowImageClassifier
+com/example/mascotasproject/IA/AutoFitTextureView.java
+ com.example.mascotasproject.IA.AutoFitTextureView
+com/example/mascotasproject/FirebaseCard.java
+ com.example.mascotasproject.FirebaseCard

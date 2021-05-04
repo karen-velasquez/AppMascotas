@@ -4,15 +4,11 @@
     package="com.example.mascotasproject">
 
 
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
-    <!-- remove implicitly added permissions (tensorflow targetSDK < app targetSDK) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- remove implicitly added permissions (tensorflow targetSDK < app targetSDK) -->
     <uses-permission
         android:name="android.permission.READ_PHONE_STATE"
         tools:node="remove" />
@@ -20,27 +16,25 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
+        android:authorities="com.example.mascotasProject.fileprovider"
+        android:exported="false"
+        android:grantUriPermissions="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
-        android:usesCleartextTraffic="true"
-
-        android:authorities="com.example.mascotasProject.fileprovider"
-        android:exported="false"
-        android:grantUriPermissions="true"
-
-        android:theme="@style/Theme.MascotasProject"
-        tools:targetApi="m">
-        <activity android:name=".IA.GetLocation"></activity>
-        <activity android:name=".AddData"></activity>
+        android:theme="@style/Theme.MascotasProject">
+        <activity android:name=".IA.LogInActivity"></activity>
+        <activity android:name=".AddData" />
         <activity android:name=".FirebaseCard" />
-        <activity android:name=".IA.CameraActivity"/>
+        <activity android:name=".IA.CameraActivity" />
         <activity android:name=".IA.SimpleListActivity" />
-
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -51,7 +45,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
-
 
         <activity
             android:name=".MainActivity"
@@ -90,14 +83,27 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges= "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
     </application>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-
-
 
 </manifest>

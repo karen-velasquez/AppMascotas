@@ -36,6 +36,7 @@
         <activity android:name=".FirebaseCard" />
         <activity android:name=".IA.CameraActivity" />
         <activity android:name=".IA.SimpleListActivity" />
+        <activity android:name=".MostrarRecycler" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -35,10 +35,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.MascotasProject" >
         <activity android:name="com.example.mascotasproject.IA.LogInActivity" />
+        <activity android:name="com.example.mascotasproject.IA.GetLocation" />
         <activity android:name="com.example.mascotasproject.AddData" />
         <activity android:name="com.example.mascotasproject.FirebaseCard" />
         <activity android:name="com.example.mascotasproject.IA.CameraActivity" />
         <activity android:name="com.example.mascotasproject.IA.SimpleListActivity" />
+        <activity android:name="com.example.mascotasproject.MostrarRecycler" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -76,6 +76,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth:20.0.4'
+    //Ingreso a facebook
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
     implementation 'com.squareup.picasso:picasso:2.71828'
 

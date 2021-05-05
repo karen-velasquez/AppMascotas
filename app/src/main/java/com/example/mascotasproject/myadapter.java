@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
@@ -14,7 +15,8 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewholder> {
+public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewholder>  {
+
 
     public myadapter(@NonNull FirebaseRecyclerOptions<model> options) {
         super(options);
@@ -33,7 +35,22 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new desfragment(model.getNombreMas(),model.getCaracteristicas(),model.getUbicacionPerdida(),model.getImagen())).addToBackStack(null).commit();
             }
         });
+
+       /* holder.img1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String currentTitle=model.getNombreMas();
+                System.out.println("el nombre   "+currentTitle);
+                String currentImage=model.getImagen();
+                System.out.println("el nombre   "+currentImage);
+                addData.showDeleteDataDialog(currentTitle,currentImage);
+                return true;
+            }
+        });*/
+
     }
+
+
 
     @NonNull
     @Override
@@ -57,4 +74,13 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
             datos_perdida=itemView.findViewById(R.id.datos_perdida);
         }
     }
+
+
+
+
+
+
+
+
+
 }

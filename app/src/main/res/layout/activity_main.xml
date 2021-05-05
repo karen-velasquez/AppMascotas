@@ -63,6 +63,16 @@
         android:layout_marginTop="200dp"
         android:text="Log In" />
 
+
+    <Button
+        android:id="@+id/btn_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="145dp"
+        android:text="CARDVIEW" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"

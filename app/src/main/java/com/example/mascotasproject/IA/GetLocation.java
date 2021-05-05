@@ -29,7 +29,7 @@ public class GetLocation extends AppCompatActivity {
     private ProgressBar progressBar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_location);
 
@@ -39,9 +39,9 @@ public class GetLocation extends AppCompatActivity {
         findViewById(R.id.buttonGetCurrentLocation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ContextCompat.checkSelfPermission(
+                if (ContextCompat.checkSelfPermission(
                         getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED){
+                ) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(
                             GetLocation.this,
                             new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
@@ -58,16 +58,16 @@ public class GetLocation extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(requestCode == REQUEST_CODE_LOCATION_PERMISSION && grantResults.length > 0){
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == REQUEST_CODE_LOCATION_PERMISSION && grantResults.length > 0) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getCurrentLocation();
-            }else{
-                Toast.makeText(this,"Permission Denied", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void getCurrentLocation(){
+    private void getCurrentLocation() {
 
         progressBar.setVisibility(View.VISIBLE);
 
@@ -76,6 +76,16 @@ public class GetLocation extends AppCompatActivity {
         locationRequest.setFastestInterval(3000);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         LocationServices.getFusedLocationProviderClient(GetLocation.this)
                 .requestLocationUpdates(locationRequest, new LocationCallback() {
                     @Override
@@ -83,7 +93,7 @@ public class GetLocation extends AppCompatActivity {
                         super.onLocationResult(locationResult);
                         LocationServices.getFusedLocationProviderClient(GetLocation.this)
                                 .removeLocationUpdates(this);
-                        if(locationResult != null && locationResult.getLocations().size() > 0){
+                        if (locationResult != null && locationResult.getLocations().size() > 0) {
                             int latestLocationIndex = locationResult.getLocations().size() - 1;
                             double latitude =
                                     locationResult.getLocations().get(latestLocationIndex).getLatitude();

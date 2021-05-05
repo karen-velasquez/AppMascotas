@@ -19,6 +19,10 @@ com/example/mascotasproject/IA/LogInActivity.java
  com.example.mascotasproject.IA.LogInActivity$2
  com.example.mascotasproject.IA.LogInActivity$3
  com.example.mascotasproject.IA.LogInActivity$4
+com/example/mascotasproject/IA/GetLocation.java
+ com.example.mascotasproject.IA.GetLocation
+ com.example.mascotasproject.IA.GetLocation$1
+ com.example.mascotasproject.IA.GetLocation$2
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
 com/example/mascotasproject/IA/env/ImageUtils.java
@@ -30,6 +34,11 @@ com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData$3
  com.example.mascotasproject.AddData$4
  com.example.mascotasproject.AddData$5
+ com.example.mascotasproject.AddData$6
+ com.example.mascotasproject.AddData$6$1
+ com.example.mascotasproject.AddData$6$2
+ com.example.mascotasproject.AddData$6$3
+ com.example.mascotasproject.AddData$7
 com/example/mascotasproject/myadapter.java
  com.example.mascotasproject.myadapter
  com.example.mascotasproject.myadapter$1
@@ -58,5 +67,9 @@ com/example/mascotasproject/IA/TensorFlowImageClassifier.java
  com.example.mascotasproject.IA.TensorFlowImageClassifier
 com/example/mascotasproject/IA/AutoFitTextureView.java
  com.example.mascotasproject.IA.AutoFitTextureView
+com/example/mascotasproject/MostrarRecycler.java
+ com.example.mascotasproject.MostrarRecycler
+ com.example.mascotasproject.MostrarRecycler$1
+ com.example.mascotasproject.MostrarRecycler$Holder
 com/example/mascotasproject/FirebaseCard.java
  com.example.mascotasproject.FirebaseCard

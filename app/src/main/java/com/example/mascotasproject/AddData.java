@@ -3,10 +3,12 @@ package com.example.mascotasproject;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -22,8 +24,12 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -84,6 +90,8 @@ public class AddData extends AppCompatActivity {
 
             }
         });
+
+
 
         //AL HACER CLICK EN EL BOTON
         mUploadBtn.setOnClickListener(new View.OnClickListener(){
@@ -156,6 +164,61 @@ public class AddData extends AppCompatActivity {
         else {
             Toast.makeText(this,"Por favor selecciona una imagen",Toast.LENGTH_SHORT).show();
         }
+    }
+
+
+
+    public void showDeleteDataDialog(String currentTitle,String currentImage){
+        AlertDialog.Builder builder=new AlertDialog.Builder(AddData.this);
+        builder.setTitle("Eliminar");
+        builder.setMessage("Estas seguro que deseas eliminar esta publicacion?");
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Cuando el usuario presiona SI , elimina los datos
+                Query mQuery = mDatabaseReference.orderByChild("nombreMas").equalTo(currentTitle);
+                mQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot ds : snapshot.getChildren()) {
+                            ds.getRef().removeValue();
+                        }
+                        //Mensaje despues de eliminar los datos
+                        Toast.makeText(AddData.this, "Se elimino correctamente el dato", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        //Si nada sucede esto envia el  mensaje de error
+                        Toast.makeText(AddData.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                //Eliminando la imagen usando de referencias la url from FirebaseStorage
+                StorageReference mPicturRefe = FirebaseStorage.getInstance().getReferenceFromUrl(currentImage);
+                mPicturRefe.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(AddData.this, "Imagen eliminada", Toast.LENGTH_SHORT).show();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(AddData.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+            });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Cuando el usuario presion NO, desaparece el dialogo
+                dialog.dismiss();
+
+            }
+        });
     }
 
     private String getFileExtension(Uri uri) {

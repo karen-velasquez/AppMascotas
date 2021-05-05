@@ -1974,10 +1974,12 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_add
+id btn_cardview
 id btn_firebase_card
 id btn_getLocation
 id btn_logIn
 id button
+id buttonGetCurrentLocation
 id buttonPanel
 id buttonupload
 id cache_measures
@@ -2136,6 +2138,7 @@ id listMode
 id list_breeds
 id list_item
 id lvExp
+id mRecyclerView
 id masked
 id material_clock_display
 id material_clock_face
@@ -2324,7 +2327,9 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
+id textAdress
 id textEnd
+id textLatLong
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2437,9 +2442,11 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_data
 layout activity_camera
+layout activity_get_location
 layout activity_list
 layout activity_log_in
 layout activity_main
+layout activity_mostrar_recycler
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout camera_connection_fragment

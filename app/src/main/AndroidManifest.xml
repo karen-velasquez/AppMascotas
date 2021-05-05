@@ -31,6 +31,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MascotasProject">
         <activity android:name=".IA.LogInActivity"></activity>
+        <activity android:name=".IA.GetLocation" />
         <activity android:name=".AddData" />
         <activity android:name=".FirebaseCard" />
         <activity android:name=".IA.CameraActivity" />

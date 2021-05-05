@@ -21,8 +21,7 @@ import com.google.android.gms.location.LocationServices
 import kotlin.reflect.full.declaredMemberFunctions
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
+
 
 
 class MainActivity : AppCompatActivity() {

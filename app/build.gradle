@@ -75,6 +75,9 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 
     testImplementation 'junit:junit:4.13.2'
@@ -94,15 +97,15 @@ dependencies {
     implementation 'com.firebase:firebase-client-android:2.4.0'
 
 
-    //Fused Location Provider
-    implementation 'com.google.android.gms:play-services-location:18.0.0'
-
     /*adicionando las clases del IA*/
     implementation 'org.tensorflow:tensorflow-android:1.8.0'
     implementation 'org.tensorflow:tensorflow-lite:+'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Adicionando Librerias de geolocalización
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
 
 
 }

@@ -14,11 +14,15 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.mascotasproject.IA.CameraActivity
 import com.example.mascotasproject.IA.ClassifierActivity
+import com.example.mascotasproject.IA.GetLocation
+import com.example.mascotasproject.IA.LogInActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlin.reflect.full.declaredMemberFunctions
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,9 +32,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        findViewById<Button>(R.id.btn_getLocation).setOnClickListener{
-            fetchLocation()
+
+        //Botón Get Location
+        val btnGetLocation: Button =findViewById(R.id.btn_getLocation)
+        btnGetLocation.setOnClickListener{
+            val intent= Intent(this, GetLocation:: class.java)
+            startActivity(intent)
         }
         //Boton Firebase card view
         val btnOpenActivity: Button =findViewById(R.id.btn_firebase_card)
@@ -51,6 +58,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //botón log In
+        val btn_logIn = findViewById<Button>(R.id.btn_logIn)
+
+        btn_logIn.setOnClickListener{
+            val intent= Intent(this, LogInActivity:: class.java)
+            startActivity(intent)
+        }
 
     }
 
@@ -88,4 +102,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 }

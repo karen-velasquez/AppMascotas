@@ -256,10 +256,6 @@ activity#com.example.mascotasproject.AddData
 ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:35:9-45
 	android:name
 		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:35:19-42
-activity#com.example.mascotasproject.FirebaseCard
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:9-50
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:19-47
 activity#com.example.mascotasproject.IA.CameraActivity
 ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:9-55
 	android:name

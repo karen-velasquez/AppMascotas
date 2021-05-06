@@ -39,12 +39,7 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this, GetLocation:: class.java)
             startActivity(intent)
         }
-        //Boton Firebase card view
-        val btnOpenActivity: Button =findViewById(R.id.btn_firebase_card)
-        btnOpenActivity.setOnClickListener{
-            val intent= Intent(this, FirebaseCard:: class.java)
-            startActivity(intent)
-        }
+
 
         val btnAdd: Button =findViewById(R.id.btn_add)
         btnAdd.setOnClickListener{

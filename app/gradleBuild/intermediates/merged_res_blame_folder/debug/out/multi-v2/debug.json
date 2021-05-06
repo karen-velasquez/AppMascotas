@@ -1112,6 +1112,21 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\values-small-v4_values-small-v4.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\asus\\.gradle\\caches\\transforms-2\\files-2.1\\5e18bcc52414b5d70a7fe433520add55\\material-1.3.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,128,198,270",
+                        "endColumns": "72,69,71,69",
+                        "endOffsets": "123,193,265,335"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\values-is_values-is.arsc.flat",
             "map": [
                 {
@@ -1216,21 +1231,6 @@
                         "startOffsets": "3322,3430,3616,3743,3854,4054,4181,4320,4642,4855,4963,5151,5279,5480,5664,5758,5851",
                         "endColumns": "107,185,126,110,199,126,138,133,212,107,187,127,200,183,93,92,107",
                         "endOffsets": "3425,3611,3738,3849,4049,4176,4315,4449,4850,4958,5146,5274,5475,5659,5753,5846,5954"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\values-small-v4_values-small-v4.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\asus\\.gradle\\caches\\transforms-2\\files-2.1\\5e18bcc52414b5d70a7fe433520add55\\material-1.3.0\\res\\values-small-v4\\values-small-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,128,198,270",
-                        "endColumns": "72,69,71,69",
-                        "endOffsets": "123,193,265,335"
                     }
                 }
             ]

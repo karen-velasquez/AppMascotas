@@ -2242,7 +2242,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recview
 id results
 id reverseSawtooth
 id right
@@ -2376,7 +2375,6 @@ id withText
 id withinBounds
 id wrap
 id wrap_content
-id wrapper
 id zero_corner_chip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -2471,9 +2469,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout firebase_card
 layout fragment_desfragment
-layout fragment_recfragment
 layout lang_dialog
 layout list_group
 layout list_item

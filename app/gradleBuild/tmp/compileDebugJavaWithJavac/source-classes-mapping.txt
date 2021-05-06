@@ -1,5 +1,5 @@
-com/example/mascotasproject/FirebaseCard.java
- com.example.mascotasproject.FirebaseCard
+com/example/mascotasproject/desfragment.java
+ com.example.mascotasproject.desfragment
 com/example/mascotasproject/IA/CameraConnectionFragment.java
  com.example.mascotasproject.IA.CameraConnectionFragment
  com.example.mascotasproject.IA.CameraConnectionFragment$1
@@ -39,10 +39,6 @@ com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData$6$2
  com.example.mascotasproject.AddData$6$3
  com.example.mascotasproject.AddData$7
-com/example/mascotasproject/myadapter.java
- com.example.mascotasproject.myadapter
- com.example.mascotasproject.myadapter$1
- com.example.mascotasproject.myadapter$myviewholder
 com/example/mascotasproject/BuildConfig.java
  com.example.mascotasproject.BuildConfig
 com/example/mascotasproject/IA/CameraActivity.java
@@ -59,16 +55,12 @@ com/example/mascotasproject/IA/Classifier.java
 com/example/mascotasproject/IA/ClassifierActivity.java
  com.example.mascotasproject.IA.ClassifierActivity
  com.example.mascotasproject.IA.ClassifierActivity$InferenceTask
-com/example/mascotasproject/recfragment.java
- com.example.mascotasproject.recfragment
 com/example/mascotasproject/IA/ListAdapter.java
  com.example.mascotasproject.IA.ListAdapter
 com/example/mascotasproject/IA/TensorFlowImageClassifier.java
  com.example.mascotasproject.IA.TensorFlowImageClassifier
 com/example/mascotasproject/IA/AutoFitTextureView.java
  com.example.mascotasproject.IA.AutoFitTextureView
-com/example/mascotasproject/desfragment.java
- com.example.mascotasproject.desfragment
 com/example/mascotasproject/MostrarRecycler.java
  com.example.mascotasproject.MostrarRecycler
  com.example.mascotasproject.MostrarRecycler$1

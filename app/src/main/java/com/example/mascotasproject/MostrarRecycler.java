@@ -2,10 +2,12 @@ package com.example.mascotasproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -16,12 +18,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
@@ -79,26 +90,18 @@ public class MostrarRecycler extends AppCompatActivity {
                                 intent.putExtra("perdida",model.getUbicacionPerdida());
                                 intent.putExtra("image",model.getImagen());
                                 startActivity(intent);
-
-                              /*  TextView mnombreMas=view.findViewById(R.id.nombre);
-                                TextView mCaractericas=view.findViewById(R.id.caracteristica);
-                                ImageView mimagen=view.findViewById(R.id.img1);
-                                TextView mdatosperdida=view.findViewById(R.id.datos_perdida);
-                                //Obtener data para views
-                                String mnombre=mnombreMas.getText().toString();
-                                String mCaracteristicas=mCaractericas.getText().toString();
-                                String mdatosper=mdatosperdida.getText().toString();
-                                String urlimage=mimagen.getTes(model.getImagen());
-                                Drawable mDrawable=mimagen.getDrawable();
-                                Bitmap mbitmap= ((BitmapDrawable)mDrawable).getBitmap();
-
-                              */
-
                             }
 
                         });
-
-
+                        holder.setOnLongClickListener(new View.OnLongClickListener(){
+                            @Override
+                            public boolean onLongClick(View view){
+                                String nombre= model.getNombreMas();
+                                String image=model.getImagen();
+                                showDeleteDataDialog(nombre,image);
+                                return true;
+                            }
+                        });
 
                     }
 
@@ -108,14 +111,7 @@ public class MostrarRecycler extends AppCompatActivity {
                     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerowdesign,parent,false);
                         Holder viewHolder=new Holder(view);
-
-
-
-
                         return viewHolder;
-
-
-
                     }
 
 
@@ -126,11 +122,74 @@ public class MostrarRecycler extends AppCompatActivity {
         mRecyclerView.setAdapter(firebaseRecyclerAdapter);
 
 
+
+
+
+    }
+
+    private void showDeleteDataDialog(String nombre, String image) {
+        //Aler dialog
+        AlertDialog.Builder builder= new AlertDialog.Builder(MostrarRecycler.this);
+        builder.setTitle("Eliminar");
+        builder.setMessage("Seguro que deseas eliminar este dato?");
+        //obteniendo el boton positivo y negativo
+        builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //el usuario presiona SI, se elimina los datos
+                Query mQuery=mRef.orderByChild("NombreMas").equalTo(nombre);
+                mQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot ds: snapshot.getChildren()){
+                            ds.getRef().removeValue();
+                        }
+                        Toast.makeText(MostrarRecycler.this,"Datos eliminados correctamente",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        //SI no se logra enviar mensaje de error
+                        Toast.makeText(MostrarRecycler.this,error.getMessage(),Toast.LENGTH_SHORT).show();
+                    }
+                });
+                mFirebaseDatabase=FirebaseDatabase.getInstance();
+                mRef=mFirebaseDatabase.getReference("Mascotas/Datos");
+
+                FirebaseStorage storage=FirebaseStorage.getInstance();
+                StorageReference mPictureRefe= storage.getReferenceFromUrl(image);
+                mPictureRefe.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        //eliminacion correcta
+                        Toast.makeText(MostrarRecycler.this,"Imagen eliminada correctamente", Toast.LENGTH_SHORT).show();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        //no se logra eliminar
+                        Toast.makeText(MostrarRecycler.this,e.getMessage(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+            }
+        });
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //si el usuario presion no
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
+
     }
 
     /*-------------------------------------------------------------------------------------------*/
 
     public static class Holder extends RecyclerView.ViewHolder {
+
 
         TextView mnombreMas, mCaractericas, mdatosperdida;
         ImageView mimagen;
@@ -154,13 +213,13 @@ public class MostrarRecycler extends AppCompatActivity {
                 }
             });
             //EN CASO DE QUE EL CLICK SEA LARGO
-          /*  itemView.setOnLongClickListener(new View.OnLongClickListener() {
+           itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    mClickListener.onItemLongClick(v);
+                    mClickLongListener.onLongClick(v);
                     return true;
                 }
-            });*/
+            });
 
 
         }
@@ -171,13 +230,12 @@ public class MostrarRecycler extends AppCompatActivity {
             mClickListener=onClickListener;
         }
 
-        //interface para enviar los callbacks
-        public interface OnClickListener{
-            void onItemClick(View view, int position);
-            void onItemLongClick(View view,int position);
+        private View.OnLongClickListener mClickLongListener;
 
-
+        public void setOnLongClickListener(View.OnLongClickListener onLongClickListener) {
+            mClickLongListener=onLongClickListener;
         }
+
 
 
     }

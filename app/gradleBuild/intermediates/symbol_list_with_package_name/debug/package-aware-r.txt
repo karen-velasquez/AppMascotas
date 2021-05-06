@@ -1975,7 +1975,6 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_add
 id btn_cardview
-id btn_firebase_card
 id btn_getLocation
 id btn_logIn
 id button

@@ -65,6 +65,12 @@ com/example/mascotasproject/MostrarRecycler.java
  com.example.mascotasproject.MostrarRecycler
  com.example.mascotasproject.MostrarRecycler$1
  com.example.mascotasproject.MostrarRecycler$1$1
+ com.example.mascotasproject.MostrarRecycler$1$2
+ com.example.mascotasproject.MostrarRecycler$2
+ com.example.mascotasproject.MostrarRecycler$2$1
+ com.example.mascotasproject.MostrarRecycler$2$2
+ com.example.mascotasproject.MostrarRecycler$2$3
+ com.example.mascotasproject.MostrarRecycler$3
  com.example.mascotasproject.MostrarRecycler$Holder
  com.example.mascotasproject.MostrarRecycler$Holder$1
- com.example.mascotasproject.MostrarRecycler$Holder$OnClickListener
+ com.example.mascotasproject.MostrarRecycler$Holder$2

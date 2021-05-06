@@ -37,6 +37,7 @@
         <activity android:name=".IA.CameraActivity" />
         <activity android:name=".IA.SimpleListActivity" />
         <activity android:name=".MostrarRecycler" />
+        <activity android:name=".desfragment" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -32,7 +32,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity=(AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new desfragment(model.getNombreMas(),model.getCaracteristicas(),model.getUbicacionPerdida(),model.getImagen())).addToBackStack(null).commit();
+               // activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new desfragment(model.getNombreMas(),model.getCaracteristicas(),model.getUbicacionPerdida(),model.getImagen())).addToBackStack(null).commit();
             }
         });
 

@@ -1,10 +1,18 @@
 package com.example.mascotasproject;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.os.PersistableBundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,66 +24,48 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import java.io.ByteArrayOutputStream;
 
-public class desfragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-    String NombreMas,Caracteristicas,UbicacionPerdida,Imagen;
-
-    public desfragment() {
-
-    }
-
-    public desfragment(String NombreMas,String Caracteristicas,String UbicacionPerdida,String Imagen) {
-        this.NombreMas=NombreMas;
-        this.Caracteristicas=Caracteristicas;
-        this.UbicacionPerdida=UbicacionPerdida;
-        this.Imagen=Imagen;
-    }
-
-   public static desfragment newInstance(String param1, String param2) {
-        desfragment fragment = new desfragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+public class desfragment extends AppCompatActivity {
+    TextView mnombreMas, mCaractericas, mdatosperdida;
+    ImageView mimagen;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        setContentView(R.layout.fragment_desfragment);
+        //ActionBar
+        ActionBar actionBar=getSupportActionBar();
+        //titulo action bar
+        actionBar.setTitle("Detalles del Post");
+        //seleccionar boton en action bar
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+
+        mnombreMas=findViewById(R.id.nombreholder);
+        mCaractericas=findViewById(R.id.caracteristicaholder);
+        mdatosperdida=findViewById(R.id.perdidaholder);
+        mimagen=findViewById(R.id.imageholder);
+
+        //Obteniendo los datos del intent
+        String mnombre=getIntent().getStringExtra("nombreMas");
+        String mCaracteristicas=getIntent().getStringExtra("caracteristica");
+        String mdatosper=getIntent().getStringExtra("perdida");
+        String image=getIntent().getStringExtra("image");
+       // byte[] bytes=getIntent().getByteArrayExtra("image");
+
+     //   Bitmap bmp= BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+
+        //escoger data para views
+        mnombreMas.setText(mnombre);
+        mCaractericas.setText(mCaracteristicas);
+        mdatosperdida.setText(mdatosper);
+        Picasso.get().load(image).into(mimagen);
+
+
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_desfragment, container, false);
-        ImageView image=view.findViewById(R.id.imageholder);
-        TextView nombre=view.findViewById(R.id.nombreholder);
-        TextView caracteristicas=view.findViewById(R.id.caracteristicaholder);
-        TextView datos_perdida=view.findViewById(R.id.perdidaholder);
 
-        nombre.setText(NombreMas);
-        caracteristicas.setText(Caracteristicas);
-        datos_perdida.setText(UbicacionPerdida);
-        Glide.with(getContext()).load(Imagen).into(image);
-        //Picasso.get().load(Imagen).into(image);
 
-        return view;
-    }
-
-    public void onBackPressed(){
-        AppCompatActivity activity=(AppCompatActivity)getContext();
-        activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new recfragment()).addToBackStack(null).commit();
-    }
 }

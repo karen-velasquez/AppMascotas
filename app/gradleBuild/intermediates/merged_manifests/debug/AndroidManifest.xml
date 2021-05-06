@@ -41,6 +41,7 @@
         <activity android:name="com.example.mascotasproject.IA.CameraActivity" />
         <activity android:name="com.example.mascotasproject.IA.SimpleListActivity" />
         <activity android:name="com.example.mascotasproject.MostrarRecycler" />
+        <activity android:name="com.example.mascotasproject.desfragment" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

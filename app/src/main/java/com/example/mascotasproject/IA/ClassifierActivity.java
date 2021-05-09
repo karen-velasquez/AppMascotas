@@ -91,8 +91,9 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
                 inferenceTask = new InferenceTask();
                 inferenceTask.execute(croppedFromGallery);
                 Toast.makeText(getApplicationContext(), "ESTOY AQUI WE", Toast.LENGTH_LONG).show();
-                upload_storage(imageUri);
-
+                if(getQuien().equals("Usuario")){
+                    upload_storage(imageUri);
+                }
             });
         } catch (IOException e) {
             Toast.makeText(getApplicationContext(), "Unable to load image", Toast.LENGTH_LONG).show();
@@ -121,6 +122,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
                             Uri url = uri.getResult();
                             System.out.println("EL URL DONDE SE GUARDO ES "+url);
                             Toast.makeText(ClassifierActivity.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
+
                             modeltemporal modelo=new modeltemporal(getCodigo(),url.toString());
                             //obteniendo el id de la imagen subida
                             String imageUploadId= mDatabaseReference.push().getKey();

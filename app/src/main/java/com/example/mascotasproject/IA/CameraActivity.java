@@ -328,6 +328,11 @@ public abstract class CameraActivity extends FragmentActivity
         System.out.println("numero 1quien es el codigo1"+codigo);
         return codigo;
     }
+    public String getQuien() {
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero 1quien es el codigo1"+quien);
+        return quien;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

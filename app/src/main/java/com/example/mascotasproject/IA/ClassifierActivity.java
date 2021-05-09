@@ -47,6 +47,9 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     @Override
     void handleSendImage(Intent data) {
         final Uri imageUri = data.getParcelableExtra(Intent.EXTRA_STREAM);
+        //Obteniendo los datos de quien es
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero 2222222222"+quien);
         classifyLoadedImage(imageUri);
     }
 
@@ -56,6 +59,8 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+
 
         if (resultCode == RESULT_OK && requestCode == PICK_IMAGE)
             classifyLoadedImage(data.getData());
@@ -185,7 +190,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
 
     @Override
     protected void processImage() {
-        if (!snapShot.get() && !continuousInference && !imageSet) {
+        if (!snapShot.get() && !imageSet) {
             readyForNextImage();
             return;
         }
@@ -194,11 +199,11 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
         final Canvas canvas = new Canvas(croppedBitmap);
         canvas.drawBitmap(rgbFrameBitmap, frameToCropTransform, null);
 
-        if (snapShot.compareAndSet(true, false) || continuousInference) {
+        if (snapShot.compareAndSet(true, false)) {
             final Bitmap finalCroppedBitmap = croppedBitmap.copy(croppedBitmap.getConfig(), false);
 
             runOnUiThread(() -> {
-                if (!continuousInference && !imageSet)
+                if (!imageSet)
                     setImage(finalCroppedBitmap);
 
                 inferenceTask = new InferenceTask();
@@ -210,7 +215,6 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     protected class InferenceTask extends AsyncTask<Bitmap, Void, List<Classifier.Recognition>> {
         @Override
         protected void onPreExecute() {
-            if (!continuousInference)
                 progressBar.setVisibility(View.VISIBLE);
         }
 

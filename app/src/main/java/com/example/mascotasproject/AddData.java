@@ -11,6 +11,7 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -34,7 +35,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -62,6 +65,10 @@ public class AddData extends AppCompatActivity {
 
     //Code de requisito para escoger imagen
     int IMAGE_REQUEST_CODE=5;
+
+    //Datos para el stored
+    String mnombreUp,mperdidaUp,mimagenUp,mcaracUp;
+
 
 
     @Override
@@ -93,11 +100,36 @@ public class AddData extends AppCompatActivity {
 
 
 
+
+
+        //Obteniendo los datos del Intent
+        Bundle intent=getIntent().getExtras();
+        if(intent!=null){
+            mnombreUp=intent.getString("nombreMas");
+            mperdidaUp=intent.getString("perdida");
+            mcaracUp=intent.getString("caracteristica");
+            mimagenUp=intent.getString("image");
+            nombreAdd.setText(mnombreUp);
+            perdidaAdd.setText(mperdidaUp);
+            Picasso.get().load(mimagenUp).into(imagenAdd);
+            actionBar.setTitle("Actualizar post");
+            mUploadBtn.setText("Actualizar");
+
+        }
+
+
+
         //AL HACER CLICK EN EL BOTON
         mUploadBtn.setOnClickListener(new View.OnClickListener(){
             @Override
-                    public void onClick(View v){
-                        uploadDatatoFirebase();
+            public void onClick(View v){
+                if(mUploadBtn.getText().equals("Upload")){
+                    uploadDatatoFirebase();
+                }else {
+                    beginUpdate();
+                }
+
+
             }
         });
         //asignando la instancia de firebasestorage a un objeto de storage
@@ -107,6 +139,94 @@ public class AddData extends AppCompatActivity {
 
         //progress dialog
         mProgressDialog=new ProgressDialog(AddData.this);
+
+    }
+
+    private void beginUpdate() {
+        mProgressDialog.setMessage("Actualizando....");
+        mProgressDialog.show();
+        deletePreviousImage();
+
+    }
+
+    private void deletePreviousImage() {
+        FirebaseStorage storage= FirebaseStorage.getInstance();
+        StorageReference mPictureRef=storage.getReferenceFromUrl(mimagenUp);
+        mPictureRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                //eliminando
+
+                Toast.makeText(AddData.this,"Eliminada imagen antigua....",Toast.LENGTH_SHORT).show();
+                uploadNewImage();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                //error al eliminar
+                Toast.makeText(AddData.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                mProgressDialog.dismiss();
+            }
+        });
+    }
+
+    private void uploadNewImage() {
+        String imagename=System.currentTimeMillis()+".png";
+        StorageReference storageReference=mStorageReference.child(mStoragePath+imagename);
+        Bitmap bitmap= ((BitmapDrawable)imagenAdd.getDrawable()).getBitmap();
+        ByteArrayOutputStream baos=new ByteArrayOutputStream();
+        //compress image
+        bitmap.compress(Bitmap.CompressFormat.PNG,100,baos);
+        byte[] data=baos.toByteArray();
+        UploadTask uploadTask=storageReference.putBytes(data);
+        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(AddData.this,"Nueva imagen actualizada",Toast.LENGTH_SHORT).show();
+                //sacando la url de storage
+                Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                while(!uri.isSuccessful());
+                Uri url = uri.getResult();
+                //actualizando en la BD
+                updateDatabase(url.toString());
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(AddData.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                mProgressDialog.dismiss();
+            }
+        });
+    }
+
+    private void updateDatabase(final String s) {
+        //actualizando valores
+        String nombre=nombreAdd.getText().toString();
+        String perdida=perdidaAdd.getText().toString();
+        FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+        DatabaseReference mRef=firebaseDatabase.getReference("Mascotas/Datos");
+        Query query=mRef.orderByChild("NombreMas").equalTo(nombre);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //actualizando datos
+                for(DataSnapshot ds:snapshot.getChildren()){
+                    //actualizando
+                    ds.getRef().child("NombreMas").setValue(nombre);
+                    ds.getRef().child("ubicacionPerdida").setValue(perdida);
+                    ds.getRef().child("imagen").setValue(s);
+                }
+                mProgressDialog.dismiss();
+                Toast.makeText(AddData.this,"Datos actualizados",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(AddData.this,MostrarRecycler.class));
+                finish();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
 

@@ -37,9 +37,9 @@
         android:layout_alignTop="@+id/continuousInferenceButton"
         android:layout_centerHorizontal="true"
         android:background="@drawable/roundedbutton"
-        android:src="@mipmap/camera_icon"
+        android:src="@mipmap/ic_action_gallery_icon"
         android:translationZ="50dp"
-        android:translationX="100dp"/>
+        android:translationX="120dp"/>
 
     <ImageButton
         android:id="@+id/shareButton"
@@ -52,15 +52,28 @@
         android:translationZ="200dp"
         android:visibility="gone" />
 
+
     <ImageButton
-        android:id="@+id/saveButton"
+        android:id="@+id/checkButtoninvitado"
         android:layout_width="54dp"
         android:layout_height="54dp"
         android:layout_alignTop="@+id/continuousInferenceButton"
         android:layout_marginEnd="48dp"
         android:layout_toStartOf="@+id/cameraButton"
         android:background="@drawable/roundedbutton"
-        android:src="@mipmap/ic_action_save"
+        android:src="@mipmap/ic_action_check"
+        android:translationZ="200dp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/checkButtonusuario"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_alignTop="@+id/continuousInferenceButton"
+        android:layout_marginEnd="48dp"
+        android:layout_toStartOf="@+id/cameraButton"
+        android:background="@drawable/roundedbutton"
+        android:src="@mipmap/ic_action_check"
         android:translationZ="200dp"
         android:visibility="gone" />
 
@@ -77,12 +90,36 @@
         android:visibility="gone" />
 
     <TextView
+        android:id="@+id/titledogs"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:text="SACALE UNA FOTO A LA MASCOTA"
+        android:background="@drawable/button_background_selector"
+        android:elevation="@android:dimen/app_icon_size"
+        android:enabled="false"
+        android:paddingLeft="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"
+        android:translationZ="200dp"
+        android:textSize="25sp"/>
+    <TextView
         android:id="@+id/results"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/primary_text_dark"
-        android:text="MEGA FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
-        android:textSize="22sp"/>
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:text="Sacale una foto al rostro de la mascota desde una distancia razonable"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_background_selector"
+        android:elevation="@android:dimen/app_icon_size"
+        android:enabled="false"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:paddingLeft="5dp"
+        android:textColor="@android:color/background_light"
+        android:translationZ="200dp"
+        android:textSize="20sp"/>
    <!-- <com.example.mascotasproject.IA.RecognitionScoreView
         android:id="@+id/results"
         android:layout_width="match_parent"

@@ -3,25 +3,15 @@ package com.example.mascotasproject
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-import android.os.Handler;
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import com.example.mascotasproject.IA.CameraActivity
 import com.example.mascotasproject.IA.ClassifierActivity
-import com.example.mascotasproject.IA.GetLocation
 import com.example.mascotasproject.IA.LogInActivity
 import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
-import kotlin.reflect.full.declaredMemberFunctions
-import kotlin.reflect.full.memberProperties
-import kotlin.reflect.jvm.isAccessible
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -40,6 +30,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //Botón Get Location
+        val btnsegundo: Button =findViewById(R.id.btn_segundo)
+        btnsegundo.setOnClickListener{
+            val intent= Intent(this, OpcionesIngreso:: class.java)
+            startActivity(intent)
+        }
 
         val btnAdd: Button =findViewById(R.id.btn_add)
         btnAdd.setOnClickListener{

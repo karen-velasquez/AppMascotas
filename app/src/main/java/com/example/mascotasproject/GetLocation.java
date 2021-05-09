@@ -1,4 +1,4 @@
-package com.example.mascotasproject.IA;
+package com.example.mascotasproject;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -15,8 +15,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 
-import com.example.mascotasproject.MainActivity;
-import com.example.mascotasproject.R;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;

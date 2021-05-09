@@ -1864,6 +1864,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable roundedbutton
+drawable roundedbuttonfont
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1977,6 +1978,7 @@ id btn_add
 id btn_cardview
 id btn_getLocation
 id btn_logIn
+id btn_segundo
 id button
 id buttonGetCurrentLocation
 id buttonPanel
@@ -1993,6 +1995,8 @@ id center_vertical
 id chain
 id chains
 id chart
+id checkButtoninvitado
+id checkButtonusuario
 id checkbox
 id checked
 id chip
@@ -2116,6 +2120,7 @@ id img1
 id info
 id inline
 id invisible
+id invitado
 id inward
 id italic
 id item_touch_helper_previous_elevation
@@ -2136,6 +2141,7 @@ id linear
 id listMode
 id list_breeds
 id list_item
+id locationButton
 id lvExp
 id mRecyclerView
 id masked
@@ -2249,7 +2255,6 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id saveButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2347,6 +2352,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id titledogs
 id toggle
 id toolbar
 id top
@@ -2366,6 +2372,7 @@ id unknown
 id unlabeled
 id up
 id useLogo
+id usuario
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2444,6 +2451,7 @@ layout activity_list
 layout activity_log_in
 layout activity_main
 layout activity_mostrar_recycler
+layout activity_opciones_ingreso
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout camera_connection_fragment
@@ -2556,6 +2564,8 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu menu_main
 mipmap camera_icon
+mipmap ic_action_check
+mipmap ic_action_gallery_icon
 mipmap ic_action_save
 mipmap ic_launcher
 mipmap ic_launcher_round

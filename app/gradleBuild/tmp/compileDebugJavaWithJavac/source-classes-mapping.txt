@@ -1,5 +1,6 @@
 com/example/mascotasproject/desfragment.java
  com.example.mascotasproject.desfragment
+ com.example.mascotasproject.desfragment$1
 com/example/mascotasproject/IA/CameraConnectionFragment.java
  com.example.mascotasproject.IA.CameraConnectionFragment
  com.example.mascotasproject.IA.CameraConnectionFragment$1
@@ -19,10 +20,6 @@ com/example/mascotasproject/IA/LogInActivity.java
  com.example.mascotasproject.IA.LogInActivity$2
  com.example.mascotasproject.IA.LogInActivity$3
  com.example.mascotasproject.IA.LogInActivity$4
-com/example/mascotasproject/IA/GetLocation.java
- com.example.mascotasproject.IA.GetLocation
- com.example.mascotasproject.IA.GetLocation$1
- com.example.mascotasproject.IA.GetLocation$2
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
 com/example/mascotasproject/IA/env/ImageUtils.java
@@ -30,23 +27,31 @@ com/example/mascotasproject/IA/env/ImageUtils.java
 com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData
  com.example.mascotasproject.AddData$1
+ com.example.mascotasproject.AddData$10
+ com.example.mascotasproject.AddData$11
+ com.example.mascotasproject.AddData$11$1
+ com.example.mascotasproject.AddData$11$2
+ com.example.mascotasproject.AddData$11$3
+ com.example.mascotasproject.AddData$12
  com.example.mascotasproject.AddData$2
  com.example.mascotasproject.AddData$3
  com.example.mascotasproject.AddData$4
  com.example.mascotasproject.AddData$5
  com.example.mascotasproject.AddData$6
- com.example.mascotasproject.AddData$6$1
- com.example.mascotasproject.AddData$6$2
- com.example.mascotasproject.AddData$6$3
  com.example.mascotasproject.AddData$7
+ com.example.mascotasproject.AddData$8
+ com.example.mascotasproject.AddData$9
 com/example/mascotasproject/BuildConfig.java
  com.example.mascotasproject.BuildConfig
+com/example/mascotasproject/GetLocation.java
+ com.example.mascotasproject.GetLocation
+ com.example.mascotasproject.GetLocation$1
+ com.example.mascotasproject.GetLocation$2
 com/example/mascotasproject/IA/CameraActivity.java
  com.example.mascotasproject.IA.CameraActivity
  com.example.mascotasproject.IA.CameraActivity$1
  com.example.mascotasproject.IA.CameraActivity$2
  com.example.mascotasproject.IA.CameraActivity$3
- com.example.mascotasproject.IA.CameraActivity$4
 com/example/mascotasproject/IA/SimpleListActivity.java
  com.example.mascotasproject.IA.SimpleListActivity
 com/example/mascotasproject/IA/Classifier.java
@@ -66,11 +71,18 @@ com/example/mascotasproject/MostrarRecycler.java
  com.example.mascotasproject.MostrarRecycler$1
  com.example.mascotasproject.MostrarRecycler$1$1
  com.example.mascotasproject.MostrarRecycler$1$2
+ com.example.mascotasproject.MostrarRecycler$1$2$1
  com.example.mascotasproject.MostrarRecycler$2
  com.example.mascotasproject.MostrarRecycler$2$1
  com.example.mascotasproject.MostrarRecycler$2$2
- com.example.mascotasproject.MostrarRecycler$2$3
+ com.example.mascotasproject.MostrarRecycler$2$2$1
  com.example.mascotasproject.MostrarRecycler$3
+ com.example.mascotasproject.MostrarRecycler$3$1
+ com.example.mascotasproject.MostrarRecycler$3$2
+ com.example.mascotasproject.MostrarRecycler$3$3
+ com.example.mascotasproject.MostrarRecycler$4
  com.example.mascotasproject.MostrarRecycler$Holder
  com.example.mascotasproject.MostrarRecycler$Holder$1
  com.example.mascotasproject.MostrarRecycler$Holder$2
+com/example/mascotasproject/OpcionesIngreso.java
+ com.example.mascotasproject.OpcionesIngreso

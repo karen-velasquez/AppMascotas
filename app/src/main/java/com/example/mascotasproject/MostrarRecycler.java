@@ -13,6 +13,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,9 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,10 +42,11 @@ import com.squareup.picasso.Picasso;
 import java.io.ByteArrayOutputStream;
 
 public class MostrarRecycler extends AppCompatActivity {
-
+    private static final String TAG = "MostrarRecycler";
     RecyclerView mRecyclerView;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mRef;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,7 @@ public class MostrarRecycler extends AppCompatActivity {
         //colocando el layout en el linearlayout
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mRef=mFirebaseDatabase.getReference("Mascotas/Datos");
+         mAuth = FirebaseAuth.getInstance();
 
 
     }
@@ -67,63 +73,182 @@ public class MostrarRecycler extends AppCompatActivity {
     protected void onStart() {
         System.out.println("Llegue a este nivel numero 2..............");
         super.onStart();
-        FirebaseRecyclerOptions<model> options =
-                new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(mRef,model.class)
-                        .build();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null) {
+            // do your stuff
+            FirebaseRecyclerOptions<model> options =
+                    new FirebaseRecyclerOptions.Builder<model>()
+                            .setQuery(mRef,model.class)
+                            .build();
 
-        FirebaseRecyclerAdapter<model, Holder> firebaseRecyclerAdapter=
-                new FirebaseRecyclerAdapter<model, Holder>(options) {
-                    @Override
-                    protected void onBindViewHolder(@NonNull Holder holder, int position, @NonNull model model) {
-                        holder.mnombreMas.setText(model.getNombreMas());
-                        holder.mCaractericas.setText(model.getCaracteristicas());
-                        holder.mdatosperdida.setText(model.getUbicacionPerdida());
-                        Picasso.get().load(model.getImagen()).into(holder.mimagen);
+            FirebaseRecyclerAdapter<model, Holder> firebaseRecyclerAdapter=
+                    new FirebaseRecyclerAdapter<model, Holder>(options) {
+                        @Override
+                        protected void onBindViewHolder(@NonNull Holder holder, int position, @NonNull model model) {
+                            holder.mnombreMas.setText(model.getNombreMas());
+                            holder.mCaractericas.setText(model.getCaracteristicas());
+                            holder.mdatosperdida.setText(model.getUbicacionPerdida());
+                            Picasso.get().load(model.getImagen()).into(holder.mimagen);
 
-                        holder.setOnClickListener(new View.OnClickListener() {
+                            holder.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent=new Intent(view.getContext(),desfragment.class);
+                                    intent.putExtra("nombreMas",model.getNombreMas());
+                                    intent.putExtra("caracteristica",model.getCaracteristicas());
+                                    intent.putExtra("perdida",model.getUbicacionPerdida());
+                                    intent.putExtra("image",model.getImagen());
+                                    startActivity(intent);
+                                }
+
+                            });
+                            holder.setOnLongClickListener(new View.OnLongClickListener(){
+                                @Override
+                                public boolean onLongClick(View view){
+
+                                    AlertDialog.Builder builder=new AlertDialog.Builder(MostrarRecycler.this);
+                                    String[]options={"Actualizar","Eliminar"};
+                                    //escoger dialog
+                                    builder.setItems(options, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            //dependiendo de lo que escoja
+                                            if(which==0){
+                                                //click actualizar
+                                                Intent intent=new Intent(MostrarRecycler.this,desfragment.class);
+                                                intent.putExtra("nombreMas",(model.getNombreMas()).toString());
+                                                intent.putExtra("caracteristica",model.getCaracteristicas().toString());
+                                                intent.putExtra("perdida",model.getUbicacionPerdida().toString());
+                                                intent.putExtra("image",model.getImagen().toString());
+                                                startActivity(intent);
+
+                                            }
+                                            if(which==1){
+                                                //click eliminar
+                                                //llamar metodo
+                                                showDeleteDataDialog(model.getNombreMas().toString(),model.getImagen().toString());
+                                            }
+                                        }
+                                    });
+                                    builder.create().show();
+
+                                    return true;
+
+                                }
+                            });
+
+                        }
+
+
+                        @NonNull
+                        @Override
+                        public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                            View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerowdesign,parent,false);
+                            Holder viewHolder=new Holder(view);
+                            return viewHolder;
+                        }
+
+
+                    };
+
+            firebaseRecyclerAdapter.startListening();
+            RecyclerView mRecyclerView=(RecyclerView) this.findViewById(R.id.mRecyclerView);
+            mRecyclerView.setAdapter(firebaseRecyclerAdapter);
+        } else {
+            signInAnonymously();
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+    private void signInAnonymously() {
+                // do your stuff
+                FirebaseRecyclerOptions<model> options =
+                        new FirebaseRecyclerOptions.Builder<model>()
+                                .setQuery(mRef,model.class)
+                                .build();
+
+                FirebaseRecyclerAdapter<model, Holder> firebaseRecyclerAdapter=
+                        new FirebaseRecyclerAdapter<model, Holder>(options) {
                             @Override
-                            public void onClick(View view) {
-                                Intent intent=new Intent(view.getContext(),desfragment.class);
-                                intent.putExtra("nombreMas",model.getNombreMas());
-                                intent.putExtra("caracteristica",model.getCaracteristicas());
-                                intent.putExtra("perdida",model.getUbicacionPerdida());
-                                intent.putExtra("image",model.getImagen());
-                                startActivity(intent);
+                            protected void onBindViewHolder(@NonNull Holder holder, int position, @NonNull model model) {
+                                holder.mnombreMas.setText(model.getNombreMas());
+                                holder.mCaractericas.setText(model.getCaracteristicas());
+                                holder.mdatosperdida.setText(model.getUbicacionPerdida());
+                                Picasso.get().load(model.getImagen()).into(holder.mimagen);
+
+                                holder.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent=new Intent(view.getContext(),desfragment.class);
+                                        intent.putExtra("nombreMas",model.getNombreMas());
+                                        intent.putExtra("caracteristica",model.getCaracteristicas());
+                                        intent.putExtra("perdida",model.getUbicacionPerdida());
+                                        intent.putExtra("image",model.getImagen());
+                                        startActivity(intent);
+                                    }
+
+                                });
+                                holder.setOnLongClickListener(new View.OnLongClickListener(){
+                                    @Override
+                                    public boolean onLongClick(View view){
+
+                                        AlertDialog.Builder builder=new AlertDialog.Builder(MostrarRecycler.this);
+                                        String[]options={"Actualizar","Eliminar"};
+                                        //escoger dialog
+                                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                //dependiendo de lo que escoja
+                                                if(which==0){
+                                                    //click actualizar
+                                                    Intent intent=new Intent(MostrarRecycler.this,desfragment.class);
+                                                    intent.putExtra("nombreMas",(model.getNombreMas()).toString());
+                                                    intent.putExtra("caracteristica",model.getCaracteristicas().toString());
+                                                    intent.putExtra("perdida",model.getUbicacionPerdida().toString());
+                                                    intent.putExtra("image",model.getImagen().toString());
+                                                    startActivity(intent);
+
+                                                }
+                                                if(which==1){
+                                                    //click eliminar
+                                                    //llamar metodo
+                                                    showDeleteDataDialog(model.getNombreMas().toString(),model.getImagen().toString());
+                                                }
+                                            }
+                                        });
+                                        builder.create().show();
+
+                                        return true;
+
+                                    }
+                                });
+
                             }
 
-                        });
-                        holder.setOnLongClickListener(new View.OnLongClickListener(){
+
+                            @NonNull
                             @Override
-                            public boolean onLongClick(View view){
-                                String nombre= model.getNombreMas();
-                                String image=model.getImagen();
-                                showDeleteDataDialog(nombre,image);
-                                return true;
+                            public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                                View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerowdesign,parent,false);
+                                Holder viewHolder=new Holder(view);
+                                return viewHolder;
                             }
-                        });
-
-                    }
 
 
-                    @NonNull
-                    @Override
-                    public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerowdesign,parent,false);
-                        Holder viewHolder=new Holder(view);
-                        return viewHolder;
-                    }
+                        };
 
-
-                };
-
-        firebaseRecyclerAdapter.startListening();
-        RecyclerView mRecyclerView=(RecyclerView) this.findViewById(R.id.mRecyclerView);
-        mRecyclerView.setAdapter(firebaseRecyclerAdapter);
-
-
-
-
+                firebaseRecyclerAdapter.startListening();
+              //  mRecyclerView=new RecyclerView();
+             //   RecyclerView mRecyclerView=(RecyclerView) this.findViewById(R.id.mRecyclerView);
+                mRecyclerView.setAdapter(firebaseRecyclerAdapter);
 
     }
 

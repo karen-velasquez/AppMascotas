@@ -1,35 +1,24 @@
 package com.example.mascotasproject;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import android.os.PersistableBundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
-
-import java.io.ByteArrayOutputStream;
 
 
 public class desfragment extends AppCompatActivity {
     TextView mnombreMas, mCaractericas, mdatosperdida;
     ImageView mimagen;
+    ImageButton mlocation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,6 +36,7 @@ public class desfragment extends AppCompatActivity {
         mCaractericas=findViewById(R.id.caracteristicaholder);
         mdatosperdida=findViewById(R.id.perdidaholder);
         mimagen=findViewById(R.id.imageholder);
+        mlocation=findViewById(R.id.locationButton);
 
         //Obteniendo los datos del intent
         String mnombre=getIntent().getStringExtra("nombreMas");
@@ -63,6 +53,14 @@ public class desfragment extends AppCompatActivity {
         mdatosperdida.setText(mdatosper);
         Picasso.get().load(image).into(mimagen);
 
+
+        mlocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(desfragment.this, GetLocation.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

@@ -57,7 +57,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.example.mascotasproject.GetLocation;
+import com.example.mascotasproject.MostrarRecycler;
 import com.example.mascotasproject.R;
+import com.example.mascotasproject.desfragment;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -99,9 +102,8 @@ public abstract class CameraActivity extends FragmentActivity
     TextView resultsView;
     PieChart mChart;
     AtomicBoolean snapShot = new AtomicBoolean(false);
-    boolean continuousInference = false;
     boolean imageSet = false;
-    ImageButton cameraButton, shareButton, closeButton, saveButton,pick;
+    ImageButton cameraButton, closeButton, pick,checkButtonGral,checkButtonuser;
     ToggleButton continuousInferenceButton;
     ImageView imageViewFromGallery;
     ProgressBar progressBar;
@@ -116,6 +118,7 @@ public abstract class CameraActivity extends FragmentActivity
     private boolean useCamera2API;
     private String fileUrl;
     private boolean alreadyAdded = false;
+
 
 
     public static String preferredLanguageCode;
@@ -182,11 +185,29 @@ public abstract class CameraActivity extends FragmentActivity
 
         continuousInferenceButton = findViewById(R.id.continuousInferenceButton);
         cameraButton = findViewById(R.id.cameraButton);
-        shareButton = findViewById(R.id.shareButton);
+     //   shareButton = findViewById(R.id.shareButton);
+        checkButtonGral=findViewById(R.id.checkButtoninvitado);
         closeButton = findViewById(R.id.closeButton);
-        saveButton = findViewById(R.id.saveButton);
+        checkButtonuser=findViewById(R.id.checkButtonusuario);
+
         pick=findViewById(R.id.pick);
         cameraButton.setEnabled(false);
+
+        checkButtonGral.setOnClickListener(v-> {
+            Intent intent=new Intent(CameraActivity.this, MostrarRecycler.class);
+            startActivity(intent);
+
+        });
+
+        checkButtonuser.setOnClickListener(v-> {
+            Intent intent=new Intent(CameraActivity.this, GetLocation.class);
+            startActivity(intent);
+
+        });
+
+
+
+
 
         pick.setOnClickListener(v -> {
         if (!hasPermission(PERMISSION_STORAGE_READ)) {
@@ -195,7 +216,11 @@ public abstract class CameraActivity extends FragmentActivity
         }
         pickImage();
         });
-            setButtonsVisibility(View.GONE);
+        //Obteniendo los datos de quien es
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero 111111"+quien);
+
+        setButtonsVisibility(View.GONE,quien);
 
             cameraButton.setOnClickListener(v -> {
             if (!hasPermission(PERMISSION_CAMERA)) {
@@ -236,31 +261,8 @@ public abstract class CameraActivity extends FragmentActivity
             pnlFlash.startAnimation(fade);
         });
 
-        continuousInferenceButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (!hasPermission(PERMISSION_CAMERA)) requestPermission(PERMISSION_CAMERA);
-
-            imageViewFromGallery.setVisibility(View.GONE);
-            continuousInference = isChecked;
-
-            if (!continuousInference)
-                if (inferenceTask != null)
-                    inferenceTask.cancel(true);
-
-            if (!isChecked)
-                resultsView.setEnabled(false);
-
-            cameraButton.setEnabled(true);
-
-            imageSet = false;
-
-            if (handler != null)
-                handler.post(() -> updateResults(null));
-
-            readyForNextImage();
-        });
-
         resultsView.setOnClickListener(v -> {
-            if (currentRecognitions == null || continuousInference || currentRecognitions.size() == 0)
+            if (currentRecognitions == null|| currentRecognitions.size() == 0)
                 return;
 
             final Intent i = new Intent(getApplicationContext(), com.example.mascotasproject.IA.SimpleListActivity.class);
@@ -268,6 +270,7 @@ public abstract class CameraActivity extends FragmentActivity
             startActivity(i);
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -691,32 +694,40 @@ public abstract class CameraActivity extends FragmentActivity
     void updateResults(List<Classifier.Recognition> results) {
         runOnUiThread(() -> {
             updateResultsView(results);
-            updatePieChart(results);
         });
     }
 
-    void setButtonsVisibility(final int visibility) {
+    void setButtonsVisibility(final int visibility, String quien) {
         final boolean enabled = visibility == View.VISIBLE;
-
-        shareButton.setVisibility(visibility);
-        shareButton.setEnabled(enabled);
+        System.out.println("QUE ENTROOOOOO ADENTRO DE LA VISIBILIDAD"+quien);
+        if(quien.toString().equals("Invitado")){
+            checkButtonGral.setVisibility(visibility);
+            checkButtonGral.setEnabled(enabled);
+        }
+        if(quien.equals("Usuario")){
+            checkButtonuser.setVisibility(visibility);
+            checkButtonuser.setEnabled(enabled);
+        }
         closeButton.setVisibility(visibility);
         closeButton.setEnabled(enabled);
-        saveButton.setVisibility(visibility);
-        saveButton.setEnabled(enabled);
+      // saveButton.setVisibility(visibility);
+       // saveButton.setEnabled(enabled);
     }
 
     // update results on our custom textview
     void updateResultsView(List<Classifier.Recognition> results) {
+        String mensaje="";
         final StringBuilder sb = new StringBuilder();
         currentRecognitions = new ArrayList<String>();
 
         if (results != null) {
             resultsView.setEnabled(true);
 
-            if (!continuousInference) {
-                setButtonsVisibility(View.VISIBLE);
-            }
+            //Obteniendo los datos de quien es
+            String quien=getIntent().getStringExtra("quien");
+            System.out.println("numero 111111"+quien);
+            setButtonsVisibility(View.VISIBLE,quien);
+
 
             if (results.size() > 0) {
                 for (final Classifier.Recognition recog : results) {
@@ -725,63 +736,22 @@ public abstract class CameraActivity extends FragmentActivity
                     sb.append(text);
                     currentRecognitions.add(recog.getTitle());
                 }
+                mensaje=("Imagen correctamente analizada");
             } else {
-                sb.append(getString(R.string.no_detection));
+              //  sb.append(getString(R.string.no_detection));
+                mensaje=("Saca una mejor foto a la mascota, no se reconocio a la mascota");
             }
         } else {
             resultsView.setEnabled(false);
         }
 
         final String finalText = sb.toString();
-        resultsView.setText(finalText);
+        //resultsView.setText(finalText);
+        resultsView.setText(mensaje);
+        System.out.println(finalText);
+
     }
 
-    void updatePieChart(List<Classifier.Recognition> results) {
-        final ArrayList<PieEntry> entries = new ArrayList<>();
-        float sum = 0;
-
-        if (results != null)
-            for (int i = 0; i < results.size(); i++) {
-                sum += results.get(i).getConfidence();
-
-                PieEntry entry = new PieEntry(results.get(i).getConfidence() * 100, results.get(i).getTitle());
-                entries.add(entry);
-            }
-
-        // add unknown slice
-        final float unknown = 1 - sum;
-        entries.add(new PieEntry(unknown * 100, ""));
-
-        //calculate center of slice
-        final float offset = entries.get(0).getValue() * 3.6f / 2;
-        // calculate the next angle
-        final float end = 270f - (entries.get(0).getValue() * 3.6f - offset);
-
-        final PieDataSet set = new PieDataSet(entries, "");
-
-        if (entries.size() > 2)
-            set.setSliceSpace(3f);
-
-        // set slice colors
-        final ArrayList<Integer> sliceColors = new ArrayList<>();
-
-        for (int c : CHART_COLORS)
-            sliceColors.add(c);
-
-        if (entries.size() > 0)
-            sliceColors.set(entries.size() - 1, R.color.transparent);
-
-        set.setColors(sliceColors);
-        set.setDrawValues(false);
-
-        final PieData data = new PieData(set);
-        mChart.setData(data);
-
-        //rotate to center of first slice
-        mChart.setRotationAngle(end);
-        mChart.setEntryLabelTextSize(16);
-        mChart.invalidate();
-    }
 
     protected void setImage(Bitmap image) {
         final int transitionTime = 1000;
@@ -795,7 +765,6 @@ public abstract class CameraActivity extends FragmentActivity
         final TransitionDrawable transition = (TransitionDrawable) imageViewFromGallery.getBackground();
         transition.startTransition(transitionTime);
 
-        setupShareButton();
 
         // fade out image on click
         final AlphaAnimation fade = new AlphaAnimation(1, 0);
@@ -811,7 +780,10 @@ public abstract class CameraActivity extends FragmentActivity
                 runInBackground(() -> updateResults(null));
                 transition.reverseTransition(transitionTime);
                 imageViewFromGallery.setVisibility(View.GONE);
-                setButtonsVisibility(View.GONE);
+                //Obteniendo los datos de quien es
+                String quien=getIntent().getStringExtra("quien");
+                System.out.println("numero 111111"+quien);
+                setButtonsVisibility(View.GONE, quien);
             }
 
             @Override
@@ -832,60 +804,18 @@ public abstract class CameraActivity extends FragmentActivity
         imageViewFromGallery.setVisibility(View.VISIBLE);
         closeButton.setOnClickListener(v -> imageViewFromGallery.startAnimation(fade));
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveImage();
-            }
-        });
 
     }
 
     public Bitmap takeScreenshot() {
-        setButtonsVisibility(View.GONE);
+        //Obteniendo los datos de quien es
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero 111111"+quien);
+        setButtonsVisibility(View.GONE,quien);
         final View rootView = findViewById(android.R.id.content).getRootView();
         rootView.setDrawingCacheEnabled(true);
         final Bitmap b = rootView.getDrawingCache();
-        setButtonsVisibility(View.VISIBLE);
+        setButtonsVisibility(View.VISIBLE,quien);
         return b;
-    }
-
-    private void saveImage() {
-        if (!hasPermission(PERMISSION_STORAGE_WRITE)) {
-            requestPermission(PERMISSION_STORAGE_WRITE);
-            return;
-        }
-        
-        if (!alreadyAdded) {
-            final String fileName = getString(R.string.app_name) + " " + System.currentTimeMillis() / 1000;
-            fileUrl = MediaStore.Images.Media.insertImage(getContentResolver(), takeScreenshot(), fileName, currentRecognitions.toString());
-            alreadyAdded = true;
-        }
-
-        saveButton.setVisibility(View.GONE);
-        saveButton.setEnabled(false);
-    }
-
-    protected void setupShareButton() {
-
-        shareButton.setOnClickListener(v -> {
-            if (!hasPermission(PERMISSION_STORAGE_WRITE)) {
-                requestPermission(PERMISSION_STORAGE_WRITE);
-                return;
-            }
-
-            saveImage();
-
-            final Uri contentUri = Uri.parse(fileUrl);
-
-            if (contentUri != null) {
-                Intent shareIntent = new Intent();
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); // temp permission for receiving app to read this file
-                shareIntent.setDataAndType(contentUri, getContentResolver().getType(contentUri));
-                shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
-                startActivity(Intent.createChooser(shareIntent, getString(R.string.share_with)));
-            }
-        });
     }
 }

@@ -56,6 +56,8 @@ com/example/mascotasproject/IA/CameraActivity.java
  com.example.mascotasproject.IA.CameraActivity$1
  com.example.mascotasproject.IA.CameraActivity$2
  com.example.mascotasproject.IA.CameraActivity$3
+com/example/mascotasproject/InfoPet.java
+ com.example.mascotasproject.InfoPet
 com/example/mascotasproject/IA/SimpleListActivity.java
  com.example.mascotasproject.IA.SimpleListActivity
 com/example/mascotasproject/loginnumero.java

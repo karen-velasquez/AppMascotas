@@ -36,7 +36,7 @@
     <string name="yes">Yes</string>
     <string name="no_detection">No detection</string>
     <string name="change_language">Change Language</string>
-
+    <string name="PetInfo">Muestra Información de dicha mascota</string>
 
     <string name="facebook_app_id">161912065819486</string>
 

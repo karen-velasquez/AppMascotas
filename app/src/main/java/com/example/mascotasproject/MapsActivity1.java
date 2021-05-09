@@ -1,5 +1,6 @@
 package com.example.mascotasproject;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
@@ -8,12 +9,16 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private Marker InfoWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +30,32 @@ public class MapsActivity1 extends FragmentActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Add a marker in La Paz
+        LatLng lapaz = new LatLng(-16.540280161376856, -68.08833198852622);
+        mMap.addMarker(new MarkerOptions().position(lapaz).title("Marker in La Paz").snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(lapaz));
+
+        LatLng pet1 = new LatLng(-16.522954746025434, -68.08032188119428);
+        InfoWindow = googleMap.addMarker(new MarkerOptions()
+                .position(pet1)
+                .title("Lost Pet 1").snippet("Quizá un resúmen de mascotas perdidas.")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_weso)));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lapaz,7));
+        googleMap.setOnInfoWindowClickListener(this);
+    }
+
+    @Override
+    public void onInfoWindowClick(@NonNull Marker marker) {
+        if (marker.equals(InfoWindow)){
+            InfoPet.newIntance(marker.getTitle(),
+                    getString(R.string.PetInfo))
+                    .show(getSupportFragmentManager(),null);
+        }
     }
 }

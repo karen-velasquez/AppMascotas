@@ -40,12 +40,16 @@
         "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_mostrar_recycler.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker_weso.png.flat",
+        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\marker_weso.png"
     },
     {
         "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_save.png.flat",
         "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_save.png"
+    },
+    {
+        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -238,5 +242,9 @@
     {
         "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker.png.flat",
+        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\marker.png"
     }
 ]

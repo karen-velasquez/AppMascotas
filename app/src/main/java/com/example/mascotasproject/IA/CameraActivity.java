@@ -1,6 +1,7 @@
 package com.example.mascotasproject.IA;
 
 import android.Manifest;
+import android.content.ContentResolver;
 import android.os.Handler;
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -48,6 +49,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -67,15 +69,26 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.example.mascotasproject.IA.env.ImageUtils;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 
@@ -118,9 +131,18 @@ public abstract class CameraActivity extends FragmentActivity
     private boolean useCamera2API;
     private String fileUrl;
     private boolean alreadyAdded = false;
+    ClassifierActivity classifierActivity;
 
 
 
+
+    int IMAGE_REQUEST_CODE=1;
+    Uri mFilePathUri;
+    //CARPETA DONDE SE ENCONTRARAN LAS IMAGENES
+    String mStoragePath = "ImagenesMascotas/";
+    StorageReference mStorageReference;
+
+    DatabaseReference myRef;
     public static String preferredLanguageCode;
 
     abstract void handleSendImage(Intent intent);
@@ -204,6 +226,10 @@ public abstract class CameraActivity extends FragmentActivity
         });
 
         checkButtonuser.setOnClickListener(v-> {
+            //verificando que filepathyuri esta vacio o no
+            //asignando la instancia de firebasestorage a un objeto de storage
+
+
             Intent intent=new Intent(CameraActivity.this, GetLocation.class);
             intent.putExtra("quien",quien);
             startActivity(intent);
@@ -295,6 +321,12 @@ public abstract class CameraActivity extends FragmentActivity
         Configuration config = new Configuration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());    //restart Activity
+    }
+
+    public String getCodigo() {
+        String codigo=getIntent().getStringExtra("codigo");
+        System.out.println("numero 1quien es el codigo1"+codigo);
+        return codigo;
     }
 
     @Override
@@ -821,4 +853,31 @@ public abstract class CameraActivity extends FragmentActivity
         setButtonsVisibility(View.VISIBLE,quien);
         return b;
     }
+
+
+
+
+
+    public Uri getImageUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
+    }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==IMAGE_REQUEST_CODE
+                && resultCode==RESULT_OK
+                && data !=null
+                && data.getData()!=null){
+            mFilePathUri=data.getData();
+
+        }
+
+    }
+
 }

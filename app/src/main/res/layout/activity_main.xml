@@ -14,22 +14,13 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <Button
-        android:id="@+id/btn_getLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="300dp"
-        android:text="@string/get_location"
-        android:textSize="18sp" />
-    <Button
         android:id="@+id/btn_segundo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="350dp"
-        android:text="SEGUNDO"
+        android:text="COMENZAR"
         android:textSize="18sp" />
 
 
@@ -69,8 +60,8 @@
         android:id="@+id/btn_cardview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
         android:layout_marginStart="117dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="145dp"
         android:text="CARDVIEW" />
 

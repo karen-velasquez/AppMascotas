@@ -23,12 +23,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        //Botón Get Location
-        val btnGetLocation: Button =findViewById(R.id.btn_getLocation)
-        btnGetLocation.setOnClickListener{
-            val intent= Intent(this, GetLocation:: class.java)
-            startActivity(intent)
-        }
 
 
         //Botón Get Location

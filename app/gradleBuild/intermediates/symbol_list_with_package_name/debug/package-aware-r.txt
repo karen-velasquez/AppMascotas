@@ -1976,9 +1976,11 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_add
 id btn_cardview
-id btn_getLocation
 id btn_logIn
+id btn_logincodigo
+id btn_seguimiento
 id btn_segundo
+id btn_seperdio
 id button
 id buttonGetCurrentLocation
 id buttonPanel
@@ -2067,6 +2069,7 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id edit_logincodigo
 id edit_query
 id elastic
 id end
@@ -2247,6 +2250,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id rellenarimageen
 id results
 id reverseSawtooth
 id right
@@ -2449,9 +2453,11 @@ layout activity_camera
 layout activity_get_location
 layout activity_list
 layout activity_log_in
+layout activity_loginnumero
 layout activity_main
 layout activity_mostrar_recycler
 layout activity_opciones_ingreso
+layout activity_opciones_usuario
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout camera_connection_fragment

@@ -17,10 +17,21 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Size;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
+import com.example.mascotasproject.AddData;
 import com.example.mascotasproject.IA.env.ImageUtils;
 import com.example.mascotasproject.R;
+import com.example.mascotasproject.model;
+import com.example.mascotasproject.modeltemporal;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 import java.util.List;
@@ -61,7 +72,6 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
         super.onActivityResult(requestCode, resultCode, data);
 
 
-
         if (resultCode == RESULT_OK && requestCode == PICK_IMAGE)
             classifyLoadedImage(data.getData());
     }
@@ -81,11 +91,48 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
                 inferenceTask = new InferenceTask();
                 inferenceTask.execute(croppedFromGallery);
                 Toast.makeText(getApplicationContext(), "ESTOY AQUI WE", Toast.LENGTH_LONG).show();
+                upload_storage(imageUri);
+
             });
         } catch (IOException e) {
             Toast.makeText(getApplicationContext(), "Unable to load image", Toast.LENGTH_LONG).show();
         }
     }
+
+    public void upload_storage(Uri imageUri){
+        //DIRECCION DE LA BASE DE DATOS PARA FIREBASE
+        String mDatabasePath="temporalimagen";
+        DatabaseReference mDatabaseReference;
+
+        mDatabaseReference= FirebaseDatabase.getInstance().getReference(mDatabasePath);
+
+        mFilePathUri=imageUri;
+        mStorageReference= FirebaseStorage.getInstance().getReference();
+        if(mFilePathUri!=null) {
+            StorageReference storageReference2nd = mStorageReference.child(mStoragePath + System.currentTimeMillis() + "." + getFileExtension(mFilePathUri)+"jpg");
+            //adicionando un suceso a storagereference2nd
+            storageReference2nd.putFile(mFilePathUri)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            //sacando la url de storage
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while (!uri.isComplete()) ;
+                            Uri url = uri.getResult();
+                            System.out.println("EL URL DONDE SE GUARDO ES "+url);
+                            Toast.makeText(ClassifierActivity.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
+                            modeltemporal modelo=new modeltemporal(getCodigo(),url.toString());
+                            //obteniendo el id de la imagen subida
+                            String imageUploadId= mDatabaseReference.push().getKey();
+                            //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
+                            mDatabaseReference.child(imageUploadId).setValue(modelo);
+
+                        }
+                    });
+        }
+    }
+
+
 
     // get orientation of picture
     public int getOrientation(Context context, Uri photoUri) {
@@ -164,6 +211,13 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
 
         final Matrix cropToFrameTransform = new Matrix();
         frameToCropTransform.invert(cropToFrameTransform);
+    }
+
+
+    private String getFileExtension(Uri uri) {
+        ContentResolver contentResolver=getContentResolver();
+        MimeTypeMap mimeTypeMap=MimeTypeMap.getSingleton();
+        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
 
     protected synchronized void initClassifier() {

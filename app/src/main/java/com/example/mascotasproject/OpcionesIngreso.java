@@ -23,6 +23,7 @@ public class OpcionesIngreso extends AppCompatActivity {
         musuario.setOnClickListener(v-> {
             Intent intent=new Intent(OpcionesIngreso.this, ClassifierActivity.class);
             intent.putExtra("quien","Usuario");
+            intent.putExtra("codigo","2323");
             startActivity(intent);
 
         });

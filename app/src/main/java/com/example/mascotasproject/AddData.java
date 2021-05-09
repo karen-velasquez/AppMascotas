@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.mascotasproject.IA.ClassifierActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -56,6 +57,7 @@ public class AddData extends AppCompatActivity {
     //Creando el URI
     Uri mFilePathUri;
 
+
     //CREANDO EL REFERENCE DEL DATABASE Y STORAGE
     StorageReference mStorageReference;
     DatabaseReference mDatabaseReference;
@@ -86,14 +88,22 @@ public class AddData extends AppCompatActivity {
         imagenAdd=findViewById(R.id.imagenAdd);
         mUploadBtn=findViewById(R.id.buttonupload);
 
+        String usuario=getIntent().getStringExtra("usuario");
+        String quien=getIntent().getStringExtra("quien");
+
         //AL TOCAR LA IMAGEN
         imagenAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
+               /* Intent intent=new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Seleccionar imagen"),IMAGE_REQUEST_CODE);
+                startActivityForResult(Intent.createChooser(intent,"Seleccionar imagen"),IMAGE_REQUEST_CODE);*/
+                Intent intent=new Intent(AddData.this, ClassifierActivity.class);
+                intent.putExtra("usuario",usuario);
+                intent.putExtra("quien",  quien);
+                startActivity(intent);
+
 
             }
         });

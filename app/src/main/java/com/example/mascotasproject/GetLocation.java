@@ -2,9 +2,11 @@ package com.example.mascotasproject;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ import com.google.android.gms.location.LocationServices;
 
 public class GetLocation extends AppCompatActivity {
 
+    private ImageView rellenar;
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     private TextView textLatlong;
     private ProgressBar progressBar;
@@ -33,6 +36,15 @@ public class GetLocation extends AppCompatActivity {
 
         textLatlong = findViewById(R.id.textLatLong);
         progressBar = findViewById(R.id.progressBar);
+
+        rellenar=findViewById(R.id.rellenarimageen);
+
+
+        Bundle bundle=getIntent().getExtras();
+        String quien=getIntent().getStringExtra("quien");
+        Bitmap bitmap = (Bitmap) getIntent().getParcelableExtra("imagen");
+        rellenar.setImageBitmap(bitmap);
+        System.out.println("numero 111111"+quien);
 
         findViewById(R.id.buttonGetCurrentLocation).setOnClickListener(new View.OnClickListener() {
             @Override

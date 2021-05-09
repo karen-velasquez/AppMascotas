@@ -38,11 +38,20 @@ public class desfragment extends AppCompatActivity {
         mimagen=findViewById(R.id.imageholder);
         mlocation=findViewById(R.id.locationButton);
 
+
+
         //Obteniendo los datos del intent
         String mnombre=getIntent().getStringExtra("nombreMas");
         String mCaracteristicas=getIntent().getStringExtra("caracteristica");
         String mdatosper=getIntent().getStringExtra("perdida");
         String image=getIntent().getStringExtra("image");
+        String quien=getIntent().getStringExtra("quien");
+
+
+
+        System.out.println("numero finalllllll"+quien);
+        setButtonsVisibility(View.VISIBLE,quien);
+
        // byte[] bytes=getIntent().getByteArrayExtra("image");
 
      //   Bitmap bmp= BitmapFactory.decodeByteArray(bytes,0,bytes.length);
@@ -62,6 +71,22 @@ public class desfragment extends AppCompatActivity {
             }
         });
 
+    }
+    void setButtonsVisibility(final int visibility, String quien) {
+        final boolean enabled = visibility == View.VISIBLE;
+        System.out.println("QUE ENTROOOOOO ADENTRO DE LA VISIBILIDAD"+quien);
+        if(quien.toString().equals("Invitado")){
+            mlocation.setVisibility(visibility);
+            mlocation.setEnabled(enabled);
+        }
+        if(quien.equals("Usuario")){
+        //    checkButtonuser.setVisibility(visibility);
+        //    checkButtonuser.setEnabled(enabled);
+        }
+       // closeButton.setVisibility(visibility);
+      //  closeButton.setEnabled(enabled);
+        // saveButton.setVisibility(visibility);
+        // saveButton.setEnabled(enabled);
     }
 
 

@@ -73,8 +73,8 @@ public class MostrarRecycler extends AppCompatActivity {
     protected void onStart() {
         System.out.println("Llegue a este nivel numero 2..............");
         super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
-        if (user != null) {
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero mostrar recycler"+quien);
             // do your stuff
             FirebaseRecyclerOptions<model> options =
                     new FirebaseRecyclerOptions.Builder<model>()
@@ -93,11 +93,13 @@ public class MostrarRecycler extends AppCompatActivity {
                             holder.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    Intent intent=new Intent(view.getContext(),desfragment.class);
+                                    Intent intent=new Intent(MostrarRecycler.this,desfragment.class);
                                     intent.putExtra("nombreMas",model.getNombreMas());
                                     intent.putExtra("caracteristica",model.getCaracteristicas());
                                     intent.putExtra("perdida",model.getUbicacionPerdida());
                                     intent.putExtra("image",model.getImagen());
+                                    System.out.println("QUE ESTOY ENVIANDOOOO"+quien);
+                                    intent.putExtra("quien",quien);
                                     startActivity(intent);
                                 }
 
@@ -154,10 +156,6 @@ public class MostrarRecycler extends AppCompatActivity {
             firebaseRecyclerAdapter.startListening();
             RecyclerView mRecyclerView=(RecyclerView) this.findViewById(R.id.mRecyclerView);
             mRecyclerView.setAdapter(firebaseRecyclerAdapter);
-        } else {
-            signInAnonymously();
-        }
-
 
 
 
@@ -168,89 +166,6 @@ public class MostrarRecycler extends AppCompatActivity {
 
 
 
-    private void signInAnonymously() {
-                // do your stuff
-                FirebaseRecyclerOptions<model> options =
-                        new FirebaseRecyclerOptions.Builder<model>()
-                                .setQuery(mRef,model.class)
-                                .build();
-
-                FirebaseRecyclerAdapter<model, Holder> firebaseRecyclerAdapter=
-                        new FirebaseRecyclerAdapter<model, Holder>(options) {
-                            @Override
-                            protected void onBindViewHolder(@NonNull Holder holder, int position, @NonNull model model) {
-                                holder.mnombreMas.setText(model.getNombreMas());
-                                holder.mCaractericas.setText(model.getCaracteristicas());
-                                holder.mdatosperdida.setText(model.getUbicacionPerdida());
-                                Picasso.get().load(model.getImagen()).into(holder.mimagen);
-
-                                holder.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Intent intent=new Intent(view.getContext(),desfragment.class);
-                                        intent.putExtra("nombreMas",model.getNombreMas());
-                                        intent.putExtra("caracteristica",model.getCaracteristicas());
-                                        intent.putExtra("perdida",model.getUbicacionPerdida());
-                                        intent.putExtra("image",model.getImagen());
-                                        startActivity(intent);
-                                    }
-
-                                });
-                                holder.setOnLongClickListener(new View.OnLongClickListener(){
-                                    @Override
-                                    public boolean onLongClick(View view){
-
-                                        AlertDialog.Builder builder=new AlertDialog.Builder(MostrarRecycler.this);
-                                        String[]options={"Actualizar","Eliminar"};
-                                        //escoger dialog
-                                        builder.setItems(options, new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                //dependiendo de lo que escoja
-                                                if(which==0){
-                                                    //click actualizar
-                                                    Intent intent=new Intent(MostrarRecycler.this,desfragment.class);
-                                                    intent.putExtra("nombreMas",(model.getNombreMas()).toString());
-                                                    intent.putExtra("caracteristica",model.getCaracteristicas().toString());
-                                                    intent.putExtra("perdida",model.getUbicacionPerdida().toString());
-                                                    intent.putExtra("image",model.getImagen().toString());
-                                                    startActivity(intent);
-
-                                                }
-                                                if(which==1){
-                                                    //click eliminar
-                                                    //llamar metodo
-                                                    showDeleteDataDialog(model.getNombreMas().toString(),model.getImagen().toString());
-                                                }
-                                            }
-                                        });
-                                        builder.create().show();
-
-                                        return true;
-
-                                    }
-                                });
-
-                            }
-
-
-                            @NonNull
-                            @Override
-                            public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                                View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerowdesign,parent,false);
-                                Holder viewHolder=new Holder(view);
-                                return viewHolder;
-                            }
-
-
-                        };
-
-                firebaseRecyclerAdapter.startListening();
-              //  mRecyclerView=new RecyclerView();
-             //   RecyclerView mRecyclerView=(RecyclerView) this.findViewById(R.id.mRecyclerView);
-                mRecyclerView.setAdapter(firebaseRecyclerAdapter);
-
-    }
 
     private void showDeleteDataDialog(String nombre, String image) {
         //Aler dialog

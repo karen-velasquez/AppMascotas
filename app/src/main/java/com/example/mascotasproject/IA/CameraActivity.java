@@ -192,15 +192,20 @@ public abstract class CameraActivity extends FragmentActivity
 
         pick=findViewById(R.id.pick);
         cameraButton.setEnabled(false);
+        //Obteniendo los datos de quien es
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero 111111"+quien);
 
         checkButtonGral.setOnClickListener(v-> {
             Intent intent=new Intent(CameraActivity.this, MostrarRecycler.class);
+            intent.putExtra("quien",quien);
             startActivity(intent);
 
         });
 
         checkButtonuser.setOnClickListener(v-> {
             Intent intent=new Intent(CameraActivity.this, GetLocation.class);
+            intent.putExtra("quien",quien);
             startActivity(intent);
 
         });
@@ -216,9 +221,7 @@ public abstract class CameraActivity extends FragmentActivity
         }
         pickImage();
         });
-        //Obteniendo los datos de quien es
-        String quien=getIntent().getStringExtra("quien");
-        System.out.println("numero 111111"+quien);
+
 
         setButtonsVisibility(View.GONE,quien);
 

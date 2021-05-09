@@ -53,6 +53,7 @@
             android:background="@drawable/roundedbuttonfont"
             android:src="@mipmap/ic_action_check"
             android:translationZ="200dp"
+            android:visibility="gone"
              />
 
 

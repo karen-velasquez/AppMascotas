@@ -1,8 +1,11 @@
 package com.example.mascotasproject;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -46,8 +49,19 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                 .title("Lost Pet 1").snippet("Quizá un resúmen de mascotas perdidas.")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_weso)));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lapaz,7));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lapaz, 7));
         googleMap.setOnInfoWindowClickListener(this);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
     }
 
     @Override

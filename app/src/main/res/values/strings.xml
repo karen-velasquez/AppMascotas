@@ -179,6 +179,7 @@
         <item>fr </item>
         <item>ka</item>
     </string-array>
+    <string name="title_activity_maps1">Map</string>
 
 
 </resources>

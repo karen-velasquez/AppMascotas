@@ -24,7 +24,12 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
 
-
+        //Botón Show Map
+        val btnmap: Button =findViewById(R.id.btn_showMap)
+        btnmap.setOnClickListener{
+            val intent= Intent(this, MapsActivity1:: class.java)
+            startActivity(intent)
+        }
         //Botón Get Location
         val btnsegundo: Button =findViewById(R.id.btn_segundo)
         btnsegundo.setOnClickListener{

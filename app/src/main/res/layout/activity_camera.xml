@@ -37,7 +37,7 @@
         android:layout_alignTop="@+id/continuousInferenceButton"
         android:layout_centerHorizontal="true"
         android:background="@drawable/roundedbutton"
-        android:src="@mipmap/ic_action_gallery_icon"
+
         android:translationZ="50dp"
         android:translationX="120dp"/>
 

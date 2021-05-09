@@ -24,6 +24,8 @@ com/example/mascotasproject/OpcionesUsuario.java
  com.example.mascotasproject.OpcionesUsuario
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
+com/example/mascotasproject/MapsActivity1.java
+ com.example.mascotasproject.MapsActivity1
 com/example/mascotasproject/IA/env/ImageUtils.java
  com.example.mascotasproject.IA.env.ImageUtils
 com/example/mascotasproject/AddData.java

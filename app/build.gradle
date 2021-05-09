@@ -79,6 +79,7 @@ dependencies {
     //Ingreso a facebook
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
 
     testImplementation 'junit:junit:4.13.2'

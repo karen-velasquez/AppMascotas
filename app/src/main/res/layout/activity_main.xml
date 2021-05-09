@@ -72,5 +72,13 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/Theme.MascotasProject.PopupOverlay" />
 
+    <Button
+        android:id="@+id/btn_showMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="270dp"
+        android:text="Mostrar Mapa" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

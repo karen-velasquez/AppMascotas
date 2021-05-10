@@ -50,7 +50,7 @@
         android:theme="@style/Theme.MascotasProject" >
         <activity android:name="com.example.mascotasproject.login.ProfileActivity" />
         <activity android:name="com.example.mascotasproject.login.LoggedinActivity" />
-        <activity android:name="com.example.mascotasproject.RegisterActivity" />
+        <activity android:name="com.example.mascotasproject.login.RegisterActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -69,7 +69,7 @@
         <activity android:name="com.example.mascotasproject.OpcionesUsuario" />
         <activity android:name="com.example.mascotasproject.loginnumero" />
         <activity android:name="com.example.mascotasproject.OpcionesIngreso" />
-        <activity android:name="com.example.mascotasproject.IA.LogInActivity" />
+        <activity android:name="com.example.mascotasproject.login.LogInActivity" />
         <activity android:name="com.example.mascotasproject.GetLocation" />
         <activity android:name="com.example.mascotasproject.AddData" />
         <activity android:name="com.example.mascotasproject.IA.CameraActivity" />

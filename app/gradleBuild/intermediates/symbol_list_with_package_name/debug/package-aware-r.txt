@@ -2615,6 +2615,7 @@ layout text_view_without_line_height
 menu menu_main
 mipmap camera_icon
 mipmap ic_action_check
+mipmap ic_action_gallery_icon
 mipmap ic_action_save
 mipmap ic_launcher
 mipmap ic_launcher_round

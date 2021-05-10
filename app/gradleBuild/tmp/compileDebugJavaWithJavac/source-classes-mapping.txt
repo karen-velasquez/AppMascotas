@@ -14,18 +14,14 @@ com/example/mascotasproject/IA/CameraConnectionFragment.java
 com/example/mascotasproject/IA/LegacyCameraConnectionFragment.java
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment$1
-com/example/mascotasproject/IA/LogInActivity.java
- com.example.mascotasproject.IA.LogInActivity
- com.example.mascotasproject.IA.LogInActivity$1
- com.example.mascotasproject.IA.LogInActivity$2
- com.example.mascotasproject.IA.LogInActivity$3
- com.example.mascotasproject.IA.LogInActivity$4
+com/example/mascotasproject/OpcionesIngreso.java
+ com.example.mascotasproject.OpcionesIngreso
 com/example/mascotasproject/OpcionesUsuario.java
  com.example.mascotasproject.OpcionesUsuario
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
-com/example/mascotasproject/OpcionesIngreso.java
- com.example.mascotasproject.OpcionesIngreso
+com/example/mascotasproject/MapsActivity1.java
+ com.example.mascotasproject.MapsActivity1
 com/example/mascotasproject/IA/env/ImageUtils.java
  com.example.mascotasproject.IA.env.ImageUtils
 com/example/mascotasproject/AddData.java
@@ -91,5 +87,9 @@ com/example/mascotasproject/MostrarRecycler.java
  com.example.mascotasproject.MostrarRecycler$Holder$2
 com/example/mascotasproject/modeltemporal.java
  com.example.mascotasproject.modeltemporal
-com/example/mascotasproject/MapsActivity1.java
- com.example.mascotasproject.MapsActivity1
+com/example/mascotasproject/IA/LogInActivity.java
+ com.example.mascotasproject.IA.LogInActivity
+ com.example.mascotasproject.IA.LogInActivity$1
+ com.example.mascotasproject.IA.LogInActivity$2
+ com.example.mascotasproject.IA.LogInActivity$3
+ com.example.mascotasproject.IA.LogInActivity$4

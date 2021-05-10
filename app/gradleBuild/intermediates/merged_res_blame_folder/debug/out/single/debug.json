@@ -1,250 +1,250 @@
 [
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_action_save.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_action_save.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_add_data.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_add_data.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_singlerowdesign.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\singlerowdesign.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_loginnumero.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_loginnumero.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_get_location.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_get_location.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_camera_icon.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\camera_icon.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_action_save.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_save.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_add.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\ic_action_add.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_list.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_list.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_action_check.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_action_check.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_log_in.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_log_in.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_add.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_add.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker_weso.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\marker_weso.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_maps1.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_maps1.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_mostrar_recycler.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_mostrar_recycler.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker_weso.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\marker_weso.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_save.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_save.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_action_save.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_action_save.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_action_check.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_action_check.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_blackout_transition.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\blackout_transition.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_action_save.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_action_save.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_add.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_add.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_action_check.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_action_check.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\list_item.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_camera_icon.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\camera_icon.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_check.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_check.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_action_save.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_action_save.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_opciones_ingreso.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_opciones_ingreso.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_action_check.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_check.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_list_group.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\list_group.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_button_background_selector.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\button_background_selector.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\xml_filepaths.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\xml\\filepaths.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_action_check.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_action_check.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_roundedbuttonfont.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\roundedbuttonfont.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\xml_filepaths.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\xml\\filepaths.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_camera_icon.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\camera_icon.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_fragment_desfragment.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\fragment_desfragment.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_action_check.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_action_check.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\marker.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_add_data.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_add_data.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_loginnumero.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_loginnumero.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_action_save.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_action_save.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_camera.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_camera.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_roundedbutton.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\roundedbutton.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\menu_menu_main.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\menu\\menu_main.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_camera_icon.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\camera_icon.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_fragment_desfragment.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\fragment_desfragment.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_opciones_ingreso.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_opciones_ingreso.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_add.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-anydpi\\ic_action_add.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_change_language.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\ic_change_language.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_opciones_usuario.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_opciones_usuario.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_camera_connection_fragment.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\camera_connection_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_camera_connection_fragment.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\camera_connection_fragment.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_singlerowdesign.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\singlerowdesign.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_camera_icon.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\camera_icon.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_log_in.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_log_in.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_maps1.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_maps1.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_camera_icon.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\camera_icon.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_button_background_selector.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\button_background_selector.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_check.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_check.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\list_item.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_save.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_save.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_action_check.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_check.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_camera_icon.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\camera_icon.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_action_save.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_action_save.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_lang_dialog.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\lang_dialog.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_lang_dialog.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\lang_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_roundedbutton.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\roundedbutton.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_add.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-mdpi\\ic_action_add.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_add.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-mdpi\\ic_action_add.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_opciones_usuario.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_opciones_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_mostrar_recycler.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_mostrar_recycler.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_add.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_add.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_add.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\ic_action_add.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_get_location.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\activity_get_location.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_camera.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_camera.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi_button_background_selector.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-anydpi\\button_background_selector.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\menu_menu_main.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_camera_icon.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\camera_icon.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_add.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_add.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_change_language.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\ic_change_language.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_action_check.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_action_check.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_list_group.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\layout\\list_group.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_action_save.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_save.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_list.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_list.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_roundedbuttonfont.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\roundedbuttonfont.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi_button_background_selector.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-anydpi\\button_background_selector.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_camera_icon.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\camera_icon.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_camera_icon.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\camera_icon.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_blackout_transition.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-hdpi\\blackout_transition.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_add.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-anydpi\\ic_action_add.xml"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker.png.flat",
-        "source": "C:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\marker.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     }
 ]

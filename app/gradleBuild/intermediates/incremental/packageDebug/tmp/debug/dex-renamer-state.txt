@@ -1,10 +1,10 @@
-#Sun May 09 19:32:19 BOT 2021
+#Sun May 09 23:51:24 BOT 2021
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.1=C\:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
-base.0=C\:\\Users\\ccave\\StudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.2=D\:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.1=D\:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=D\:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex

@@ -112,11 +112,11 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Log.d(TAG, "singn in with credential: successful");
+                    Log.d(TAG, "sign in with credential: successful");
                     FirebaseUser user = mFirebaseAuth.getCurrentUser();
                     updateUI(user);
                 }else{
-                    Log.d(TAG, "singn in with credential: failute", task.getException());
+                    Log.d(TAG, "sign in with credential: failure", task.getException());
                     Toast.makeText(LogInActivity.this, "Autenticación fracasada", Toast.LENGTH_SHORT).show();
                     updateUI(null);
                 }

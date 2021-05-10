@@ -8,24 +8,28 @@
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\singlerowdesign.xml"
     },
     {
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_action_save.png.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_save.png"
+    },
+    {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_get_location.xml.flat",
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_get_location.xml"
     },
     {
-        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_action_save.png.flat",
-        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_action_save.png"
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_profile.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_profile.xml"
     },
     {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_log_in.xml.flat",
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_log_in.xml"
+    },
+    {
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_marker_weso.png.flat",
@@ -90,6 +94,10 @@
     {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\xml_filepaths.xml.flat",
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\xml\\filepaths.xml"
+    },
+    {
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_loggedin.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_loggedin.xml"
     },
     {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_roundedbuttonfont.xml.flat",
@@ -160,6 +168,10 @@
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_maps1.xml"
     },
     {
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_button_background_selector.xml.flat",
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable\\button_background_selector.xml"
     },
@@ -178,6 +190,10 @@
     {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xhdpi_waldog_logo.jpg.flat",
+        "source": "D:\\Projects\\Git\\AppMascotas\\app\\src\\main\\res\\drawable-xhdpi\\waldog_logo.jpg"
     },
     {
         "merged": "D:\\Projects\\Git\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_action_save.png.flat",

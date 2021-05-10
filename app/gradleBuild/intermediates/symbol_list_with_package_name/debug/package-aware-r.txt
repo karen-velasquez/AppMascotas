@@ -1894,6 +1894,7 @@ drawable roundedbuttonfont
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable waldog_logo
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2099,6 +2100,8 @@ id easeOut
 id edit_logincodigo
 id edit_query
 id elastic
+id emailEt
+id emailTIL
 id end
 id endToStart
 id end_padder
@@ -2144,7 +2147,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id image_photo
 id imageholder
 id imagenAdd
 id img1
@@ -2173,6 +2175,8 @@ id listMode
 id list_breeds
 id list_item
 id locationButton
+id login_btn
+id logo
 id lvExp
 id mRecyclerView
 id map
@@ -2259,6 +2263,8 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passwordEt
+id passwordTIL
 id password_toggle
 id path
 id pathRelative
@@ -2272,6 +2278,7 @@ id pin
 id pnlFlash
 id position
 id postLayout
+id profileTv
 id progressBar
 id progress_bar
 id progress_circular
@@ -2279,6 +2286,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerBtn
+id register_btn
 id rellenarimageen
 id results
 id reverseSawtooth
@@ -2484,12 +2493,15 @@ layout activity_camera
 layout activity_get_location
 layout activity_list
 layout activity_log_in
+layout activity_loggedin
 layout activity_loginnumero
 layout activity_main
 layout activity_maps1
 layout activity_mostrar_recycler
 layout activity_opciones_ingreso
 layout activity_opciones_usuario
+layout activity_profile
+layout activity_register
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout camera_connection_fragment

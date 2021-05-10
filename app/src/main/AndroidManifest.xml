@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mascotasproject">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -34,7 +33,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MascotasProject">
-
+        <activity android:name=".login.ProfileActivity"></activity>
+        <activity android:name=".login.LoggedinActivity" />
+        <activity android:name=".login.RegisterActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,11 +50,11 @@
 
         <activity
             android:name=".MapsActivity1"
-            android:label="@string/title_activity_maps1"></activity>
+            android:label="@string/title_activity_maps1" />
         <activity android:name=".OpcionesUsuario" />
         <activity android:name=".loginnumero" />
         <activity android:name=".OpcionesIngreso" />
-        <activity android:name=".IA.LogInActivity" />
+        <activity android:name=".login.LogInActivity" />
         <activity android:name=".GetLocation" />
         <activity android:name=".AddData" />
         <activity android:name=".IA.CameraActivity" />

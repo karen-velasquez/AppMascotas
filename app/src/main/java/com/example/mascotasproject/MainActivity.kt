@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.mascotasproject.IA.ClassifierActivity
-import com.example.mascotasproject.IA.LogInActivity
+import com.example.mascotasproject.login.LogInActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 
 

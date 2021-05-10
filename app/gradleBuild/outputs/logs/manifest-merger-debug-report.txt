@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
-INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
-INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
-INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\0ea6423f245fb8f377d1cc38b6535364\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\91040f6d8303e6306385b2932b27e079\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\c7cea885cb688069d77c70bc5af82277\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -90,39 +90,39 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Gabriel\.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\d45173a4433445ed27ba3205f38a8546\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\4d72b1ed71f8f0aaad8f75658ef18c02\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\135c84401ce154e04a0bb635d3d8d88f\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
-INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
-INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
+INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
 	package
 		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:4:5-42
 		INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
 		INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-132:12
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
 		INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:10:22-76
 uses-feature#android.hardware.camera
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:13:5-60
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:12:5-60
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:13:19-57
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:12:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:14:5-70
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:13:5-70
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:14:19-67
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:13:19-67
 uses-permission#android.permission.INTERNET
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:16:5-67
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:15:5-67
 MERGED from [com.firebaseui:firebase-ui-database:7.1.1] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\e0b998865836f0f317b63688fa88ebb7\jetified-firebase-ui-database-7.1.1\AndroidManifest.xml:11:5-67
 MERGED from [com.firebaseui:firebase-ui-database:7.1.1] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\e0b998865836f0f317b63688fa88ebb7\jetified-firebase-ui-database-7.1.1\AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
@@ -132,21 +132,21 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Gabriel\.gra
 MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:16:22-64
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:15:22-64
 uses-permission#android.permission.CAMERA
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:17:5-65
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:16:5-65
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:17:22-62
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:16:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:18:5-80
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:17:5-80
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:18:22-77
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:17:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:19:5-81
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:18:5-81
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:19:22-78
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:18:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:20:5-79
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:19:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
@@ -154,19 +154,19 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\Gabriel\.gra
 MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:20:22-76
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:19:22-76
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:21:5-23:31
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:20:5-22:31
 	tools:node
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:23:9-28
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:22:9-28
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:22:9-59
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:21:9-59
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:24:5-81
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:23:5-81
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:24:22-78
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:23:22-78
 application
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:27:5-130:19
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:26:5-131:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\5e18bcc52414b5d70a7fe433520add55\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\5e18bcc52414b5d70a7fe433520add55\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\81d3ec2b04b555d24ab31fd1b2d0358b\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -224,177 +224,189 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Gabriel\.grad
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\8fa328dc624bc3ae88922e4d852898ed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\8fa328dc624bc3ae88922e4d852898ed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:grantUriPermissions
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:31:9-43
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:30:9-43
 	android:authorities
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:29:9-71
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:28:9-71
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\3e400367cd43db14a328fa68a9e885d3\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:35:9-35
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:34:9-35
 	android:label
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:33:9-41
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:32:9-41
 	android:exported
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:30:9-33
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:29:9-33
 	android:roundIcon
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:34:9-54
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:33:9-54
 	android:icon
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:32:9-43
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:31:9-43
 	android:allowBackup
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:28:9-35
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:27:9-35
 	android:theme
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:36:9-53
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:35:9-53
+activity#com.example.mascotasproject.login.ProfileActivity
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:36:9-68
+	android:name
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:36:19-56
+activity#com.example.mascotasproject.login.LoggedinActivity
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:37:9-60
+	android:name
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:37:19-57
+activity#com.example.mascotasproject.login.RegisterActivity
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:38:9-60
+	android:name
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:38:19-57
 meta-data#com.google.android.geo.API_KEY
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:46:9-48:55
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:47:9-49:55
 	android:value
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:48:13-52
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:49:13-52
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:47:13-58
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:48:13-58
 activity#com.example.mascotasproject.MapsActivity1
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:50:9-52:69
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:51:9-53:60
 	android:label
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:52:13-57
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:53:13-57
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:51:13-42
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:52:13-42
 activity#com.example.mascotasproject.OpcionesUsuario
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:53:9-53
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:54:9-53
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:53:19-50
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:54:19-50
 activity#com.example.mascotasproject.loginnumero
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:54:9-49
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:55:9-49
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:54:19-46
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:55:19-46
 activity#com.example.mascotasproject.OpcionesIngreso
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:55:9-53
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:56:9-53
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:55:19-50
-activity#com.example.mascotasproject.IA.LogInActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:56:9-54
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:56:19-50
+activity#com.example.mascotasproject.login.LogInActivity
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:57:9-57
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:56:19-51
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:57:19-54
 activity#com.example.mascotasproject.GetLocation
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:57:9-49
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:58:9-49
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:57:19-46
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:58:19-46
 activity#com.example.mascotasproject.AddData
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:58:9-45
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:59:9-45
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:58:19-42
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:59:19-42
 activity#com.example.mascotasproject.IA.CameraActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:59:9-55
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:60:9-55
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:59:19-52
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:60:19-52
 activity#com.example.mascotasproject.IA.SimpleListActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:60:9-59
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:61:9-59
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:60:19-56
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:61:19-56
 activity#com.example.mascotasproject.MostrarRecycler
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:61:9-53
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:62:9-53
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:61:19-50
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:62:19-50
 activity#com.example.mascotasproject.desfragment
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:62:9-49
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:63:9-49
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:62:19-46
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:63:19-46
 activity#com.example.mascotasproject.MainActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:63:9-81:20
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:64:9-82:20
 	android:screenOrientation
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:66:13-49
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:67:13-49
 	android:label
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:65:13-45
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:66:13-45
 	tools:ignore
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:68:13-53
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:69:13-53
 	android:theme
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:67:13-69
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:68:13-69
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:64:13-41
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:65:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:69:13-73:29
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:70:13-74:29
 action#android.intent.action.MAIN
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:70:17-69
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:71:17-69
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:70:25-66
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:71:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:72:17-77
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:73:17-77
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:72:27-74
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:73:27-74
 intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:image/*
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:74:13-80:29
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:75:13-81:29
 action#android.intent.action.SEND
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:75:17-69
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:76:17-69
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:75:25-66
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:76:25-66
 category#android.intent.category.DEFAULT
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:77:17-76
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:78:17-76
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:77:27-73
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:78:27-73
 data
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:79:17-52
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:80:17-52
 	android:scheme
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:113:23-72
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:114:23-72
 	android:mimeType
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:79:23-49
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:80:23-49
 activity#com.example.mascotasproject.IA.ClassifierActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:82:9-99:20
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:83:9-100:20
 	android:screenOrientation
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:85:13-49
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:86:13-49
 	android:label
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:84:13-42
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:85:13-42
 	tools:ignore
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:86:13-53
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:87:13-53
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:83:13-50
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:84:13-50
 activity#com.facebook.FacebookActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:100:9-103:48
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:101:9-104:48
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\68f3ff553ee7cd5ff7799e21ecf04e48\jetified-facebook-common-4.42.0\AndroidManifest.xml:29:9-32:66
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\68f3ff553ee7cd5ff7799e21ecf04e48\jetified-facebook-common-4.42.0\AndroidManifest.xml:29:9-32:66
 	android:label
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:103:13-45
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:104:13-45
 	android:configChanges
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:102:13-96
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:103:13-96
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:4.42.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\68f3ff553ee7cd5ff7799e21ecf04e48\jetified-facebook-common-4.42.0\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:101:13-57
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:102:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:104:9-115:20
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:105:9-116:20
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\68f3ff553ee7cd5ff7799e21ecf04e48\jetified-facebook-common-4.42.0\AndroidManifest.xml:34:9-67
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\Gabriel\.gradle\caches\transforms-2\files-2.1\68f3ff553ee7cd5ff7799e21ecf04e48\jetified-facebook-common-4.42.0\AndroidManifest.xml:34:9-67
 	android:exported
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:106:13-36
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:107:13-36
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:105:13-58
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:106:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:107:13-114:29
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:108:13-115:29
 action#android.intent.action.VIEW
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:108:17-69
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:109:17-69
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:108:25-66
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:109:25-66
 category#android.intent.category.BROWSABLE
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:111:17-78
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:112:17-78
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:111:27-75
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:112:27-75
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:117:9-119:55
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:118:9-120:55
 	android:value
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:119:13-52
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:120:13-52
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:118:13-58
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:119:13-58
 provider#androidx.core.content.FileProvider
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:121:9-129:20
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:122:9-130:20
 	android:grantUriPermissions
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:125:13-47
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:126:13-47
 	android:authorities
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:123:13-75
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:124:13-75
 	android:exported
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:124:13-37
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:125:13-37
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:122:13-62
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:123:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:126:13-128:53
+ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:127:13-129:53
 	android:resource
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:128:17-50
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:129:17-50
 	android:name
-		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:127:17-67
+		ADDED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml:128:17-67
 uses-sdk
 INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Projects\Git\AppMascotas\app\src\main\AndroidManifest.xml

@@ -62,6 +62,13 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this, LogInActivity:: class.java)
             startActivity(intent)
         }
+        //botón log In
+        val btn_nuevo = findViewById<Button>(R.id.nuevo_recycler)
+
+        btn_nuevo.setOnClickListener{
+            val intent= Intent(this, MascotasFragment:: class.java)
+            startActivity(intent)
+        }
 
     }
 

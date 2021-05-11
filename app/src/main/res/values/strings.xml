@@ -42,6 +42,10 @@
 
     <string name="fb_login_protocol_scheme">fb161912065819486</string>
 
+    <string name="title_activity_maps1">Map</string>
+
+    //for fb
+    <string name="title_activity_mascotas_fragment">MascotasFragment</string>
     <string-array name="breeds_array">
         <item>Affenpinscher</item>
         <item>Afghan Hound</item>
@@ -165,8 +169,6 @@
         <item>Whippet</item>
         <item>Yorkshire Terrier</item>
     </string-array>
-
-    //for fb
     <string-array name="array_languages" translatable="false">
         <item>English</item>
         <item>Deutsch</item>
@@ -179,7 +181,6 @@
         <item>fr </item>
         <item>ka</item>
     </string-array>
-    <string name="title_activity_maps1">Map</string>
 
 
 </resources>

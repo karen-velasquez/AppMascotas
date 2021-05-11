@@ -69,16 +69,40 @@ public class MostrarRecycler extends AppCompatActivity {
     }
 
 
-    @Override
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*@Override
+    protected void onStart() {
+
+
+  }*/
+    /*@Override
     protected void onStart() {
         System.out.println("Llegue a este nivel numero 2..............");
         super.onStart();
         String quien=getIntent().getStringExtra("quien");
         System.out.println("numero mostrar recycler"+quien);
             // do your stuff
+        Query firebasesearchraza=mRef.orderByChild("nombreMas").startAt("firulais").endAt("firulais"+"\uf8ff");
+
             FirebaseRecyclerOptions<model> options =
                     new FirebaseRecyclerOptions.Builder<model>()
-                            .setQuery(mRef,model.class)
+                            .setQuery(firebasesearchraza,model.class)
                             .build();
 
             FirebaseRecyclerAdapter<model, Holder> firebaseRecyclerAdapter=
@@ -152,11 +176,8 @@ public class MostrarRecycler extends AppCompatActivity {
 
 
                     };
-
             firebaseRecyclerAdapter.startListening();
-            RecyclerView mRecyclerView=(RecyclerView) this.findViewById(R.id.mRecyclerView);
             mRecyclerView.setAdapter(firebaseRecyclerAdapter);
-
 
 
 
@@ -224,11 +245,11 @@ public class MostrarRecycler extends AppCompatActivity {
         });
         builder.create().show();
 
-    }
+    }*/
 
     /*-------------------------------------------------------------------------------------------*/
 
-    public static class Holder extends RecyclerView.ViewHolder {
+   /* public static class Holder extends RecyclerView.ViewHolder {
 
 
         TextView mnombreMas, mCaractericas, mdatosperdida;
@@ -279,7 +300,7 @@ public class MostrarRecycler extends AppCompatActivity {
 
 
     }
-
+*/
 
 
 

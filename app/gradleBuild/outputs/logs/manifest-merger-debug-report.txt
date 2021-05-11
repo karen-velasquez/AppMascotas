@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
-INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
-INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
-INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0ea6423f245fb8f377d1cc38b6535364\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\91040f6d8303e6306385b2932b27e079\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c7cea885cb688069d77c70bc5af82277\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -28,6 +28,7 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\asus\.gradle\cach
 MERGED from [com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:17:1-42:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3b9d116ed23fd5d07572211d5919f3ff\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\203bbfb31285652e50a14a7bdd844746\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:15:1-38:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\32cbdc7222c58776362087ff137b65c8\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f0689d1c36d280294eaa015741ff5a6\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -58,14 +59,13 @@ MERGED from [com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\c
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\63e57c38a746858c6d22cb6f7e279018\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\33d2d870fb940f6ff3727598a81ef3c3\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\203bbfb31285652e50a14a7bdd844746\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\580618867c7c229f5ed58bda0a03010a\fragment-1.2.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d95e89e5e535bce44e164d2b1eb44642\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b48f98f181c1c457e603680c8faec085\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4513f050de11177b9375a36205226443\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\39544f4057e7b244620d8ecc2673f2de\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d95e89e5e535bce44e164d2b1eb44642\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\7e088e417e4280735a3cac86208f9dc9\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f80498240fb7a255e8d2e94b27da99a0\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\39544f4057e7b244620d8ecc2673f2de\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b48f98f181c1c457e603680c8faec085\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\444115b712f76c9895b8067421319bc7\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\fa26535e7e0a5211d6a3f0c25913996f\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\6a1a50192adff42c7ff5ac3c12870415\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -84,89 +84,33 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\asus\.gradle
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\6b078d49645755e2d4efc19c71885e57\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\477cc92c1b0dcd4c063879e05363e383\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\415c0ce574a3f612c6f26edd7e33e76c\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e2ec5552b64ae08902288c200617fa9b\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0f21df44c256ffa3c9b49f7934a39589\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e2ec5552b64ae08902288c200617fa9b\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e3d58e7b23efa42c269fa737a039fc4a\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d45173a4433445ed27ba3205f38a8546\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4d72b1ed71f8f0aaad8f75658ef18c02\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\135c84401ce154e04a0bb635d3d8d88f\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
-INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
-INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
 	package
 		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:4:5-42
 		INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
 		INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-133:12
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:1-135:12
 		INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:10:5-79
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:10:22-76
-uses-feature#android.hardware.camera
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:12:5-60
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:12:19-57
-uses-feature#android.hardware.camera.autofocus
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:13:5-70
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:13:19-67
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:15:5-67
-MERGED from [com.firebaseui:firebase-ui-database:7.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e0b998865836f0f317b63688fa88ebb7\jetified-firebase-ui-database-7.1.1\AndroidManifest.xml:11:5-67
-MERGED from [com.firebaseui:firebase-ui-database:7.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e0b998865836f0f317b63688fa88ebb7\jetified-firebase-ui-database-7.1.1\AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:15:22-64
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:16:5-65
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:16:22-62
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:17:5-80
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:17:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:18:5-81
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:18:22-78
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:19:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:19:22-76
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:20:5-22:31
-	tools:node
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:22:9-28
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:21:9-59
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:23:5-81
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:23:22-78
 application
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:26:5-131:19
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:10:5-117:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5e18bcc52414b5d70a7fe433520add55\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5e18bcc52414b5d70a7fe433520add55\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\81d3ec2b04b555d24ab31fd1b2d0358b\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -224,189 +168,239 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\asus\.gradle\
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\8fa328dc624bc3ae88922e4d852898ed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\8fa328dc624bc3ae88922e4d852898ed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:grantUriPermissions
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:30:9-43
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:14:9-43
 	android:authorities
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:28:9-71
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:12:9-71
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3e400367cd43db14a328fa68a9e885d3\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:34:9-35
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:32:9-41
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:16:9-41
 	android:exported
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:29:9-33
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:13:9-33
 	android:roundIcon
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:33:9-54
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:31:9-43
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:27:9-35
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:35:9-53
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:19:9-53
 activity#com.example.mascotasproject.login.ProfileActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:9-68
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:22:9-59
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:19-56
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:22:19-56
 activity#com.example.mascotasproject.login.LoggedinActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:9-60
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:23:9-60
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:19-57
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:23:19-57
 activity#com.example.mascotasproject.login.RegisterActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:38:9-60
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:24:9-60
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:38:19-57
-meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:47:9-49:55
-	android:value
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:49:13-52
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:48:13-58
-activity#com.example.mascotasproject.MapsActivity1
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:51:9-53:60
-	android:label
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:53:13-57
-	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:52:13-42
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:24:19-57
 activity#com.example.mascotasproject.OpcionesUsuario
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:54:9-53
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:9-53
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:54:19-50
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:19-50
 activity#com.example.mascotasproject.loginnumero
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:55:9-49
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:9-49
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:55:19-46
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:19-46
 activity#com.example.mascotasproject.OpcionesIngreso
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:56:9-53
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:38:9-53
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:56:19-50
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:38:19-50
 activity#com.example.mascotasproject.login.LogInActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:57:9-57
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:39:9-57
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:57:19-54
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:39:19-54
 activity#com.example.mascotasproject.GetLocation
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:58:9-49
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:40:9-49
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:58:19-46
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:40:19-46
 activity#com.example.mascotasproject.AddData
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:59:9-45
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:41:9-45
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:59:19-42
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:41:19-42
 activity#com.example.mascotasproject.IA.CameraActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:60:9-55
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:42:9-55
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:60:19-52
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:42:19-52
 activity#com.example.mascotasproject.IA.SimpleListActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:61:9-59
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:43:9-59
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:61:19-56
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:43:19-56
 activity#com.example.mascotasproject.MostrarRecycler
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:62:9-53
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:44:9-53
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:62:19-50
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:44:19-50
 activity#com.example.mascotasproject.desfragment
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:63:9-49
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:45:9-49
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:63:19-46
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:45:19-46
 activity#com.example.mascotasproject.MainActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:64:9-82:20
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:47:9-65:20
 	android:screenOrientation
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:67:13-49
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:50:13-49
 	android:label
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:66:13-45
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:49:13-45
 	tools:ignore
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:69:13-53
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:52:13-53
 	android:theme
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:68:13-69
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:51:13-69
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:65:13-41
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:48:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:70:13-74:29
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:53:13-57:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:71:17-69
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:54:17-69
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:71:25-66
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:54:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:73:17-77
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:56:17-77
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:73:27-74
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:56:27-74
 intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:image/*
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:75:13-81:29
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:58:13-64:29
 action#android.intent.action.SEND
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:76:17-69
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:59:17-69
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:76:25-66
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:59:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:78:17-76
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:61:17-76
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:78:27-73
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:61:27-73
 data
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:80:17-52
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:63:17-52
 	android:scheme
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:114:23-72
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:97:23-72
 	android:mimeType
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:80:23-49
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:63:23-49
 activity#com.example.mascotasproject.IA.ClassifierActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:83:9-100:20
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:66:9-83:20
 	android:screenOrientation
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:86:13-49
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:69:13-49
 	android:label
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:85:13-42
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:68:13-42
 	tools:ignore
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:87:13-53
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:70:13-53
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:84:13-50
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:67:13-50
 activity#com.facebook.FacebookActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:101:9-104:48
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:84:9-87:48
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\506761005586eab7baa6112711b50356\jetified-facebook-common-4.42.0\AndroidManifest.xml:29:9-32:66
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\506761005586eab7baa6112711b50356\jetified-facebook-common-4.42.0\AndroidManifest.xml:29:9-32:66
 	android:label
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:104:13-45
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:87:13-45
 	android:configChanges
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:103:13-96
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:86:13-96
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:4.42.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\506761005586eab7baa6112711b50356\jetified-facebook-common-4.42.0\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:102:13-57
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:85:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:105:9-116:20
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:88:9-99:20
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\506761005586eab7baa6112711b50356\jetified-facebook-common-4.42.0\AndroidManifest.xml:34:9-67
 MERGED from [com.facebook.android:facebook-common:4.42.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\506761005586eab7baa6112711b50356\jetified-facebook-common-4.42.0\AndroidManifest.xml:34:9-67
 	android:exported
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:107:13-36
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:90:13-36
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:106:13-58
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:89:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:108:13-115:29
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:91:13-98:29
 action#android.intent.action.VIEW
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:109:17-69
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:92:17-69
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:109:25-66
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:92:25-66
 category#android.intent.category.BROWSABLE
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:112:17-78
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:95:17-78
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:112:27-75
-meta-data#com.facebook.sdk.ApplicationId
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:118:9-120:55
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:95:27-75
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:100:9-102:55
 	android:value
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:120:13-52
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:102:13-52
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:119:13-58
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:101:13-58
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:104:9-106:55
+	android:value
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:106:13-52
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:105:13-58
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:122:9-130:20
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:108:9-116:20
 	android:grantUriPermissions
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:126:13-47
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:112:13-47
 	android:authorities
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:124:13-75
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:110:13-75
 	android:exported
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:125:13-37
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:111:13-37
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:123:13-62
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:109:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:127:13-129:53
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:113:13-115:53
 	android:resource
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:129:17-50
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:115:17-50
 	android:name
-		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:128:17-67
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:114:17-67
+uses-feature#android.hardware.camera
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:119:5-60
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:119:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:120:5-70
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:120:19-67
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:122:5-79
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:122:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:123:5-67
+MERGED from [com.firebaseui:firebase-ui-database:7.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e0b998865836f0f317b63688fa88ebb7\jetified-firebase-ui-database-7.1.1\AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-database:7.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e0b998865836f0f317b63688fa88ebb7\jetified-firebase-ui-database-7.1.1\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:123:22-64
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:124:5-65
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:124:22-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:125:5-80
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:125:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:126:5-81
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:126:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:127:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:127:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:128:5-130:31
+	tools:node
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:130:9-28
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:129:9-59
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:131:5-81
+	android:name
+		ADDED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:131:22-78
 uses-sdk
 INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
@@ -459,6 +453,8 @@ MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3b9d116ed23fd5d07572211d5919f3ff\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\203bbfb31285652e50a14a7bdd844746\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\203bbfb31285652e50a14a7bdd844746\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\32cbdc7222c58776362087ff137b65c8\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -517,22 +513,20 @@ MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\asus\.g
 MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\33d2d870fb940f6ff3727598a81ef3c3\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\203bbfb31285652e50a14a7bdd844746\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\203bbfb31285652e50a14a7bdd844746\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\580618867c7c229f5ed58bda0a03010a\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\580618867c7c229f5ed58bda0a03010a\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d95e89e5e535bce44e164d2b1eb44642\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d95e89e5e535bce44e164d2b1eb44642\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b48f98f181c1c457e603680c8faec085\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b48f98f181c1c457e603680c8faec085\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4513f050de11177b9375a36205226443\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4513f050de11177b9375a36205226443\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\39544f4057e7b244620d8ecc2673f2de\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\39544f4057e7b244620d8ecc2673f2de\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d95e89e5e535bce44e164d2b1eb44642\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d95e89e5e535bce44e164d2b1eb44642\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\7e088e417e4280735a3cac86208f9dc9\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\7e088e417e4280735a3cac86208f9dc9\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f80498240fb7a255e8d2e94b27da99a0\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f80498240fb7a255e8d2e94b27da99a0\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\39544f4057e7b244620d8ecc2673f2de\transition-1.3.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\39544f4057e7b244620d8ecc2673f2de\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b48f98f181c1c457e603680c8faec085\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b48f98f181c1c457e603680c8faec085\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\444115b712f76c9895b8067421319bc7\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\444115b712f76c9895b8067421319bc7\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\fa26535e7e0a5211d6a3f0c25913996f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
@@ -569,10 +563,10 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\asus\.gradle\caches\transforms
 MERGED from [androidx.print:print:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\477cc92c1b0dcd4c063879e05363e383\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\415c0ce574a3f612c6f26edd7e33e76c\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\415c0ce574a3f612c6f26edd7e33e76c\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e2ec5552b64ae08902288c200617fa9b\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e2ec5552b64ae08902288c200617fa9b\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0f21df44c256ffa3c9b49f7934a39589\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0f21df44c256ffa3c9b49f7934a39589\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e2ec5552b64ae08902288c200617fa9b\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e2ec5552b64ae08902288c200617fa9b\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e3d58e7b23efa42c269fa737a039fc4a\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e3d58e7b23efa42c269fa737a039fc4a\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\d45173a4433445ed27ba3205f38a8546\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41

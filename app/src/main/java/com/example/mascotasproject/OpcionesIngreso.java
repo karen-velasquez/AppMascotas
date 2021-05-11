@@ -1,6 +1,7 @@
 package com.example.mascotasproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +13,14 @@ import com.example.mascotasproject.IA.ClassifierActivity;
 
 public class OpcionesIngreso extends AppCompatActivity {
 
-    Button musuario,minvitado;
+    Button musuario,minvitado,mnuevo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_ingreso);
         musuario=findViewById(R.id.usuario);
         minvitado=findViewById(R.id.invitado);
+        mnuevo=findViewById(R.id.nuevo);
 
         musuario.setOnClickListener(v-> {
             Intent intent=new Intent(OpcionesIngreso.this, ClassifierActivity.class);
@@ -34,6 +36,20 @@ public class OpcionesIngreso extends AppCompatActivity {
             startActivity(intent);
 
         });
+
+        mnuevo.setOnClickListener(v-> {
+          /* AppCompatActivity activity=(AppCompatActivity)v.getContext();
+            activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new MascotasFragment(),"").addToBackStack(null).commit();
+*/
+           MascotasFragment fragment=new MascotasFragment();
+            FragmentTransaction ft1=getSupportFragmentManager().beginTransaction();
+            ft1.replace(R.id.wrapper,fragment,"");
+            ft1.commit();
+
+        });
+
+
+
 
     }
 }

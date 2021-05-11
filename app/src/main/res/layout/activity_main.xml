@@ -23,6 +23,17 @@
         android:text="COMENZAR"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/nuevo_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="400dp"
+        android:text="CNUEVO RECYCLERR"
+        android:textSize="18sp" />
+
+
 
 
     <Button

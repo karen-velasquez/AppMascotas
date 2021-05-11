@@ -2180,6 +2180,7 @@ id logo
 id lvExp
 id mRecyclerView
 id map
+id mascotas_RecyclerView
 id masked
 id material_clock_display
 id material_clock_face
@@ -2251,6 +2252,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nuevo
+id nuevo_recycler
 id off
 id on
 id open_graph
@@ -2425,6 +2428,7 @@ id withText
 id withinBounds
 id wrap
 id wrap_content
+id wrapper
 id zero_corner_chip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -2527,6 +2531,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_desfragment
+layout fragment_mascotas
 layout lang_dialog
 layout list_group
 layout list_item
@@ -2798,6 +2803,7 @@ string second_fragment_label
 string share_with
 string status_bar_notification_info_overflow
 string title_activity_maps1
+string title_activity_mascotas_fragment
 string yes
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

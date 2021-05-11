@@ -2181,7 +2181,6 @@ id logo
 id lvExp
 id mRecyclerView
 id map
-id mascotas_RecyclerView
 id masked
 id material_clock_display
 id material_clock_face
@@ -2254,7 +2253,6 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id nuevo
-id nuevo_recycler
 id off
 id on
 id open_graph
@@ -2532,7 +2530,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_desfragment
-layout fragment_mascotas
 layout lang_dialog
 layout list_group
 layout list_item

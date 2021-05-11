@@ -41,11 +41,6 @@ public class OpcionesIngreso extends AppCompatActivity {
           /* AppCompatActivity activity=(AppCompatActivity)v.getContext();
             activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new MascotasFragment(),"").addToBackStack(null).commit();
 */
-           MascotasFragment fragment=new MascotasFragment();
-            FragmentTransaction ft1=getSupportFragmentManager().beginTransaction();
-            ft1.replace(R.id.wrapper,fragment,"");
-            ft1.commit();
-
         });
 
 

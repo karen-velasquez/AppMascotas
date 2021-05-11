@@ -1889,6 +1889,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable perro
 drawable roundedbutton
 drawable roundedbuttonfont
 drawable test_custom_background
@@ -2615,6 +2616,7 @@ layout text_view_without_line_height
 menu menu_main
 mipmap camera_icon
 mipmap ic_action_check
+mipmap ic_action_gallery_icon
 mipmap ic_action_save
 mipmap ic_launcher
 mipmap ic_launcher_round

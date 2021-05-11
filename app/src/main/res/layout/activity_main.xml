@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/perro"
+
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,29 +25,34 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="350dp"
         android:text="COMENZAR"
-        android:textSize="18sp" />
-
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        />
 
 
     <Button
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
+        android:layout_marginStart="100dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="430dp"
         android:text="ADICIONAR DATOS"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        />
 
     <Button
         android:id="@+id/ia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
+        android:layout_marginStart="150dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="500dp"
         android:text="IA"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        />
 
 
     <Button
@@ -52,8 +61,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="200dp"
-        android:text="Log In" />
+        android:layout_marginTop="210dp"
+        android:text="Log In"
+        android:backgroundTint="#4CAF50"
+        />
 
 
     <Button
@@ -63,13 +74,15 @@
         android:layout_marginStart="117dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="145dp"
-        android:text="CARDVIEW" />
+        android:text="CARDVIEW"
+        android:backgroundTint="#4CAF50"
+        />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#2180F3"
         app:popupTheme="@style/Theme.MascotasProject.PopupOverlay" />
 
     <Button
@@ -77,8 +90,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="115dp"
-        android:layout_marginTop="270dp"
-        android:text="Mostrar Mapa" />
+        android:layout_marginTop="280dp"
+        android:text="Mostrar Mapa"
+        android:backgroundTint="#4CAF50"
+        />
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

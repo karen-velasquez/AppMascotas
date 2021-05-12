@@ -1322,7 +1322,7 @@
     <string name="google_api_key" translatable="false">AIzaSyALVr6stwhCUCs54bYOf_IjATptpnA4jwg</string>
     <string name="google_app_id" translatable="false">1:700085161945:android:7a8d816587a23e0f0cd3c8</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyALVr6stwhCUCs54bYOf_IjATptpnA4jwg</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBdFZToESRZbaM0G6FzhN2vGCqlq1es4Pg</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB4ihTl6tPVdRB_76JOdXgfLxQvNPGwAZI</string>
     <string name="google_storage_bucket" translatable="false">fir-image-66e1c.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
@@ -1399,6 +1399,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="share_with">Share with..</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_localizaciones">Map</string>
     <string name="title_activity_maps1">Map</string>
     <string name="title_activity_mascotas_fragment">MascotasFragment</string>
     <string name="yes">Yes</string>

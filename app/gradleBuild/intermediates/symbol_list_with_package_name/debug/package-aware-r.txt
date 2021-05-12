@@ -2505,6 +2505,7 @@ layout activity_add_data
 layout activity_camera
 layout activity_get_location
 layout activity_list
+layout activity_localizaciones
 layout activity_log_in
 layout activity_loggedin
 layout activity_loginnumero
@@ -2813,6 +2814,7 @@ string search_menu_title
 string second_fragment_label
 string share_with
 string status_bar_notification_info_overflow
+string title_activity_localizaciones
 string title_activity_maps1
 string title_activity_mascotas_fragment
 string yes

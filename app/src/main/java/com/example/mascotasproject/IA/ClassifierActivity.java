@@ -146,11 +146,23 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     /**/
     public void eliminardatosredundantestemporal(String codigo){
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("temporalimagen");
-        modeltemporal modeltemporal=new modeltemporal();
-        modeltemporal.setCodigo(codigo);
-        ref.child(modeltemporal.getCodigo()).removeValue();
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    /*obteniendo los datos de razas desde firebase*/
+                    modeltemporal modeltemporal = ds.getValue(com.example.mascotasproject.modeltemporal.class);
+                    if (modeltemporal.getCodigo().equals(codigo)) {
+                        ds.getRef().removeValue();
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
     }
 
 

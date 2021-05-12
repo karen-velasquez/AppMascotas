@@ -46,6 +46,7 @@
 
     //for fb
     <string name="title_activity_mascotas_fragment">MascotasFragment</string>
+    <string name="title_activity_localizaciones">Map</string>
     <string-array name="breeds_array">
         <item>Affenpinscher</item>
         <item>Afghan Hound</item>

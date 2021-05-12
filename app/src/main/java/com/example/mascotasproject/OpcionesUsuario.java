@@ -28,7 +28,14 @@ public class OpcionesUsuario extends AppCompatActivity {
             intent.putExtra("usuario",usuario);
             intent.putExtra("quien",  quien);
             startActivity(intent);
+        });
 
+
+        mbtn_seguimiento.setOnClickListener(v->{
+            Intent intent=new Intent(OpcionesUsuario.this, SeguimientoMascotas.class);
+            intent.putExtra("codigo",usuario);
+            intent.putExtra("quien",  quien);
+            startActivity(intent);
         });
 
     }

@@ -29,11 +29,7 @@
         <!-- Needs to be explicitly declared on Android R+ -->
         <package android:name="com.google.android.apps.maps" />
     </queries>
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -47,9 +43,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MascotasProject" >
+        <activity android:name="com.example.mascotasproject.SeguimientoMascotas" />
         <activity android:name="com.example.mascotasproject.login.ProfileActivity" />
         <activity android:name="com.example.mascotasproject.login.LoggedinActivity" />
         <activity android:name="com.example.mascotasproject.login.RegisterActivity" />
+        <activity android:name="com.example.mascotasproject.MapsActivity1" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -58,8 +56,6 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-            android:name=".MapsActivity1"
-            android:label="@string/title_activity_maps1" />
         <activity android:name="com.example.mascotasproject.OpcionesUsuario" />
         <activity android:name="com.example.mascotasproject.loginnumero" />
         <activity android:name="com.example.mascotasproject.OpcionesIngreso" />

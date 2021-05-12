@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,19 +55,51 @@ public class MostrarRecycler extends AppCompatActivity {
         setContentView(R.layout.activity_mostrar_recycler);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setTitle("Lista de datos");
-        System.out.println("Llegue a este nivel numero 1..............");
 
         //RecyclerView
         mRecyclerView=findViewById(R.id.mRecyclerView);
         mRecyclerView.setHasFixedSize(true);
 
-        //colocando el layout en el linearlayout
+        //Colocando los valores del Firebase
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mRef=mFirebaseDatabase.getReference("Mascotas/Datos");
          mAuth = FirebaseAuth.getInstance();
 
 
     }
+
+    public void mascotasrecyclerUsuarios(String codigo){
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mascotaslist.clear();
+                for(DataSnapshot ds: snapshot.getChildren()){
+                    /*obteniendo los datos de razas desde firebase*/
+                    model modelmascotas=ds.getValue(model.class);
+
+                    if(modelmascotas.getCodigoDueno().equals(codigo)){
+                        //obtener todos los usuarios menos
+                        mascotaslist.add(modelmascotas);
+
+                    }
+                }
+                mascotasAdapter=new MascotasAdapter(MostrarRecycler.this,mascotaslist);
+                mRecyclerView.setAdapter(mascotasAdapter);
+
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+    }
+
+
     public void mascotasrecyclerInvitados(){
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
         ref.addValueEventListener(new ValueEventListener() {

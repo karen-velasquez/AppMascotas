@@ -2082,6 +2082,7 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id dimensions
+id direccion_location
 id direct
 id disableHome
 id disablePostScroll
@@ -2150,6 +2151,7 @@ id image
 id imageView
 id imageholder
 id imagenAdd
+id imagen_location
 id img1
 id info
 id inline
@@ -2164,6 +2166,7 @@ id labelGroup
 id labeled
 id large
 id largeLabel
+id latitud_location
 id layout
 id lblListHeader
 id left
@@ -2176,11 +2179,14 @@ id listMode
 id list_breeds
 id list_item
 id locationButton
+id locationRecyclerView
 id login_btn
 id logo
+id longitud_location
 id lvExp
 id mRecyclerView
 id map
+id mapa_location
 id masked
 id material_clock_display
 id material_clock_face
@@ -2420,9 +2426,11 @@ id unlabeled
 id up
 id useLogo
 id usuario
+id usuario_maslocation
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
+id visto_location
 id wide
 id withText
 id withinBounds
@@ -2506,6 +2514,7 @@ layout activity_opciones_ingreso
 layout activity_opciones_usuario
 layout activity_profile
 layout activity_register
+layout activity_seguimiento_mascotas
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout camera_connection_fragment
@@ -2534,6 +2543,7 @@ layout fragment_desfragment
 layout lang_dialog
 layout list_group
 layout list_item
+layout location_mas_user
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

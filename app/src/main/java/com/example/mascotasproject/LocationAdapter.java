@@ -1,5 +1,6 @@
 package com.example.mascotasproject;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -18,56 +19,48 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHolder>{
+public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHolder>{
 
     Context context;
 
-    List<model> mascotaList;
+    List<locationMascota> locationList;
 
-    public MascotasAdapter(Context context, List<model> mascotalist) {
-            this.context=context;
-            this.mascotaList=mascotalist;
+    public LocationAdapter(Context context, List<locationMascota> locationList) {
+        this.context=context;
+        this.locationList=locationList;
     }
 
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view= LayoutInflater.from(context).inflate(R.layout.singlerowdesign,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.location_mas_user,parent,false);
         return new MyHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
         /*Que el boton de ir a ver locaciones aparezca en caso de que quien sea Usuario*/
-        final boolean enabled = View.VISIBLE ==View.VISIBLE ;
-        if(getquien().equals("Usuario")){
-            holder.muser_maslocation.setVisibility(View.VISIBLE);
-            holder.muser_maslocation.setEnabled(enabled);
-        }
+
 
         //obteniendo datos
-        String dnombreMas=mascotaList.get(position).getNombreMas();
-        String dCaracteristicas=mascotaList.get(position).getCaracteristicas();
-        String ddatosperdida=mascotaList.get(position).getUbicacionPerdida();
-        String urlimagen=mascotaList.get(position).getImagen();
+        String dnombreMas=locationList.get(position).getNombreMas();
+        String dCaracteristica=locationList.get(position).getCaracteristica();
+        String dlatitude=locationList.get(position).getLatitude();
+        String dlongitud=locationList.get(position).getLongitud();
 
-        //enviando data
-        holder.mnombreMas.setText(dnombreMas);
-        holder.mCaractericas.setText(dCaracteristicas);
-        holder.mdatosperdida.setText(ddatosperdida);
-        try{
-            Picasso.get().load(urlimagen)
-                    .into(holder.mimagen);
-        }catch (Exception e){
 
-        }
+        /*ingresando los datos al holder---------------------*/
+        holder.mvisto_Location.setText(dnombreMas);
+        holder.mdireccion_location.setText(dCaracteristica);
+        holder.mlatitude_location.setText(dlatitude);
+        holder.mlongitud_location.setText(dlongitud);
 
         //handle item click
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,desfragment.class);
+               /* Intent intent=new Intent(context,desfragment.class);
 
                 intent.putExtra("nombreMas",mascotaList.get(position).getNombreMas());
                 intent.putExtra("caracteristica",mascotaList.get(position).getCaracteristicas());
@@ -75,17 +68,17 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
                 intent.putExtra("image",mascotaList.get(position).getImagen());
                 intent.putExtra("quien",getquien());
                 v.getContext().startActivity(intent);
-                Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();*/
 
             }
         });
 
-        holder.muser_maslocation.setOnClickListener(new View.OnClickListener() {
+        /*holder.muser_maslocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
-        });
+        });*/
 
 
 
@@ -100,23 +93,24 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
 
     @Override
     public int getItemCount() {
-        return mascotaList.size();
+        return locationList.size();
     }
 
     //view holder class
     class  MyHolder extends RecyclerView.ViewHolder{
 
-        TextView mnombreMas, mCaractericas, mdatosperdida;
-        ImageView mimagen;
-        Button muser_maslocation;
+        TextView mvisto_Location,mlatitude_location,mlongitud_location,mdireccion_location;
+        ImageView mimagen_location;
+        Button mmapa_location;
         public MyHolder(@NonNull View itemView) {
-          super(itemView);
+            super(itemView);
 
-              mnombreMas = itemView.findViewById(R.id.nombre);
-              mCaractericas = itemView.findViewById(R.id.caracteristica);
-              mdatosperdida = itemView.findViewById(R.id.datos_perdida);
-              mimagen = itemView.findViewById(R.id.img1);
-              muser_maslocation=itemView.findViewById(R.id.usuario_maslocation);
+            mvisto_Location = itemView.findViewById(R.id.visto_location);
+            mlatitude_location = itemView.findViewById(R.id.latitud_location);
+            mlongitud_location = itemView.findViewById(R.id.longitud_location);
+            mdireccion_location=itemView.findViewById(R.id.direccion_location);
+            mimagen_location = itemView.findViewById(R.id.imagen_location);
+            mmapa_location=itemView.findViewById(R.id.mapa_location);
 
 
 

@@ -57,6 +57,14 @@
             android:text="datos perdida"
             android:textColor="#000"
             android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/usuario_maslocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IR A VER"
+                android:visibility="visible"
+                />
     </LinearLayout>
 
 

@@ -228,10 +228,9 @@ public abstract class CameraActivity extends FragmentActivity
         checkButtonuser.setOnClickListener(v-> {
             //verificando que filepathyuri esta vacio o no
             //asignando la instancia de firebasestorage a un objeto de storage
-
-
-            Intent intent=new Intent(CameraActivity.this, GetLocation.class);
-            intent.putExtra("quien",quien);
+            Intent intent=new Intent(CameraActivity.this, AddData.class);
+            intent.putExtra("quien",getQuien());
+            intent.putExtra("codigo",getCodigo());
             startActivity(intent);
 
         });

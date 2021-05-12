@@ -59,6 +59,7 @@ public class GetLocation extends AppCompatActivity {
 
 
         /*-------------------------------obteniendo los datos del intent*/
+        String mcodDueno=getIntent().getStringExtra("codDueno");
         String mnombre=getIntent().getStringExtra("nombreMas");
         String mCaracteristicas=getIntent().getStringExtra("caracteristica");
         String mdatosper=getIntent().getStringExtra("perdida");
@@ -102,6 +103,7 @@ public class GetLocation extends AppCompatActivity {
                 locationupdate.put("longitud",longi);
                 locationupdate.put("nombreMas",mnombre);
                 locationupdate.put("caracteristica",mCaracteristicas);
+                locationupdate.put("codigoDueno",mcodDueno);
                 mRef.push().setValue(locationupdate);
             }
         });

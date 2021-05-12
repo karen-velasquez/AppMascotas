@@ -2019,6 +2019,7 @@ id cameraButton
 id cancel_action
 id cancel_button
 id caracteristica
+id caracteristicaAdd
 id caracteristicaholder
 id center
 id center_horizontal

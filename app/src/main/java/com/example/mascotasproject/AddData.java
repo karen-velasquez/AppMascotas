@@ -41,10 +41,11 @@ import com.squareup.picasso.Picasso;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Random;
 
 public class AddData extends AppCompatActivity {
 //hola probando
-    EditText nombreAdd, perdidaAdd;
+    EditText nombreAdd, perdidaAdd, caracteristicaAdd;
     ImageView imagenAdd;
     Button mUploadBtn;
 
@@ -85,24 +86,21 @@ public class AddData extends AppCompatActivity {
 
         nombreAdd = findViewById(R.id.nombreAdd);
         perdidaAdd = findViewById(R.id.perdidaAdd);
+        caracteristicaAdd=findViewById(R.id.caracteristicaAdd);
         imagenAdd=findViewById(R.id.imagenAdd);
         mUploadBtn=findViewById(R.id.buttonupload);
 
-        String usuario=getIntent().getStringExtra("usuario");
-        String quien=getIntent().getStringExtra("quien");
+
+
 
         //AL TOCAR LA IMAGEN
         imagenAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* Intent intent=new Intent();
+                Intent intent=new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Seleccionar imagen"),IMAGE_REQUEST_CODE);*/
-                Intent intent=new Intent(AddData.this, ClassifierActivity.class);
-                intent.putExtra("usuario",usuario);
-                intent.putExtra("quien",  quien);
-                startActivity(intent);
+                startActivityForResult(Intent.createChooser(intent,"Seleccionar imagen"),IMAGE_REQUEST_CODE);
 
 
             }
@@ -128,20 +126,26 @@ public class AddData extends AppCompatActivity {
         }
 
 
+        mUploadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                uploadDatatoFirebase();
+            }
+        });
 
         //AL HACER CLICK EN EL BOTON
-        mUploadBtn.setOnClickListener(new View.OnClickListener(){
+     /*  mUploadBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 if(mUploadBtn.getText().equals("Upload")){
-                    uploadDatatoFirebase();
+
                 }else {
                     beginUpdate();
                 }
 
 
             }
-        });
+        });*/
         //asignando la instancia de firebasestorage a un objeto de storage
         mStorageReference= FirebaseStorage.getInstance().getReference();
         //asignando la instancia de direbasedatabase a el root con ese nombre
@@ -242,6 +246,7 @@ public class AddData extends AppCompatActivity {
 
     }
 
+    /*-------------------------------SE SUBE LOS NUEVOS DATOS A FIREBASE CUANDO SE SELECCIONO UNA IMAGEN------------------------------------------------------------*/
     private void uploadDatatoFirebase(){
         //verificando que filepathyuri esta vacio o no
         if(mFilePathUri!=null){
@@ -256,13 +261,14 @@ public class AddData extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             String mnombreAdd=nombreAdd.getText().toString().trim();
                             String mperdidaAdd=perdidaAdd.getText().toString().trim();
+                            String mcaracteristicaAdd=caracteristicaAdd.getText().toString().trim();
+                            String mcoddueno=getCodigo();
+                            String mcodmascota=codigoMascotaGen(10);
+                            String mvigencia="true";
+                            String mraza="Pastor Aleman";
 
                             mProgressDialog.dismiss();
 
-                            String carac="holi";
-                            String cdu="1";
-                            String cmas="2";
-                            String vige="true";
                             //sacando la url de storage
                             Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
                             while(!uri.isComplete());
@@ -374,4 +380,75 @@ public class AddData extends AppCompatActivity {
             }
         }
     }
+
+
+
+
+
+
+    /*Comprobando y uniendo Generador Random y no repcodmascota*/
+    public static String codigoMascotaGen(int i){
+        boolean flag=false;
+        String generadorrandom="";
+        while (flag==false){
+            generadorrandom=GenerandoRandom(i);
+            if(noRepCodMascota(generadorrandom)==true){
+                flag=false;
+            }else{
+                flag=true;
+            }
+        }
+        return generadorrandom;
+    }
+
+
+    /*GENERANDO UN STRING RANDOMICOOOOOOOOOOOOOOOOO-------------------------------------------------------------*/
+    public static String GenerandoRandom(int i){
+        final String characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder result=new StringBuilder();
+        while(i>0){
+            Random rand = new Random();
+            result.append(characters.charAt(rand.nextInt(characters.length())));
+            i--;
+        }
+
+        return result.toString();
+    }
+
+    /*REVISANDO QUE NINGUNA OTRA MASCOTA TENGA EL MISMO CODIGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO----------------------*/
+    public static boolean noRepCodMascota(String codigomascosta) {
+        final boolean[] flag = {false};
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    /*obteniendo los datos de razas desde firebase*/
+                    model modelmascotas = ds.getValue(model.class);
+                    if (modelmascotas.getCodigoMascota().equals(codigomascosta)) {
+                        flag[0] =true;
+                    } else {
+                        flag[0] =false;
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        return flag[0];
+    }
+
+
+    /*Obteniendo el quien y el codigo-------------------------------------*/
+    public String getQuien(){
+        String quien=getIntent().getStringExtra("quien");
+        return quien;
+    }
+    public String getCodigo(){
+        String codigo=getIntent().getStringExtra("codigo");
+        return codigo;
+    }
+
 }

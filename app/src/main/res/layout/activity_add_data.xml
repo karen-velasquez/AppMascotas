@@ -13,13 +13,21 @@
             android:id="@+id/nombreAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ingresar nombre"
+            android:hint="Ingresar nombre Mascota"
             android:singleLine="true"
             />
         <ImageView
             android:id="@+id/imagenAdd"
             android:layout_width="match_parent"
             android:layout_height="250dp"/>
+        <EditText
+            android:id="@+id/caracteristicaAdd"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese caracteristica de la mascota"
+            android:minHeight="100dp"
+            android:gravity="top"/>
         <EditText
             android:id="@+id/perdidaAdd"
             android:padding="10dp"

@@ -1,24 +1,25 @@
 package com.example.mascotasproject;
 
 public class locationMascota {
-    String caracteristica, latitude,longitud,nombreMas,codigo;
+    String caracteristica, latitude,longitud,nombreMas,codigoDueno;
 
     public locationMascota(){}
 
-    public String getCodigo() {
-        return codigo;
+
+    public String getCodigoDueno() {
+        return codigoDueno;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCodigoDueno(String codigoDueno) {
+        this.codigoDueno = codigoDueno;
     }
 
-    public locationMascota(String caracteristica, String latitude, String longitud, String nombreMas, String codigo) {
+    public locationMascota(String caracteristica, String latitude, String longitud, String nombreMas, String codigoDueno) {
         this.caracteristica=caracteristica;
         this.latitude=latitude;
         this.longitud=longitud;
         this.nombreMas=nombreMas;
-        this.codigo=codigo;
+        this.codigoDueno=codigoDueno;
     }
 
     public String getCaracteristica() {

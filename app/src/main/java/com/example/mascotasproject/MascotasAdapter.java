@@ -69,6 +69,7 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
             public void onClick(View v) {
                 Intent intent=new Intent(context,desfragment.class);
 
+                intent.putExtra("codDueno",mascotaList.get(position).getCodigoDueno());
                 intent.putExtra("nombreMas",mascotaList.get(position).getNombreMas());
                 intent.putExtra("caracteristica",mascotaList.get(position).getCaracteristicas());
                 intent.putExtra("perdida",mascotaList.get(position).getUbicacionPerdida());

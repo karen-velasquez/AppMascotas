@@ -18,6 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class SeguimientoMascotas extends AppCompatActivity {
 
@@ -31,6 +32,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
     LocationAdapter locationAdapter;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ public class SeguimientoMascotas extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
 
         actionBar.setTitle("Seguimiento Mascotas");
+
 
         //RecyclerView
         mlocationRecyclerView=findViewById(R.id.locationRecyclerView);
@@ -80,8 +84,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
                    locationMascota locationMascotas=ds.getValue(locationMascota.class);
 
 
-                   System.out.print("cuales vioooooooooooo"+locationMascotas.getCodigo());
-                    if(locationMascotas.getCodigo().equals(codigo)){
+                   System.out.print("cuales vioooooooooooo"+locationMascotas.getCodigoDueno());
+                    if(locationMascotas.getCodigoDueno().equals(codigo)){
                         //obtener todos los usuarios menos
                         locationlist.add(locationMascotas);
 
@@ -100,5 +104,18 @@ public class SeguimientoMascotas extends AppCompatActivity {
 
 
 
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }

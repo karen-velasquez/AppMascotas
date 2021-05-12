@@ -2632,6 +2632,7 @@ mipmap camera_icon
 mipmap ic_action_check
 mipmap ic_action_gallery_icon
 mipmap ic_action_save
+mipmap ic_gallery
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph

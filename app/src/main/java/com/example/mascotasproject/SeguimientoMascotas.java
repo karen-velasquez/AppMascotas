@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -63,8 +64,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
         }else{
             if(quien.equals("Usuario")){
                 String codigo=getIntent().getStringExtra("codigo");
-                mascotasrecyclerUsuarios(codigo);
-                System.out.print("que codigo INGRESOOOO"+codigo);
+                String codMascota=getIntent().getStringExtra("codMascota");
+                positionrecyclerUsuarios(codigo,codMascota);
             }
         }
 
@@ -72,9 +73,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
 
     }
 
-    public void mascotasrecyclerUsuarios(String codigo){
+    public void positionrecyclerUsuarios(String codigo,String codMascota){
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Locaciones");
-        System.out.print("ENTRO AQUI??????");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -82,10 +82,7 @@ public class SeguimientoMascotas extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren()){
                     /*obteniendo los datos de razas desde firebase*/
                    locationMascota locationMascotas=ds.getValue(locationMascota.class);
-
-
-                   System.out.print("cuales vioooooooooooo"+locationMascotas.getCodigoDueno());
-                    if(locationMascotas.getCodigoDueno().equals(codigo)){
+                    if(locationMascotas.getCodigoDueno().equals(codigo) && locationMascotas.getCodigoMascota().equals(codMascota)){
                         //obtener todos los usuarios menos
                         locationlist.add(locationMascotas);
 

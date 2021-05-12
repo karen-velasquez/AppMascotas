@@ -39,6 +39,7 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
+
         /*Que el boton de ir a ver locaciones aparezca en caso de que quien sea Usuario*/
         final boolean enabled = View.VISIBLE ==View.VISIBLE ;
         if(getquien().equals("Usuario")){
@@ -46,7 +47,7 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
             holder.muser_maslocation.setEnabled(enabled);
         }
 
-        //obteniendo datos
+        //obteniendo datos para el card view dentro el Recycler View
         String dnombreMas=mascotaList.get(position).getNombreMas();
         String dCaracteristicas=mascotaList.get(position).getCaracteristicas();
         String ddatosperdida=mascotaList.get(position).getUbicacionPerdida();
@@ -60,16 +61,17 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
             Picasso.get().load(urlimagen)
                     .into(holder.mimagen);
         }catch (Exception e){
-
+            Toast.makeText(context, "Hay un error al cargar la imagen", Toast.LENGTH_SHORT).show();
         }
 
-        //handle item click
+        //en caso de que se clickee un item del RecyclerView
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context,desfragment.class);
 
                 intent.putExtra("codDueno",mascotaList.get(position).getCodigoDueno());
+                intent.putExtra("codMascota",mascotaList.get(position).getCodigoMascota());
                 intent.putExtra("nombreMas",mascotaList.get(position).getNombreMas());
                 intent.putExtra("caracteristica",mascotaList.get(position).getCaracteristicas());
                 intent.putExtra("perdida",mascotaList.get(position).getUbicacionPerdida());
@@ -84,7 +86,17 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
         holder.muser_maslocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(context,SeguimientoMascotas.class);
+                intent.putExtra("codDueno",mascotaList.get(position).getCodigoDueno());
+                intent.putExtra("codMascota",mascotaList.get(position).getCodigoMascota());
+                intent.putExtra("nombreMas",mascotaList.get(position).getNombreMas());
+                intent.putExtra("caracteristica",mascotaList.get(position).getCaracteristicas());
+                intent.putExtra("perdida",mascotaList.get(position).getUbicacionPerdida());
+                intent.putExtra("image",mascotaList.get(position).getImagen());
+                intent.putExtra("quien",getquien());
+                intent.putExtra("codigo",((MostrarRecycler) context).getIntent().getStringExtra("codigo"));
+                v.getContext().startActivity(intent);
+                Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
             }
         });
 

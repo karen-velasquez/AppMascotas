@@ -116,9 +116,7 @@ public class MostrarRecycler extends AppCompatActivity {
                     String razas = modelmascotas.getRazas();
                     String[] parts = razas.split("/");
                     String r1 = parts[0];
-                    System.out.print("LA RAZA 111111111"+r1);
                     String r2 = parts[1];
-                    System.out.print("LA RAZA 2222222222222"+r2);
 
                     if(r1.equals(raza1) || r2.equals(raza1) || r1.equals(raza2) || r2.equals(raza2)){
                         //obtener todos los usuarios menos

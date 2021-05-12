@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_check.png.flat",
-        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_check.png"
-    },
-    {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_add.xml.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\drawable-anydpi\\ic_action_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_check.png.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_action_check.png"
     },
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_fragment_desfragment.xml.flat",
-        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\fragment_desfragment.xml"
-    },
-    {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_camera_icon.png.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\camera_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_fragment_desfragment.xml.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\fragment_desfragment.xml"
     },
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -84,8 +84,16 @@
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\activity_log_in.xml"
     },
     {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_gallery.png.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-hdpi\\ic_gallery.png"
+    },
+    {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_add.png.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_gallery.png.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_gallery.png"
     },
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_action_gallery_icon.png.flat",
@@ -224,6 +232,10 @@
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\drawable\\marker_weso.png"
     },
     {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_gallery.png.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-xhdpi\\ic_gallery.png"
+    },
+    {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_mostrar_recycler.xml.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\activity_mostrar_recycler.xml"
     },
@@ -256,12 +268,20 @@
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\activity_loggedin.xml"
     },
     {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_gallery.png.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_gallery.png"
+    },
+    {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_camera_connection_fragment.xml.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\camera_connection_fragment.xml"
     },
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_profile.xml.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_gallery.png.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_gallery.png"
     },
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_action_gallery_icon.png.flat",

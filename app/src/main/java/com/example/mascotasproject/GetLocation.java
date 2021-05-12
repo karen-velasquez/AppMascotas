@@ -42,9 +42,9 @@ public class GetLocation extends AppCompatActivity {
     private Button updatelocation;
 
 
-    /*Subiendo los datos de donde se vio a la mascota*/
-    FirebaseDatabase mFirebaseDatabase;
-    DatabaseReference mRef;
+
+    /*Strings obteniendo los datos del Intent*/
+    String mcodDueno,mcodMascota,mnombre,mCaracteristicas,mdatosper,image,quien;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +59,15 @@ public class GetLocation extends AppCompatActivity {
 
 
         /*-------------------------------obteniendo los datos del intent*/
-        String mcodDueno=getIntent().getStringExtra("codDueno");
-        String mnombre=getIntent().getStringExtra("nombreMas");
-        String mCaracteristicas=getIntent().getStringExtra("caracteristica");
-        String mdatosper=getIntent().getStringExtra("perdida");
-        String image=getIntent().getStringExtra("image");
-        String quien=getIntent().getStringExtra("quien");
+        obteniendovaloresIntent();
+        /*-------------------------------------------------------------------------------------------------------------*/
+        /*-------------------------------subiendo localizaciones-----*/
+        updatelocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                subirdatosLocaciones();
+            }
+        });
         /*-------------------------------------------------------------------------------------------------------------*/
 
 
@@ -91,24 +94,38 @@ public class GetLocation extends AppCompatActivity {
             }
         });
 
+
+
+
+    }
+
+    public void obteniendovaloresIntent(){
+        mcodDueno=getIntent().getStringExtra("codDueno");
+        mcodMascota=getIntent().getStringExtra("codMascota");
+        mnombre=getIntent().getStringExtra("nombreMas");
+        mCaracteristicas=getIntent().getStringExtra("caracteristica");
+        mdatosper=getIntent().getStringExtra("perdida");
+        image=getIntent().getStringExtra("image");
+        quien=getIntent().getStringExtra("quien");
+    }
+
+    public void subirdatosLocaciones(){
         /*Instanciando el firebase*/
+
+        FirebaseDatabase mFirebaseDatabase;
+        DatabaseReference mRef;
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
 
-        updatelocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Map<String,Object> locationupdate=new HashMap<>();
-                locationupdate.put("latitude",lat);
-                locationupdate.put("longitud",longi);
-                locationupdate.put("nombreMas",mnombre);
-                locationupdate.put("caracteristica",mCaracteristicas);
-                locationupdate.put("codigoDueno",mcodDueno);
-                mRef.push().setValue(locationupdate);
-            }
-        });
-
-
+        /*Subiendo los datos de donde se vio a la mascota*/
+        Map<String,Object> locationupdate=new HashMap<>();
+        locationupdate.put("latitude",lat);
+        locationupdate.put("longitud",longi);
+        locationupdate.put("nombreMas",mnombre);
+        locationupdate.put("caracteristica",mCaracteristicas);
+        locationupdate.put("codigoDueno",mcodDueno);
+        locationupdate.put("codigoMascota",mcodMascota);
+        mRef.push().setValue(locationupdate);
     }
 
     @Override

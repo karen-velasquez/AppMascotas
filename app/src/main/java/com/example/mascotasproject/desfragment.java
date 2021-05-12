@@ -43,6 +43,7 @@ public class desfragment extends AppCompatActivity {
 
         //Obteniendo los datos del intent
         String mcodDueno=getIntent().getStringExtra("codDueno");
+        String mcodMascota=getIntent().getStringExtra("codMascota");
         String mnombre=getIntent().getStringExtra("nombreMas");
         String mCaracteristicas=getIntent().getStringExtra("caracteristica");
         String mdatosper=getIntent().getStringExtra("perdida");
@@ -73,6 +74,7 @@ public class desfragment extends AppCompatActivity {
 
                 Intent intent=new Intent(desfragment.this,GetLocation.class);
                 intent.putExtra("codDueno",mcodDueno);
+                intent.putExtra("codMascota",mcodMascota);
                 intent.putExtra("nombreMas",mnombre);
                 intent.putExtra("caracteristica",mCaracteristicas);
                 intent.putExtra("perdida",mdatosper);

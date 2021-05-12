@@ -1,25 +1,18 @@
 package com.example.mascotasproject;
 
 public class locationMascota {
-    String caracteristica, latitude,longitud,nombreMas,codigoDueno;
+    String caracteristica, latitude,longitud,nombreMas,codigoDueno,codigoMascota;
 
     public locationMascota(){}
 
 
-    public String getCodigoDueno() {
-        return codigoDueno;
-    }
-
-    public void setCodigoDueno(String codigoDueno) {
-        this.codigoDueno = codigoDueno;
-    }
-
-    public locationMascota(String caracteristica, String latitude, String longitud, String nombreMas, String codigoDueno) {
+    public locationMascota(String caracteristica, String latitude, String longitud, String nombreMas, String codigoDueno, String codigoMascota) {
         this.caracteristica=caracteristica;
         this.latitude=latitude;
         this.longitud=longitud;
         this.nombreMas=nombreMas;
         this.codigoDueno=codigoDueno;
+        this.codigoMascota=codigoMascota;
     }
 
     public String getCaracteristica() {
@@ -54,5 +47,20 @@ public class locationMascota {
         this.nombreMas = nombreMas;
     }
 
+    public String getCodigoDueno() {
+        return codigoDueno;
+    }
+
+    public void setCodigoDueno(String codigoDueno) {
+        this.codigoDueno = codigoDueno;
+    }
+
+    public String getCodigoMascota() {
+        return codigoMascota;
+    }
+
+    public void setCodigoMascota(String codigoMascota) {
+        this.codigoMascota = codigoMascota;
+    }
 
 }

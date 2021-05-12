@@ -20,6 +20,7 @@ public class desfragment extends AppCompatActivity {
     ImageView mimagen;
     ImageButton mlocation;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,8 @@ public class desfragment extends AppCompatActivity {
 
 
 
+
+
         System.out.println("numero finalllllll"+quien);
         setButtonsVisibility(View.VISIBLE,quien);
 
@@ -66,7 +69,13 @@ public class desfragment extends AppCompatActivity {
         mlocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(desfragment.this, GetLocation.class);
+
+                Intent intent=new Intent(desfragment.this,GetLocation.class);
+                intent.putExtra("nombreMas",mnombre);
+                intent.putExtra("caracteristica",mCaracteristicas);
+                intent.putExtra("perdida",mdatosper);
+                intent.putExtra("image",image);
+                intent.putExtra("quien",quien);
                 startActivity(intent);
             }
         });
@@ -74,8 +83,7 @@ public class desfragment extends AppCompatActivity {
     }
     void setButtonsVisibility(final int visibility, String quien) {
         final boolean enabled = visibility == View.VISIBLE;
-        System.out.println("QUE ENTROOOOOO ADENTRO DE LA VISIBILIDAD"+quien);
-        if(quien.toString().equals("Invitado")){
+        if(quien.equals("Invitado")){
             mlocation.setVisibility(visibility);
             mlocation.setEnabled(enabled);
         }

@@ -37,12 +37,6 @@ public class OpcionesIngreso extends AppCompatActivity {
 
         });
 
-        mnuevo.setOnClickListener(v-> {
-          /* AppCompatActivity activity=(AppCompatActivity)v.getContext();
-            activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new MascotasFragment(),"").addToBackStack(null).commit();
-*/
-        });
-
 
 
 

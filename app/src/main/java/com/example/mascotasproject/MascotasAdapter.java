@@ -1,6 +1,7 @@
 package com.example.mascotasproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,17 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(context,desfragment.class);
+
+                intent.putExtra("nombreMas",mascotaList.get(position).getNombreMas());
+                intent.putExtra("caracteristica",mascotaList.get(position).getCaracteristicas());
+                intent.putExtra("perdida",mascotaList.get(position).getUbicacionPerdida());
+                intent.putExtra("image",mascotaList.get(position).getImagen());
+                String quien = ((MostrarRecycler) context).getIntent().getStringExtra("quien");
+                intent.putExtra("quien",quien);
+                v.getContext().startActivity(intent);
                 Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
+
             }
         });
 

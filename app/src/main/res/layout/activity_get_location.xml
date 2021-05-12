@@ -51,6 +51,12 @@
             android:src="@color/common_google_signin_btn_text_dark_disabled"
             android:layout_marginTop="200dp"
             android:id="@+id/rellenarimageen"/>
+        <Button
+            android:id="@+id/subirlocfirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VI A LA MASCOTA AQUI"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
 </ScrollView>

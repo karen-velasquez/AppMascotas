@@ -67,6 +67,42 @@ public class MostrarRecycler extends AppCompatActivity {
 
 
     }
+    public void mascotasrecyclerInvitados(){
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mascotaslist.clear();
+                for(DataSnapshot ds: snapshot.getChildren()){
+                    /*obteniendo los datos de razas desde firebase*/
+                    model modelmascotas=ds.getValue(model.class);
+                    String resultados[] = getIntent().getStringArrayExtra("resultados");
+                    String raza1 = resultados[0];
+                    String raza2 = resultados[1];
+
+                    String razas = modelmascotas.getRazas();
+                    String[] parts = razas.split("/");
+                    String r1 = parts[0];
+                    String r2 = parts[1];
+
+                    if(r1.equals(raza1) || r2.equals(raza1) || r1.equals(raza2) || r2.equals(raza2)){
+                        //obtener todos los usuarios menos
+                        mascotaslist.add(modelmascotas);
+                        System.out.print("LLEGUE AQUI PERO NOSE  COMO");
+
+                    }
+                }
+                mascotasAdapter=new MascotasAdapter(MostrarRecycler.this,mascotaslist);
+                mRecyclerView.setAdapter(mascotasAdapter);
+
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 
 
 

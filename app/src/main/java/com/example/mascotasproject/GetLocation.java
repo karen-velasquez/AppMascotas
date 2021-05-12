@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -21,6 +22,15 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class GetLocation extends AppCompatActivity {
 
@@ -28,6 +38,13 @@ public class GetLocation extends AppCompatActivity {
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     private TextView textLatlong;
     private ProgressBar progressBar;
+    String lat,longi;
+    private Button updatelocation;
+
+
+    /*Subiendo los datos de donde se vio a la mascota*/
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference mRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +55,23 @@ public class GetLocation extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
         rellenar=findViewById(R.id.rellenarimageen);
+        updatelocation=findViewById(R.id.subirlocfirebase);
+
+
+        /*-------------------------------obteniendo los datos del intent*/
+        String mnombre=getIntent().getStringExtra("nombreMas");
+        String mCaracteristicas=getIntent().getStringExtra("caracteristica");
+        String mdatosper=getIntent().getStringExtra("perdida");
+        String image=getIntent().getStringExtra("image");
+        String quien=getIntent().getStringExtra("quien");
+        /*-------------------------------------------------------------------------------------------------------------*/
 
 
         Bundle bundle=getIntent().getExtras();
-        String quien=getIntent().getStringExtra("quien");
+
         Bitmap bitmap = (Bitmap) getIntent().getParcelableExtra("imagen");
         rellenar.setImageBitmap(bitmap);
-        System.out.println("numero 111111"+quien);
+
 
         findViewById(R.id.buttonGetCurrentLocation).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +89,23 @@ public class GetLocation extends AppCompatActivity {
                 }
             }
         });
+
+        /*Instanciando el firebase*/
+        mFirebaseDatabase=FirebaseDatabase.getInstance();
+        mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
+
+        updatelocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Map<String,Object> locationupdate=new HashMap<>();
+                locationupdate.put("latitude",lat);
+                locationupdate.put("longitud",longi);
+                locationupdate.put("nombreMas",mnombre);
+                locationupdate.put("caracteristica",mCaracteristicas);
+                mRef.push().setValue(locationupdate);
+            }
+        });
+
 
     }
 
@@ -105,10 +149,15 @@ public class GetLocation extends AppCompatActivity {
                                 .removeLocationUpdates(this);
                         if (locationResult != null && locationResult.getLocations().size() > 0) {
                             int latestLocationIndex = locationResult.getLocations().size() - 1;
+
                             double latitude =
                                     locationResult.getLocations().get(latestLocationIndex).getLatitude();
+                            lat=latitude+"";
                             double longitude =
                                     locationResult.getLocations().get(latestLocationIndex).getLongitude();
+                            longi=longi+"";
+
+
                             textLatlong.setText(
                                     String.format(
                                             "Latitude: %s\nLongitude: %s",

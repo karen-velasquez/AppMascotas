@@ -12,8 +12,11 @@ com/example/mascotasproject/IA/env/ImageUtils.java
  com.example.mascotasproject.IA.env.ImageUtils
 com/example/mascotasproject/login/LoggedinActivity.java
  com.example.mascotasproject.login.LoggedinActivity
-com/example/mascotasproject/CodigoMascotas.java
- com.example.mascotasproject.CodigoMascotas
+com/example/mascotasproject/GetLocation.java
+ com.example.mascotasproject.GetLocation
+ com.example.mascotasproject.GetLocation$1
+ com.example.mascotasproject.GetLocation$2
+ com.example.mascotasproject.GetLocation$3
 com/example/mascotasproject/InfoPet.java
  com.example.mascotasproject.InfoPet
 com/example/mascotasproject/IA/SimpleListActivity.java
@@ -25,49 +28,34 @@ com/example/mascotasproject/login/LogInActivity.java
  com.example.mascotasproject.login.LogInActivity$3
  com.example.mascotasproject.login.LogInActivity$4
  com.example.mascotasproject.login.LogInActivity$5
-com/example/mascotasproject/login/ProfileActivity.java
- com.example.mascotasproject.login.ProfileActivity
+com/example/mascotasproject/MascotasAdapter.java
+ com.example.mascotasproject.MascotasAdapter
+ com.example.mascotasproject.MascotasAdapter$1
+ com.example.mascotasproject.MascotasAdapter$2
+ com.example.mascotasproject.MascotasAdapter$MyHolder
 com/example/mascotasproject/IA/ListAdapter.java
  com.example.mascotasproject.IA.ListAdapter
 com/example/mascotasproject/IA/TensorFlowImageClassifier.java
  com.example.mascotasproject.IA.TensorFlowImageClassifier
 com/example/mascotasproject/IA/AutoFitTextureView.java
  com.example.mascotasproject.IA.AutoFitTextureView
-com/example/mascotasproject/OpcionesIngreso.java
- com.example.mascotasproject.OpcionesIngreso
+com/example/mascotasproject/desfragment.java
+ com.example.mascotasproject.desfragment
+ com.example.mascotasproject.desfragment$1
 com/example/mascotasproject/IA/LegacyCameraConnectionFragment.java
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment$1
-com/example/mascotasproject/modeltemporal.java
- com.example.mascotasproject.modeltemporal
+com/example/mascotasproject/SeguimientoMascotas.java
+ com.example.mascotasproject.SeguimientoMascotas
+ com.example.mascotasproject.SeguimientoMascotas$1
 com/example/mascotasproject/login/RegisterActivity.java
  com.example.mascotasproject.login.RegisterActivity
-com/example/mascotasproject/BuildConfig.java
- com.example.mascotasproject.BuildConfig
+com/example/mascotasproject/login/ProfileActivity.java
+ com.example.mascotasproject.login.ProfileActivity
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
 com/example/mascotasproject/MapsActivity1.java
  com.example.mascotasproject.MapsActivity1
-com/example/mascotasproject/IA/ClassifierActivity.java
- com.example.mascotasproject.IA.ClassifierActivity
- com.example.mascotasproject.IA.ClassifierActivity$1
- com.example.mascotasproject.IA.ClassifierActivity$InferenceTask
-com/example/mascotasproject/IA/Classifier.java
- com.example.mascotasproject.IA.Classifier
- com.example.mascotasproject.IA.Classifier$Recognition
-com/example/mascotasproject/desfragment.java
- com.example.mascotasproject.desfragment
- com.example.mascotasproject.desfragment$1
-com/example/mascotasproject/SeguimientoMascotas.java
- com.example.mascotasproject.SeguimientoMascotas
- com.example.mascotasproject.SeguimientoMascotas$1
-com/example/mascotasproject/OpcionesUsuario.java
- com.example.mascotasproject.OpcionesUsuario
-com/example/mascotasproject/MascotasAdapter.java
- com.example.mascotasproject.MascotasAdapter
- com.example.mascotasproject.MascotasAdapter$1
- com.example.mascotasproject.MascotasAdapter$2
- com.example.mascotasproject.MascotasAdapter$MyHolder
 com/example/mascotasproject/LocationAdapter.java
  com.example.mascotasproject.LocationAdapter
  com.example.mascotasproject.LocationAdapter$1
@@ -92,19 +80,31 @@ com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData$9
 com/example/mascotasproject/locationMascota.java
  com.example.mascotasproject.locationMascota
-com/example/mascotasproject/GetLocation.java
- com.example.mascotasproject.GetLocation
- com.example.mascotasproject.GetLocation$1
- com.example.mascotasproject.GetLocation$2
- com.example.mascotasproject.GetLocation$3
+com/example/mascotasproject/BuildConfig.java
+ com.example.mascotasproject.BuildConfig
+com/example/mascotasproject/MostrarRecycler.java
+ com.example.mascotasproject.MostrarRecycler
+ com.example.mascotasproject.MostrarRecycler$1
+ com.example.mascotasproject.MostrarRecycler$2
+com/example/mascotasproject/CodigoMascotas.java
+ com.example.mascotasproject.CodigoMascotas
+com/example/mascotasproject/loginnumero.java
+ com.example.mascotasproject.loginnumero
+com/example/mascotasproject/IA/Classifier.java
+ com.example.mascotasproject.IA.Classifier
+ com.example.mascotasproject.IA.Classifier$Recognition
+com/example/mascotasproject/modeltemporal.java
+ com.example.mascotasproject.modeltemporal
+com/example/mascotasproject/OpcionesUsuario.java
+ com.example.mascotasproject.OpcionesUsuario
+com/example/mascotasproject/IA/ClassifierActivity.java
+ com.example.mascotasproject.IA.ClassifierActivity
+ com.example.mascotasproject.IA.ClassifierActivity$1
+ com.example.mascotasproject.IA.ClassifierActivity$InferenceTask
 com/example/mascotasproject/IA/CameraActivity.java
  com.example.mascotasproject.IA.CameraActivity
  com.example.mascotasproject.IA.CameraActivity$1
  com.example.mascotasproject.IA.CameraActivity$2
  com.example.mascotasproject.IA.CameraActivity$3
-com/example/mascotasproject/MostrarRecycler.java
- com.example.mascotasproject.MostrarRecycler
- com.example.mascotasproject.MostrarRecycler$1
- com.example.mascotasproject.MostrarRecycler$2
-com/example/mascotasproject/loginnumero.java
- com.example.mascotasproject.loginnumero
+com/example/mascotasproject/OpcionesIngreso.java
+ com.example.mascotasproject.OpcionesIngreso

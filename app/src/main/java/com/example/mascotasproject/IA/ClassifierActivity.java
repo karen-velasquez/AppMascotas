@@ -22,19 +22,26 @@ import android.widget.Toast;
 
 import com.example.mascotasproject.AddData;
 import com.example.mascotasproject.IA.env.ImageUtils;
+import com.example.mascotasproject.MascotasAdapter;
+import com.example.mascotasproject.MostrarRecycler;
 import com.example.mascotasproject.R;
 import com.example.mascotasproject.model;
 import com.example.mascotasproject.modeltemporal;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 import java.util.List;
+
+import androidx.annotation.NonNull;
 
 
 public class ClassifierActivity extends com.example.mascotasproject.IA.CameraActivity implements OnImageAvailableListener {
@@ -54,6 +61,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
     private Matrix frameToCropTransform;
 
     private Classifier classifier;
+
 
     @Override
     void handleSendImage(Intent data) {
@@ -100,6 +108,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
         }
     }
 
+    /*subiendo la imagen al storage a un temporal */
     public void upload_storage(Uri imageUri){
         //DIRECCION DE LA BASE DE DATOS PARA FIREBASE
         String mDatabasePath="temporalimagen";
@@ -110,7 +119,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
         mFilePathUri=imageUri;
         mStorageReference= FirebaseStorage.getInstance().getReference();
         if(mFilePathUri!=null) {
-            StorageReference storageReference2nd = mStorageReference.child(mStoragePath + System.currentTimeMillis() + "." + getFileExtension(mFilePathUri)+"jpg");
+            StorageReference storageReference2nd = mStorageReference.child(mStoragePath + System.currentTimeMillis() + "." +"jpg");
             //adicionando un suceso a storagereference2nd
             storageReference2nd.putFile(mFilePathUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -133,6 +142,17 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
                     });
         }
     }
+
+    /**/
+    public void eliminardatosredundantestemporal(String codigo){
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("temporalimagen");
+        modeltemporal modeltemporal=new modeltemporal();
+        modeltemporal.setCodigo(codigo);
+        ref.child(modeltemporal.getCodigo()).removeValue();
+
+
+    }
+
 
 
 

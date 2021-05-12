@@ -232,7 +232,6 @@ public abstract class CameraActivity extends FragmentActivity
             intent.putExtra("quien",getQuien());
             intent.putExtra("codigo",getCodigo());
             startActivity(intent);
-
         });
 
 

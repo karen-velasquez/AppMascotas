@@ -47,7 +47,14 @@
         <activity android:name="com.example.mascotasproject.login.ProfileActivity" />
         <activity android:name="com.example.mascotasproject.login.LoggedinActivity" />
         <activity android:name="com.example.mascotasproject.login.RegisterActivity" />
-        <activity android:name="com.example.mascotasproject.MapsActivity1" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.example.mascotasproject.MapsActivity1"
+            android:label="@string/title_activity_maps1" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

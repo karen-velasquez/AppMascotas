@@ -15,6 +15,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -92,9 +93,17 @@ public class AddData extends AppCompatActivity {
 
 
 
+        /*Obteniendo el codigo del usuario y que tipo de usuario es*/
+        String usuario=getIntent().getStringExtra("codigo");
+        String quien=getIntent().getStringExtra("quien");
+        String urlimagen=getIntent().getStringExtra("urlimagen");
+        Log.d("OBTUVE ESTA URL",urlimagen);
+        Log.d("quien es",quien);
+        Picasso.get().load(urlimagen).into(imagenAdd);
+
 
         //AL TOCAR LA IMAGEN
-        imagenAdd.setOnClickListener(new View.OnClickListener() {
+      /*  imagenAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
@@ -104,7 +113,7 @@ public class AddData extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
 
 

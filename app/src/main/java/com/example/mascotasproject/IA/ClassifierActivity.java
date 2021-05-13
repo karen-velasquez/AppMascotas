@@ -84,6 +84,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
 
         if (resultCode == RESULT_OK && requestCode == PICK_IMAGE)
             classifyLoadedImage(data.getData());
+
     }
 
     private void classifyLoadedImage(Uri imageUri) {
@@ -110,45 +111,7 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
         }
     }
 
-    /*subiendo la imagen al storage a un temporal */
-    public void upload_storage(Uri imageUri){
-            String urlfoto="";
-            String mDatabasePath="temporalimagen";
-            DatabaseReference mDatabaseReference;
 
-            mDatabaseReference= FirebaseDatabase.getInstance().getReference(mDatabasePath);
-
-            mFilePathUri=imageUri;
-            mStorageReference= FirebaseStorage.getInstance().getReference();
-            if(mFilePathUri!=null) {
-                StorageReference storageReference2nd = mStorageReference.child(mStoragePath + System.currentTimeMillis() + "." +"jpg");
-                //adicionando un suceso a storagereference2nd
-                storageReference2nd.putFile(mFilePathUri)
-                        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                //sacando la url de storage
-                                Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
-                                while (!uri.isComplete()) ;
-                                Uri url = uri.getResult();
-                                System.out.println("EL URL DONDE SE GUARDO ES "+url);
-
-                                Toast.makeText(ClassifierActivity.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
-
-                                modeltemporal modelo=new modeltemporal(getCodigo(),url.toString(),"true");
-                                //obteniendo el id de la imagen subida
-                                String imageUploadId= mDatabaseReference.push().getKey();
-                                //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
-                                mDatabaseReference.child(imageUploadId).setValue(modelo);
-
-
-
-                            }
-                        });
-
-            //    eliminardatosredundantestemporal(getCodigo(),urlfoto+"");
-            }
-    }
     public void eliminardatosredundantestemporal(String codigo){
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("temporalimagen");
        // Query firebasesearchraza=ref.orderByChild("codigo").equalTo(codigo);
@@ -157,10 +120,12 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot ds : snapshot.getChildren()) {
+                    Log.d("tag",ds.getKey()+"");
                     /*obteniendo los datos de razas desde firebase*/
                     modeltemporal modeltempor = ds.getValue(modeltemporal.class);
-                    modeltemporal newtemporal=new modeltemporal(modeltempor.getCodigo(),modeltempor.getUrl(),"false");
-                    ref.setValue(newtemporal);
+                    modeltempor.setVigencia("false");
+                    modeltemporal newtemporal=new modeltemporal(modeltempor.getCodigo(),modeltempor.getUrl(),modeltempor.getVigencia());
+                    ref.child(ds.getKey()).setValue(newtemporal);
                 }
             }
             @Override

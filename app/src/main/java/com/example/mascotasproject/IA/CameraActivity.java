@@ -142,6 +142,9 @@ public abstract class CameraActivity extends FragmentActivity
 
 
     int IMAGE_REQUEST_CODE=1;
+
+    final String[] urlfoto = {""};
+
     Uri mFilePathUri;
     //CARPETA DONDE SE ENCONTRARAN LAS IMAGENES
     String mStoragePath = "ImagenesMascotas/";
@@ -233,10 +236,13 @@ public abstract class CameraActivity extends FragmentActivity
         checkButtonuser.setOnClickListener(v-> {
             //verificando que filepathyuri esta vacio o no
             //asignando la instancia de firebasestorage a un objeto de storage
+            //Log.d("urlfoto",);
             Intent intent=new Intent(CameraActivity.this, AddData.class);
             intent.putExtra("quien",getQuien());
             intent.putExtra("codigo",getCodigo());
+            intent.putExtra("urlimagen",urlfoto[0]);
             startActivity(intent);
+
         });
 
 
@@ -449,6 +455,48 @@ public abstract class CameraActivity extends FragmentActivity
         final Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         continuousInferenceButton.setChecked(false);
         startActivityForResult(i, PICK_IMAGE);
+    }
+
+
+    /*subiendo la imagen al storage a un temporal */
+    public void upload_storage(Uri imageUri){
+
+        String mDatabasePath="temporalimagen";
+        DatabaseReference mDatabaseReference;
+
+        mDatabaseReference= FirebaseDatabase.getInstance().getReference(mDatabasePath);
+
+        mFilePathUri=imageUri;
+        mStorageReference= FirebaseStorage.getInstance().getReference();
+        if(mFilePathUri!=null) {
+            StorageReference storageReference2nd = mStorageReference.child(mStoragePath + System.currentTimeMillis() + "." +"jpg");
+            //adicionando un suceso a storagereference2nd
+            storageReference2nd.putFile(mFilePathUri)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            //sacando la url de storage
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while (!uri.isComplete()) ;
+                            Uri url = uri.getResult();
+                            System.out.println("EL URL DONDE SE GUARDO ES "+url);
+
+                            Toast.makeText(CameraActivity.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
+
+                            urlfoto[0] =url+"";
+                            modeltemporal modelo=new modeltemporal(getCodigo(),url.toString(),"true");
+                            //obteniendo el id de la imagen subida
+                            String imageUploadId= mDatabaseReference.push().getKey();
+                            //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
+                            mDatabaseReference.child(imageUploadId).setValue(modelo);
+
+
+
+                        }
+                    });
+
+            //    eliminardatosredundantestemporal(getCodigo(),urlfoto+"");
+        }
     }
 
     protected int[] getRgbBytes() {
@@ -912,17 +960,5 @@ public abstract class CameraActivity extends FragmentActivity
 
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==IMAGE_REQUEST_CODE
-                && resultCode==RESULT_OK
-                && data !=null
-                && data.getData()!=null){
-            mFilePathUri=data.getData();
-
-        }
-
-    }
 
 }

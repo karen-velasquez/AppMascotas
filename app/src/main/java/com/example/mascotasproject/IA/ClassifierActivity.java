@@ -150,9 +150,9 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
             }
     }
     public void eliminardatosredundantestemporal(String codigo){
-        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("temporalimagen").child(codigo);
-        Query firebasesearchraza=ref.orderByChild("codigo").equalTo(codigo);
-        firebasesearchraza.addValueEventListener(new ValueEventListener() {
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("temporalimagen");
+       // Query firebasesearchraza=ref.orderByChild("codigo").equalTo(codigo);
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 

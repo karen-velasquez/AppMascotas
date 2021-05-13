@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mascotasproject"
-        minSdkVersion 21
+        minSdkVersion 26
         targetSdkVersion 30
 
         versionCode 103

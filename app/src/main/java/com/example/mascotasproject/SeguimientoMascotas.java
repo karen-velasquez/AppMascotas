@@ -1,10 +1,12 @@
 package com.example.mascotasproject;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +19,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -31,6 +36,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
 
     List<locationMascota> locationlist;
     LocationAdapter locationAdapter;
+
+
 
 
 
@@ -58,6 +65,21 @@ public class SeguimientoMascotas extends AppCompatActivity {
         /*Obteniendo el intent de quien es, si usuario o invitado*/
         String quien=getIntent().getStringExtra("quien");
 
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            LocalTime horaActual = LocalTime.now();
+            System.out.print("hora actual" + horaActual);
+            LocalDate fechaActual = null;
+
+            fechaActual = LocalDate.now();
+
+            System.out.print("fecha actual" + fechaActual);
+
+            LocalDateTime fechaHora = LocalDateTime.now();
+            System.out.print("fecaha y hora" + fechaHora);
+        }
+
+
         /*Si es usuario rellenar con datos de sus mascotas, si es invitados con datos de razas iguales*/
         if(quien.equals("Invitado")){
            // mascotasrecyclerInvitados();
@@ -73,7 +95,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
 
     }
 
-    public void positionrecyclerUsuarios(String codigo,String codMascota){
+
+    public void positionrecyclerUsuarios(String codigo, String codMascota){
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Locaciones");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -101,8 +124,17 @@ public class SeguimientoMascotas extends AppCompatActivity {
 
 
 
+    }
+
+    /*Obteniendo Fecha y Hora------------------*/
+
+
+    public void obtenerfechahora(){
+
 
     }
+
+
 
 
 

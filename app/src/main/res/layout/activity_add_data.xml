@@ -9,40 +9,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <EditText
             android:id="@+id/nombreAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             android:hint="Ingresar nombre Mascota"
             android:singleLine="true"
-            />
+            android:textAlignment="center" />
         <ImageView
             android:id="@+id/imagenAdd"
             android:layout_width="match_parent"
             android:layout_height="250dp"/>
+
         <EditText
             android:id="@+id/caracteristicaAdd"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:hint="Ingrese caracteristica de la mascota"
             android:minHeight="100dp"
-            android:gravity="top"/>
+            android:padding="10dp"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/perdidaAdd"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:hint="Ingrese datos de la perdida"
             android:minHeight="100dp"
-            android:gravity="top"/>
+            android:padding="10dp"
+            android:textAlignment="center" />
         <Button
             android:id="@+id/buttonupload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subir dato"
+            android:text="Subir datos"
+            android:layout_marginLeft="145dp"
             style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
-            android:layout_gravity="end"
+
             />
         
         

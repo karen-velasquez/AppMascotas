@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.mascotasproject.IA.ClassifierActivity;
 
 public class OpcionesUsuario extends AppCompatActivity {
 
-    Button mbtn_seperdio, mbtn_seguimiento;
+    ImageButton mbtn_seperdio, mbtn_seguimiento;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

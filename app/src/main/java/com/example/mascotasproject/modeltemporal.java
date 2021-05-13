@@ -2,7 +2,7 @@ package com.example.mascotasproject;
 
 public class modeltemporal {
 
-    String codigo, url;
+    String codigo, url, vigencia;
 
     public modeltemporal(){}
 
@@ -22,9 +22,18 @@ public class modeltemporal {
         this.url = url;
     }
 
-    public modeltemporal(String codigo, String url) {
+    public String getVigencia() {
+        return vigencia;
+    }
+
+    public void setVigencia(String vigencia) {
+        this.vigencia = vigencia;
+    }
+
+    public modeltemporal(String codigo, String url, String vigencia) {
         this.codigo = codigo;
         this.url=url;
+        this.vigencia=vigencia;
 
     }
 

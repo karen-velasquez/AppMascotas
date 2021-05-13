@@ -17,6 +17,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +67,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         coordenadas=findViewById(R.id.coordenadas);
 
         obteniendovaloresIntent();
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -105,10 +107,13 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mMap = googleMap;
 
         mMap.getUiSettings().setZoomControlsEnabled(true);
+        localizacionesMascotas(mMap,mcodDueno,mcodMascota);
+        Log.d("quien entro","1"+"24324");
+
+        //  Antut(mMap);
         //mMap.getUiSettings().setMyLocationButtonEnabled(true);
        // mMap.getUiSettings().setMapToolbarEnabled(true);
-        localizacionesMascotas(mMap,mcodDueno,mcodMascota);
-         //Antut(mMap);
+
 
     }
     public void Antut(GoogleMap googleMap){

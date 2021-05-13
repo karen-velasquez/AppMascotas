@@ -63,6 +63,7 @@ import com.example.mascotasproject.GetLocation;
 import com.example.mascotasproject.MostrarRecycler;
 import com.example.mascotasproject.R;
 import com.example.mascotasproject.desfragment;
+import com.example.mascotasproject.modeltemporal;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -71,8 +72,11 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.example.mascotasproject.IA.env.ImageUtils;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -85,6 +89,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import androidx.annotation.NonNull;
@@ -243,7 +248,9 @@ public abstract class CameraActivity extends FragmentActivity
             requestPermission(PERMISSION_STORAGE_READ);
             return ;
         }
+        vigenciaafalse(getCodigo());
         pickImage();
+
         });
 
 
@@ -255,6 +262,7 @@ public abstract class CameraActivity extends FragmentActivity
                 return;
             }
 
+            vigenciaafalse(getCodigo());
             final View pnlFlash = findViewById(R.id.pnlFlash);
 
             cameraButton.setEnabled(false);
@@ -299,6 +307,9 @@ public abstract class CameraActivity extends FragmentActivity
     }
 
 
+    /**/
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         final MenuInflater inflater = getMenuInflater();
@@ -331,6 +342,37 @@ public abstract class CameraActivity extends FragmentActivity
         System.out.println("numero 1quien es el codigo1"+quien);
         return quien;
     }
+
+    public void vigenciaafalse(String codigo){
+        /*Instanciando el firebase*/
+
+        FirebaseDatabase mFirebaseDatabase;
+        DatabaseReference mRef;
+        mFirebaseDatabase=FirebaseDatabase.getInstance();
+        mRef=mFirebaseDatabase.getReference("temporalimagen");
+        mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    /*obteniendo los datos de razas desde firebase*/
+                    modeltemporal modeltemporal = ds.getValue(modeltemporal.class);
+                    if(modeltemporal.getCodigo().equals(codigo)){
+                        modeltemporal.setVigencia("false");
+                    }
+
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
+    }
+
+
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -103,17 +103,12 @@ public class AddData extends AppCompatActivity {
 
 
         //AL TOCAR LA IMAGEN
-      /*  imagenAdd.setOnClickListener(new View.OnClickListener() {
+        imagenAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Seleccionar imagen"),IMAGE_REQUEST_CODE);
-
-
+                Picasso.get().load(urlimagen).into(imagenAdd);
             }
-        });*/
+        });
 
 
 

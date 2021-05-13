@@ -41,7 +41,6 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
-import java.util.List;
 
 public class MostrarRecycler extends AppCompatActivity {
     private static final String TAG = "MostrarRecycler";
@@ -49,7 +48,6 @@ public class MostrarRecycler extends AppCompatActivity {
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mRef;
     FirebaseAuth mAuth;
-    List <model> mascotaslist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +84,7 @@ public class MostrarRecycler extends AppCompatActivity {
 
                     }
                 }
-                MascotasAdapter mascotasAdapter = new MascotasAdapter(MostrarRecycler.this, mascotaslist);
+                mascotasAdapter=new MascotasAdapter(MostrarRecycler.this,mascotaslist);
                 mRecyclerView.setAdapter(mascotasAdapter);
 
 
@@ -127,7 +125,7 @@ public class MostrarRecycler extends AppCompatActivity {
 
                     }
                 }
-                MascotasAdapter mascotasAdapter = new MascotasAdapter(MostrarRecycler.this, mascotaslist);
+                mascotasAdapter=new MascotasAdapter(MostrarRecycler.this,mascotaslist);
                 mRecyclerView.setAdapter(mascotasAdapter);
 
 

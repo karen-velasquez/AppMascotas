@@ -71,34 +71,14 @@ com/example/mascotasproject/LocationAdapter.java
  com.example.mascotasproject.LocationAdapter$1
  com.example.mascotasproject.LocationAdapter$2
  com.example.mascotasproject.LocationAdapter$MyHolder
-com/example/mascotasproject/AddData.java
- com.example.mascotasproject.AddData
- com.example.mascotasproject.AddData$1
- com.example.mascotasproject.AddData$10
- com.example.mascotasproject.AddData$10$1
- com.example.mascotasproject.AddData$10$2
- com.example.mascotasproject.AddData$10$3
- com.example.mascotasproject.AddData$11
- com.example.mascotasproject.AddData$12
- com.example.mascotasproject.AddData$2
- com.example.mascotasproject.AddData$3
- com.example.mascotasproject.AddData$4
- com.example.mascotasproject.AddData$5
- com.example.mascotasproject.AddData$6
- com.example.mascotasproject.AddData$7
- com.example.mascotasproject.AddData$8
- com.example.mascotasproject.AddData$9
+com/example/mascotasproject/OpcionesIngreso.java
+ com.example.mascotasproject.OpcionesIngreso
 com/example/mascotasproject/locationMascota.java
  com.example.mascotasproject.locationMascota
 com/example/mascotasproject/BuildConfig.java
  com.example.mascotasproject.BuildConfig
-com/example/mascotasproject/IA/CameraActivity.java
- com.example.mascotasproject.IA.CameraActivity
- com.example.mascotasproject.IA.CameraActivity$1
- com.example.mascotasproject.IA.CameraActivity$2
- com.example.mascotasproject.IA.CameraActivity$3
- com.example.mascotasproject.IA.CameraActivity$4
- com.example.mascotasproject.IA.CameraActivity$5
+com/example/mascotasproject/modeltemporal.java
+ com.example.mascotasproject.modeltemporal
 com/example/mascotasproject/CodigoMascotas.java
  com.example.mascotasproject.CodigoMascotas
 com/example/mascotasproject/loginnumero.java
@@ -116,7 +96,28 @@ com/example/mascotasproject/MostrarRecycler.java
  com.example.mascotasproject.MostrarRecycler
  com.example.mascotasproject.MostrarRecycler$1
  com.example.mascotasproject.MostrarRecycler$2
-com/example/mascotasproject/modeltemporal.java
- com.example.mascotasproject.modeltemporal
-com/example/mascotasproject/OpcionesIngreso.java
- com.example.mascotasproject.OpcionesIngreso
+com/example/mascotasproject/AddData.java
+ com.example.mascotasproject.AddData
+ com.example.mascotasproject.AddData$1
+ com.example.mascotasproject.AddData$10
+ com.example.mascotasproject.AddData$11
+ com.example.mascotasproject.AddData$11$1
+ com.example.mascotasproject.AddData$11$2
+ com.example.mascotasproject.AddData$11$3
+ com.example.mascotasproject.AddData$12
+ com.example.mascotasproject.AddData$13
+ com.example.mascotasproject.AddData$2
+ com.example.mascotasproject.AddData$3
+ com.example.mascotasproject.AddData$4
+ com.example.mascotasproject.AddData$5
+ com.example.mascotasproject.AddData$6
+ com.example.mascotasproject.AddData$7
+ com.example.mascotasproject.AddData$8
+ com.example.mascotasproject.AddData$9
+com/example/mascotasproject/IA/CameraActivity.java
+ com.example.mascotasproject.IA.CameraActivity
+ com.example.mascotasproject.IA.CameraActivity$1
+ com.example.mascotasproject.IA.CameraActivity$2
+ com.example.mascotasproject.IA.CameraActivity$3
+ com.example.mascotasproject.IA.CameraActivity$4
+ com.example.mascotasproject.IA.CameraActivity$5

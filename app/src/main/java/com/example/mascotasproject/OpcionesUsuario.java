@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.mascotasproject.IA.Classifier;
 import com.example.mascotasproject.IA.ClassifierActivity;
 
 public class OpcionesUsuario extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class OpcionesUsuario extends AppCompatActivity {
 
 
         mbtn_seperdio.setOnClickListener(v-> {
-            Intent intent=new Intent(OpcionesUsuario.this, AddData.class);
+            Intent intent=new Intent(OpcionesUsuario.this, ClassifierActivity.class);
             intent.putExtra("usuario",usuario);
             intent.putExtra("quien",  quien);
             startActivity(intent);
@@ -34,7 +35,7 @@ public class OpcionesUsuario extends AppCompatActivity {
 
         mbtn_seguimiento.setOnClickListener(v->{
             Intent intent=new Intent(OpcionesUsuario.this, MostrarRecycler.class);
-            intent.putExtra("codigo",usuario);
+            intent.putExtra("usuario",usuario);
             intent.putExtra("quien",  quien);
             startActivity(intent);
         });

@@ -26,7 +26,7 @@
         android:layout_marginTop="350dp"
         android:text="COMENZAR"
         android:textSize="18sp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#1B4598"
         />
 
 
@@ -40,7 +40,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="210dp"
         android:text="Log In"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#1B4598"
         />
 
 
@@ -59,7 +59,7 @@
         android:layout_marginLeft="115dp"
         android:layout_marginTop="280dp"
         android:text="Mostrar Mapa"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#1B4598"
         />
 
 

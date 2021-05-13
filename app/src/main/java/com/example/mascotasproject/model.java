@@ -1,11 +1,19 @@
 package com.example.mascotasproject;
 
 public class model {
-    String Caracteristicas, CodigoDueno, CodigoMascota, Imagen, NombreMas, UbicacionPerdida,Vigencia;
+    String Caracteristicas, CodigoDueno, CodigoMascota, Imagen, NombreMas, UbicacionPerdida,Vigencia,Razas;
 
     public model(){}
 
-    public model( String NombreMas, String UbicacionPerdida,  String Imagen, String Caracteristicas, String CodigoDueno, String CodigoMascota,  String Vigencia) {
+    public String getRazas() {
+        return Razas;
+    }
+
+    public void setRazas(String razas) {
+        Razas = razas;
+    }
+
+    public model(String NombreMas, String UbicacionPerdida, String Imagen, String Caracteristicas, String CodigoDueno, String CodigoMascota, String Vigencia, String Razas) {
         this.Caracteristicas = Caracteristicas;
         this.CodigoDueno=CodigoDueno;
         this.CodigoMascota=CodigoMascota;
@@ -13,6 +21,7 @@ public class model {
         this.NombreMas=NombreMas;
         this.UbicacionPerdida=UbicacionPerdida;
         this.Vigencia=Vigencia;
+        this.Razas=Razas;
     }
 
     public String getCaracteristicas() {

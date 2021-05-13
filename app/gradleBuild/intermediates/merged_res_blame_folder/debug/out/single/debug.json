@@ -148,6 +148,10 @@
         "source": "C:\\Users\\ccave\\AndroidStudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_add.png"
     },
     {
+        "merged": "C:\\Users\\ccave\\AndroidStudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_more.png.flat",
+        "source": "C:\\Users\\ccave\\AndroidStudioProjects\\AppMascotas\\app\\src\\main\\res\\drawable\\more.png"
+    },
+    {
         "merged": "C:\\Users\\ccave\\AndroidStudioProjects\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_action_check.png.flat",
         "source": "C:\\Users\\ccave\\AndroidStudioProjects\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_action_check.png"
     },

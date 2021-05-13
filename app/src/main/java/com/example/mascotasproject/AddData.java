@@ -284,7 +284,7 @@ public class AddData extends AppCompatActivity {
                             Uri url = uri.getResult();
 
                             Toast.makeText(AddData.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
-                            model modelo=new model(mnombreAdd, mperdidaAdd, url.toString(),carac,cdu,cmas,vige);
+                            model modelo=new model(mnombreAdd, mperdidaAdd, url.toString(),mcaracteristicaAdd,mcoddueno,mcodmascota,mvigencia,mraza);
                             //obteniendo el id de la imagen subida
                             String imageUploadId= mDatabaseReference.push().getKey();
                             //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference

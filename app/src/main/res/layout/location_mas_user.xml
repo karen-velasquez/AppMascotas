@@ -14,6 +14,7 @@
             android:id="@+id/imagen_location"
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:layout_marginTop="40dp"
             android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
@@ -27,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/img1"
-                android:text="Visto por ultima vez"
+                android:text="    Visto por ultima vez"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -39,7 +40,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
                 android:textSize="20sp"
-                android:text="Latitud"
+                android:text=" Latitud"
                 android:textColor="#000" />
 
             <TextView
@@ -48,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
-                android:text="longitud"
+                android:text=" longitud"
                 android:textColor="#000"
                 android:textSize="20sp" />
 
@@ -58,15 +59,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
-                android:text="Direccion"
+                android:text=" Direccion"
                 android:textColor="#000"
                 android:textSize="20sp"
                 />
-            <Button
+            <ImageButton
                 android:id="@+id/mapa_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ver direccion en mapa"/>
+                android:backgroundTint="#FBFBFB"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/more" />
 
         </LinearLayout>
 

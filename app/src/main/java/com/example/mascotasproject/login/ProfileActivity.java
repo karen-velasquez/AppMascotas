@@ -1,19 +1,29 @@
 package com.example.mascotasproject.login;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.mascotasproject.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static com.example.mascotasproject.login.RegisterActivity.getRandomString;
+
 public class ProfileActivity extends AppCompatActivity {
 
     //Firebase auth
     FirebaseAuth firebaseAuth;
+
+
+    //views
+    TextView mProfileTv, mProfileCod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,9 @@ public class ProfileActivity extends AppCompatActivity {
 
         //init
         firebaseAuth = FirebaseAuth.getInstance();
+        //init views
+        mProfileTv = findViewById(R.id.profileTv);
+        mProfileCod= findViewById(R.id.profileCod);
 
     }
 
@@ -34,6 +47,10 @@ public class ProfileActivity extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
             //user is signed in stay here
+            //set email of logged in user
+            mProfileTv.setText(user.getEmail());
+            mProfileCod.setText(getRandomString(10));
+
         }else {
             //user is mo signed in, go to main activity
             startActivity(new Intent(ProfileActivity.this, LogInActivity.class));
@@ -46,6 +63,30 @@ public class ProfileActivity extends AppCompatActivity {
         //check on start of app
         checkUSerStatus();
         super.onStart();
+    }
+
+    //inflate options menu
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //  Omflating menu
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //handle menu item clicks
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //get item id
+        int id = item.getItemId();
+        if (id== R.id.action_logout){
+            firebaseAuth.signOut();
+            checkUSerStatus();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

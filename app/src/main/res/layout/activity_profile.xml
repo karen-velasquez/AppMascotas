@@ -8,10 +8,21 @@
     android:gravity="center"
     tools:context=".login.ProfileActivity">
 
+    <!--show email of logged in user-->
+
     <TextView
         android:id="@+id/profileTv"
         android:text="Profile"
         android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/profileCod"
+        android:textSize="30sp"
+        android:text="Código"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

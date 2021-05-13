@@ -49,7 +49,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                 .title("Lost Pet 1").snippet("Quizá un resúmen de mascotas perdidas.")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_weso)));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lapaz, 7));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pet1, 9));
         googleMap.setOnInfoWindowClickListener(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -61,6 +61,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+
         mMap.setMyLocationEnabled(true);
     }
 

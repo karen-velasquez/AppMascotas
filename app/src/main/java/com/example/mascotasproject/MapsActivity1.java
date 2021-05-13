@@ -2,6 +2,7 @@ package com.example.mascotasproject;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
@@ -37,6 +38,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
     private GoogleMap mMap;
     private Marker InfoWindow;
     TextView direccion,coordenadas;
+    private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     Button donde;
 
     @Override
@@ -53,14 +55,21 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mapFragment.getMapAsync(this);
 
 
-        System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?");
         LocationManager mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Localizacion localizacion= new Localizacion();
         localizacion.setMapsActivity1(this);
-        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
-            return;
+        if (ContextCompat.checkSelfPermission(
+                getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
+        ) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    MapsActivity1.this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    REQUEST_CODE_LOCATION_PERMISSION
+            );
+        } else {
+           // getCurrentLocation();
         }
-        System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?22222222");
+
         mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
 
     }
@@ -70,40 +79,29 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in La Paz
-       /*LatLng lapaz = new LatLng(-16.540280161376856, -68.08833198852622);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+        Antut(mMap);
+
+    }
+    public void Antut(GoogleMap googleMap){
+        mMap=googleMap;
+
+        final LatLng lapaz = new LatLng(-16.540280161376856, -68.08833198852622);
         mMap.addMarker(new MarkerOptions().position(lapaz).title("Marker in La Paz").snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(lapaz));
+        // Add a marker in La Paz
 
         LatLng pet1 = new LatLng(-16.522954746025434, -68.08032188119428);
-        InfoWindow = googleMap.addMarker(new MarkerOptions()
+        mMap.addMarker(new MarkerOptions()
                 .position(pet1)
                 .title("Lost Pet 1").snippet("Quizá un resúmen de mascotas perdidas.")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_weso)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(lapaz));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pet1, 9));
-        googleMap.setOnInfoWindowClickListener(this);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
 
-        mMap.setMyLocationEnabled(true);*/
-        System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?");
-        LocationManager mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Localizacion localizacion= new Localizacion();
-        localizacion.setMapsActivity1(this);
-        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
-            return;
-        }
-        System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?22222222");
-        mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pet1, 15));
     }
 
 
@@ -167,5 +165,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         public void onProviderEnabled(String provider){
             Toast.makeText(MapsActivity1.this,"GPS ACTIVADO",Toast.LENGTH_SHORT).show();
         }
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras){}
     }
 }

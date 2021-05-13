@@ -52,9 +52,12 @@ com/example/mascotasproject/OpcionesUsuario.java
  com.example.mascotasproject.OpcionesUsuario
 com/example/mascotasproject/model.java
  com.example.mascotasproject.model
-com/example/mascotasproject/MapsActivity1.java
- com.example.mascotasproject.MapsActivity1
- com.example.mascotasproject.MapsActivity1$Localizacion
+com/example/mascotasproject/GetLocation.java
+ com.example.mascotasproject.GetLocation
+ com.example.mascotasproject.GetLocation$1
+ com.example.mascotasproject.GetLocation$2
+ com.example.mascotasproject.GetLocation$3
+ com.example.mascotasproject.GetLocation$Localizacion
 com/example/mascotasproject/LocationAdapter.java
  com.example.mascotasproject.LocationAdapter
  com.example.mascotasproject.LocationAdapter$1
@@ -107,9 +110,6 @@ com/example/mascotasproject/MostrarRecycler.java
 com/example/mascotasproject/desfragment.java
  com.example.mascotasproject.desfragment
  com.example.mascotasproject.desfragment$1
-com/example/mascotasproject/GetLocation.java
- com.example.mascotasproject.GetLocation
- com.example.mascotasproject.GetLocation$1
- com.example.mascotasproject.GetLocation$2
- com.example.mascotasproject.GetLocation$3
- com.example.mascotasproject.GetLocation$Localizacion
+com/example/mascotasproject/MapsActivity1.java
+ com.example.mascotasproject.MapsActivity1
+ com.example.mascotasproject.MapsActivity1$Localizacion

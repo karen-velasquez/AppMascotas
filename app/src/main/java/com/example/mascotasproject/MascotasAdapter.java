@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -121,7 +122,7 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
 
         TextView mnombreMas, mCaractericas, mdatosperdida;
         ImageView mimagen;
-        Button muser_maslocation;
+        ImageButton muser_maslocation;
         public MyHolder(@NonNull View itemView) {
           super(itemView);
 

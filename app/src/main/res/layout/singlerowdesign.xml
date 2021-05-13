@@ -66,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FBFBFB"
                 android:layout_marginLeft="50dp"
+                android:visibility="gone"
                 android:src="@drawable/more" />
 
         </LinearLayout>

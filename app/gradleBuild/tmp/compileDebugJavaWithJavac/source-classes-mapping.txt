@@ -26,11 +26,8 @@ com/example/mascotasproject/login/LogInActivity.java
  com.example.mascotasproject.login.LogInActivity
  com.example.mascotasproject.login.LogInActivity$1
  com.example.mascotasproject.login.LogInActivity$2
-com/example/mascotasproject/MascotasAdapter.java
- com.example.mascotasproject.MascotasAdapter
- com.example.mascotasproject.MascotasAdapter$1
- com.example.mascotasproject.MascotasAdapter$2
- com.example.mascotasproject.MascotasAdapter$MyHolder
+com/example/mascotasproject/OpcionesIngreso.java
+ com.example.mascotasproject.OpcionesIngreso
 com/example/mascotasproject/IA/ListAdapter.java
  com.example.mascotasproject.IA.ListAdapter
 com/example/mascotasproject/IA/TensorFlowImageClassifier.java
@@ -71,14 +68,32 @@ com/example/mascotasproject/LocationAdapter.java
  com.example.mascotasproject.LocationAdapter$1
  com.example.mascotasproject.LocationAdapter$2
  com.example.mascotasproject.LocationAdapter$MyHolder
-com/example/mascotasproject/OpcionesIngreso.java
- com.example.mascotasproject.OpcionesIngreso
+com/example/mascotasproject/AddData.java
+ com.example.mascotasproject.AddData
+ com.example.mascotasproject.AddData$1
+ com.example.mascotasproject.AddData$10
+ com.example.mascotasproject.AddData$2
+ com.example.mascotasproject.AddData$3
+ com.example.mascotasproject.AddData$4
+ com.example.mascotasproject.AddData$5
+ com.example.mascotasproject.AddData$6
+ com.example.mascotasproject.AddData$7
+ com.example.mascotasproject.AddData$8
+ com.example.mascotasproject.AddData$8$1
+ com.example.mascotasproject.AddData$8$2
+ com.example.mascotasproject.AddData$8$3
+ com.example.mascotasproject.AddData$9
 com/example/mascotasproject/locationMascota.java
  com.example.mascotasproject.locationMascota
 com/example/mascotasproject/BuildConfig.java
  com.example.mascotasproject.BuildConfig
-com/example/mascotasproject/modeltemporal.java
- com.example.mascotasproject.modeltemporal
+com/example/mascotasproject/IA/CameraActivity.java
+ com.example.mascotasproject.IA.CameraActivity
+ com.example.mascotasproject.IA.CameraActivity$1
+ com.example.mascotasproject.IA.CameraActivity$2
+ com.example.mascotasproject.IA.CameraActivity$3
+ com.example.mascotasproject.IA.CameraActivity$4
+ com.example.mascotasproject.IA.CameraActivity$5
 com/example/mascotasproject/CodigoMascotas.java
  com.example.mascotasproject.CodigoMascotas
 com/example/mascotasproject/loginnumero.java
@@ -92,32 +107,14 @@ com/example/mascotasproject/IA/ClassifierActivity.java
  com.example.mascotasproject.IA.ClassifierActivity$InferenceTask
 com/example/mascotasproject/login/ProfileActivity.java
  com.example.mascotasproject.login.ProfileActivity
+com/example/mascotasproject/modeltemporal.java
+ com.example.mascotasproject.modeltemporal
+com/example/mascotasproject/MascotasAdapter.java
+ com.example.mascotasproject.MascotasAdapter
+ com.example.mascotasproject.MascotasAdapter$1
+ com.example.mascotasproject.MascotasAdapter$2
+ com.example.mascotasproject.MascotasAdapter$MyHolder
 com/example/mascotasproject/MostrarRecycler.java
  com.example.mascotasproject.MostrarRecycler
  com.example.mascotasproject.MostrarRecycler$1
  com.example.mascotasproject.MostrarRecycler$2
-com/example/mascotasproject/AddData.java
- com.example.mascotasproject.AddData
- com.example.mascotasproject.AddData$1
- com.example.mascotasproject.AddData$10
- com.example.mascotasproject.AddData$11
- com.example.mascotasproject.AddData$11$1
- com.example.mascotasproject.AddData$11$2
- com.example.mascotasproject.AddData$11$3
- com.example.mascotasproject.AddData$12
- com.example.mascotasproject.AddData$13
- com.example.mascotasproject.AddData$2
- com.example.mascotasproject.AddData$3
- com.example.mascotasproject.AddData$4
- com.example.mascotasproject.AddData$5
- com.example.mascotasproject.AddData$6
- com.example.mascotasproject.AddData$7
- com.example.mascotasproject.AddData$8
- com.example.mascotasproject.AddData$9
-com/example/mascotasproject/IA/CameraActivity.java
- com.example.mascotasproject.IA.CameraActivity
- com.example.mascotasproject.IA.CameraActivity$1
- com.example.mascotasproject.IA.CameraActivity$2
- com.example.mascotasproject.IA.CameraActivity$3
- com.example.mascotasproject.IA.CameraActivity$4
- com.example.mascotasproject.IA.CameraActivity$5

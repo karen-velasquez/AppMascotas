@@ -30,29 +30,6 @@
         />
 
 
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="430dp"
-        android:text="ADICIONAR DATOS"
-        android:textSize="18sp"
-        android:backgroundTint="#4CAF50"
-        />
-
-    <Button
-        android:id="@+id/ia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="500dp"
-        android:text="IA"
-        android:textSize="18sp"
-        android:backgroundTint="#4CAF50"
-        />
 
 
     <Button
@@ -67,16 +44,6 @@
         />
 
 
-    <Button
-        android:id="@+id/btn_cardview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="145dp"
-        android:text="CARDVIEW"
-        android:backgroundTint="#4CAF50"
-        />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

@@ -46,15 +46,15 @@
         android:textSize="25sp"
         android:text="Datos Perdida"/>
 
-        <ImageButton
-            android:id="@+id/locationButton"
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:background="@drawable/roundedbuttonfont"
-            android:src="@mipmap/ic_action_check"
-            android:translationZ="200dp"
-            android:visibility="gone"
-             />
+    <ImageButton
+        android:id="@+id/locationButton"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:background="@drawable/roundedbuttonfont"
+        android:src="@mipmap/ic_action_check"
+        android:translationZ="200dp"
+        android:visibility="gone"
+        />
 
 
     </LinearLayout>

@@ -41,6 +41,8 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MostrarRecycler extends AppCompatActivity {
     private static final String TAG = "MostrarRecycler";
@@ -48,6 +50,8 @@ public class MostrarRecycler extends AppCompatActivity {
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mRef;
     FirebaseAuth mAuth;
+    List<model> mascotaslist;
+    MascotasAdapter mascotasAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +68,28 @@ public class MostrarRecycler extends AppCompatActivity {
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mRef=mFirebaseDatabase.getReference("Mascotas/Datos");
          mAuth = FirebaseAuth.getInstance();
+         if(getQuien().equals("Invitado")){
+             mascotasrecyclerInvitados();
+         }else{
+             if(getQuien().equals("Usuario")){
+                 mascotasrecyclerUsuarios(getCodigo());
+             }
+         }
 
 
     }
+
+    public String getCodigo() {
+        String codigo=getIntent().getStringExtra("codigo");
+        System.out.println("numero 1quien es el codigo1"+codigo);
+        return codigo;
+    }
+    public String getQuien() {
+        String quien=getIntent().getStringExtra("quien");
+        System.out.println("numero 1quien es el codigo1"+quien);
+        return quien;
+    }
+
 
     public void mascotasrecyclerUsuarios(String codigo){
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
@@ -101,6 +124,7 @@ public class MostrarRecycler extends AppCompatActivity {
 
 
     public void mascotasrecyclerInvitados(){
+        mascotaslist=new ArrayList<>();
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
         ref.addValueEventListener(new ValueEventListener() {
             @Override

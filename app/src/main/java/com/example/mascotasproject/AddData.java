@@ -73,6 +73,7 @@ public class AddData extends AppCompatActivity {
     //Datos para el stored
     String mnombreUp,mperdidaUp,mimagenUp,mcaracUp;
 
+    String urlimagen;
 
 
     @Override
@@ -96,7 +97,7 @@ public class AddData extends AppCompatActivity {
         /*Obteniendo el codigo del usuario y que tipo de usuario es*/
         String usuario=getIntent().getStringExtra("codigo");
         String quien=getIntent().getStringExtra("quien");
-        String urlimagen=getIntent().getStringExtra("urlimagen");
+        urlimagen=getIntent().getStringExtra("urlimagen");
         Log.d("OBTUVE ESTA URL",urlimagen);
         Log.d("quien es",quien);
         Picasso.get().load(urlimagen).into(imagenAdd);
@@ -253,7 +254,7 @@ public class AddData extends AppCompatActivity {
     /*-------------------------------SE SUBE LOS NUEVOS DATOS A FIREBASE CUANDO SE SELECCIONO UNA IMAGEN------------------------------------------------------------*/
     private void uploadDatatoFirebase(){
         //verificando que filepathyuri esta vacio o no
-        if(mFilePathUri!=null){
+        /*if(mFilePathUri!=null){
             mProgressDialog.setTitle("Cargando...");
             mProgressDialog.show();
             StorageReference storageReference2nd=mStorageReference.child(mStoragePath+System.currentTimeMillis()+"."+getFileExtension(mFilePathUri));
@@ -262,30 +263,47 @@ public class AddData extends AppCompatActivity {
             storageReference2nd.putFile(mFilePathUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {*/
                             String mnombreAdd=nombreAdd.getText().toString().trim();
                             String mperdidaAdd=perdidaAdd.getText().toString().trim();
                             String mcaracteristicaAdd=caracteristicaAdd.getText().toString().trim();
                             String mcoddueno=getCodigo();
                             String mcodmascota=codigoMascotaGen(10);
                             String mvigencia="true";
-                            String mraza="Pastor Aleman";
+                          //  String mraza="Pastor Aleman";
 
-                            mProgressDialog.dismiss();
+                            /*Obteniendo las razas*/
+                             String resultados[] = getIntent().getStringArrayExtra("resultados");
+                             String raza1 = resultados[0];
+                            String raza2 = resultados[1];
 
+                            if(raza2==null){
+                                raza2=raza1;
+                            }
+                            Log.d("las razas son",raza1+raza2);
                             //sacando la url de storage
-                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            /*Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
                             while(!uri.isComplete());
-                            Uri url = uri.getResult();
+                            Uri url = uri.getResult();*/
 
-                            Toast.makeText(AddData.this,"Cargando succeso",Toast.LENGTH_SHORT).show();
-                            model modelo=new model(mnombreAdd, mperdidaAdd, url.toString(),mcaracteristicaAdd,mcoddueno,mcodmascota,mvigencia,mraza);
-                            //obteniendo el id de la imagen subida
-                            String imageUploadId= mDatabaseReference.push().getKey();
-                            //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
-                            mDatabaseReference.child(imageUploadId).setValue(modelo);
-                        }
-                    })
+
+
+                            if((mnombreAdd.isEmpty() || mperdidaAdd.isEmpty() || urlimagen.isEmpty()|| mcaracteristicaAdd.isEmpty())!=true){
+                                model modelo=new model(mnombreAdd, mperdidaAdd, urlimagen,mcaracteristicaAdd,mcoddueno,mcodmascota,mvigencia,raza1+"/"+raza2);
+                                //obteniendo el id de la imagen subida
+                                String imageUploadId= mDatabaseReference.push().getKey();
+                                //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
+                                mDatabaseReference.child(imageUploadId).setValue(modelo);
+                                Toast.makeText(AddData.this,"Post cargado correctamente",Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(AddData.this,"Todos los datos deben estar llenos",Toast.LENGTH_SHORT).show();
+                            }
+
+        mProgressDialog.dismiss();
+
+
+        //}
+                 /*   })
                     //por si existe al error en la red al subir
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -303,7 +321,7 @@ public class AddData extends AppCompatActivity {
         }
         else {
             Toast.makeText(this,"Por favor selecciona una imagen",Toast.LENGTH_SHORT).show();
-        }
+        }*/
     }
 
 

@@ -37,23 +37,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnAdd: Button =findViewById(R.id.btn_add)
-        btnAdd.setOnClickListener{
-            val intent= Intent(this, AddData:: class.java)
-            startActivity(intent)
-        }
 
-        val btnia: Button =findViewById(R.id.ia)
-        btnia.setOnClickListener{
-            val intent= Intent(this, ClassifierActivity:: class.java)
-            startActivity(intent)
-        }
-
-        val btcard: Button =findViewById(R.id.btn_cardview)
-        btcard.setOnClickListener{
-            val intent= Intent(this, GetLocation:: class.java)
-            startActivity(intent)
-        }
 
         //botón log In
         val btn_logIn = findViewById<Button>(R.id.btn_logIn)

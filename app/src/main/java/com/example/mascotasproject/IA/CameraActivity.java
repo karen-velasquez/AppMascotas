@@ -142,6 +142,8 @@ public abstract class CameraActivity extends FragmentActivity
 
 
 
+    String[] resultados=new String[2];
+
     int IMAGE_REQUEST_CODE=1;
 
     final String[] urlfoto = {""};
@@ -230,6 +232,7 @@ public abstract class CameraActivity extends FragmentActivity
         checkButtonGral.setOnClickListener(v-> {
             Intent intent=new Intent(CameraActivity.this, MostrarRecycler.class);
             intent.putExtra("quien",quien);
+            intent.putExtra("resultados",resultados);
             startActivity(intent);
 
         });
@@ -242,6 +245,7 @@ public abstract class CameraActivity extends FragmentActivity
             intent.putExtra("quien",getQuien());
             intent.putExtra("codigo",getCodigo());
             intent.putExtra("urlimagen",urlfoto[0]);
+            intent.putExtra("resultados",resultados);
             startActivity(intent);
 
         });
@@ -846,6 +850,7 @@ public abstract class CameraActivity extends FragmentActivity
     // update results on our custom textview
     void updateResultsView(List<Classifier.Recognition> results) {
         String mensaje="";
+        int cont=0;
         final StringBuilder sb = new StringBuilder();
         currentRecognitions = new ArrayList<String>();
 
@@ -864,6 +869,8 @@ public abstract class CameraActivity extends FragmentActivity
                             recog.getTitle(), Math.round(recog.getConfidence() * 100));
                     sb.append(text);
                     currentRecognitions.add(recog.getTitle());
+                    resultados[cont]=recog.getTitle();
+                    cont++;
                 }
                 mensaje=("Imagen correctamente analizada");
             } else {

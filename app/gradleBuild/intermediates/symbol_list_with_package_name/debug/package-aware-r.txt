@@ -1913,8 +1913,6 @@ id blocking
 id bottom
 id bounce
 id breed_image
-id btn_add
-id btn_cardview
 id btn_logIn
 id btn_logincodigo
 id btn_seguimiento
@@ -2043,7 +2041,6 @@ id home
 id homeAsUp
 id honorRequest
 id hybrid
-id ia
 id icon
 id icon_group
 id icon_only

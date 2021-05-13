@@ -10,7 +10,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.mascotasproject.MostrarRecycler;
+import com.example.mascotasproject.OpcionesUsuario;
 import com.example.mascotasproject.R;
+import com.example.mascotasproject.SeguimientoMascotas;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -46,10 +49,14 @@ public class ProfileActivity extends AppCompatActivity {
         //get current user
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null){
+            Intent intent=new Intent(ProfileActivity.this, OpcionesUsuario.class);
+            intent.putExtra("usuario",user.getUid());
+            intent.putExtra("quien","Usuario");
+            startActivity(intent);
             //user is signed in stay here
             //set email of logged in user
-            mProfileTv.setText(user.getEmail());
-            mProfileCod.setText(getRandomString(10));
+            //mProfileTv.setText(user.getEmail());
+           // mProfileCod.setText();
 
         }else {
             //user is mo signed in, go to main activity

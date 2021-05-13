@@ -12,25 +12,26 @@
         android:layout_height="250dp"
         android:src="@drawable/waldog_logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         />
 
     <!--Button Register-->
     <ImageButton
         android:id="@+id/register_btn"
-        android:layout_width="77dp"
-        android:layout_height="79dp"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="420dp"
+        android:layout_width="123dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="300dp"
         android:backgroundTint="#FBFBFB"
         android:src="@drawable/edit" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrarse"
-        android:layout_marginTop="530dp"
+        android:layout_marginTop="400dp"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <!--Button Login-->
@@ -39,8 +40,8 @@
         android:id="@+id/login_btn"
         android:layout_width="84dp"
         android:layout_height="73dp"
-        android:layout_marginLeft="165dp"
-        android:layout_marginTop="560dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="500dp"
         android:backgroundTint="#FBFBFB"
         android:src="@drawable/user" />
 
@@ -48,42 +49,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar"
-        android:layout_marginTop="670dp"
+        android:layout_marginTop="580dp"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
 
-    <!--Button FB-->
-    <FrameLayout
-        android:id="@+id/FrameLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-        <!--
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone" /> -->
-
-        <ImageButton
-            android:id="@+id/fb_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="290dp"
-            android:backgroundTint="#FBFBFB"
-            android:src="@drawable/facebook" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registrarse con Facebook"
-            android:layout_marginTop="370dp"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </FrameLayout>
 
     <TextView
         android:id="@+id/text_user"

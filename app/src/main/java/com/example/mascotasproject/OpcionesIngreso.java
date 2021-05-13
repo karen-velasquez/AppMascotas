@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import com.example.mascotasproject.IA.CameraActivity;
 import com.example.mascotasproject.IA.Classifier;
 import com.example.mascotasproject.IA.ClassifierActivity;
+import com.example.mascotasproject.login.LogInActivity;
 
 import java.text.DateFormat;
 import java.time.LocalDate;
@@ -32,7 +33,7 @@ public class OpcionesIngreso extends AppCompatActivity {
 
 
         musuario.setOnClickListener(v-> {
-            Intent intent=new Intent(OpcionesIngreso.this,loginnumero.class);
+            Intent intent=new Intent(OpcionesIngreso.this, LogInActivity.class);
             intent.putExtra("quien","Usuario");
             startActivity(intent);
 

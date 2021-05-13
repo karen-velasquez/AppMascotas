@@ -92,6 +92,7 @@ public class MostrarRecycler extends AppCompatActivity {
 
 
     public void mascotasrecyclerUsuarios(String codigo){
+        mascotaslist=new ArrayList<>();
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
         ref.addValueEventListener(new ValueEventListener() {
             @Override

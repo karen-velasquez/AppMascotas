@@ -27,7 +27,7 @@ public class OpcionesUsuario extends AppCompatActivity {
 
         mbtn_seperdio.setOnClickListener(v-> {
             Intent intent=new Intent(OpcionesUsuario.this, ClassifierActivity.class);
-            intent.putExtra("usuario",usuario);
+            intent.putExtra("codigo",usuario);
             intent.putExtra("quien",  quien);
             startActivity(intent);
         });

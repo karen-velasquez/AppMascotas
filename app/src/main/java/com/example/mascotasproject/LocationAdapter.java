@@ -73,12 +73,17 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
             }
         });
 
-        /*holder.muser_maslocation.setOnClickListener(new View.OnClickListener() {
+        holder.mmapa_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                 Intent intent=new Intent(context,MapsActivity1.class);
+                intent.putExtra("codigo",getcodigo());
+                intent.putExtra("quien",getquien());
+                intent.putExtra("codigoMascota", ((SeguimientoMascotas) context).getIntent().getStringExtra("codMascota"));
+                v.getContext().startActivity(intent);
+               // Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
 
 
 
@@ -87,8 +92,12 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
     }
 
     public String getquien(){
-        String quien = ((MostrarRecycler) context).getIntent().getStringExtra("quien");
+        String quien = ((SeguimientoMascotas) context).getIntent().getStringExtra("quien");
         return quien;
+    }
+    public String getcodigo(){
+        String codigo = ((SeguimientoMascotas) context).getIntent().getStringExtra("codigo");
+        return codigo;
     }
 
     @Override

@@ -11,6 +11,13 @@ import com.example.mascotasproject.IA.CameraActivity;
 import com.example.mascotasproject.IA.Classifier;
 import com.example.mascotasproject.IA.ClassifierActivity;
 
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Calendar;
+import java.util.Date;
+
 public class OpcionesIngreso extends AppCompatActivity {
 
     Button musuario,minvitado,mnuevo;
@@ -29,6 +36,7 @@ public class OpcionesIngreso extends AppCompatActivity {
             startActivity(intent);
 
         });
+
 
         minvitado.setOnClickListener(v-> {
             Intent intent=new Intent(OpcionesIngreso.this, ClassifierActivity.class);

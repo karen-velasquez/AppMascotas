@@ -15,34 +15,61 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="200dp"
-            android:text="QUIERO ENCONTRAR A MI MASCOTA"
-            android:textSize="18dp"
-            />
-        <Button
+            android:backgroundTint="#FBFBFB"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/SadDog" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Perdiste a tu mascota?"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Esta opción te permite registrar a una mascota extraviada."
+            android:textAlignment="center"
+            android:textColor="#9A9494"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+        <ImageButton
             android:id="@+id/invitado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="200dp"
-            android:textSize="18dp"
-            android:text="ESTA PERDIDA ESTA MASCOTA?"
-            />
-
-        <Button
-            android:id="@+id/nuevo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:backgroundTint="#FBFBFB"
+            android:layout_marginLeft="1dp"
             android:layout_marginTop="50dp"
-            android:textSize="18dp"
-            android:text="NUEVO"
-            />
+            android:src="@drawable/FoundDog" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Encontraste una mascota?"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Esta opción buscara a la mascota que encontraste en nuestra base de datos."
+            android:textAlignment="center"
+            android:textColor="#9A9494"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+
 
 
     </LinearLayout>

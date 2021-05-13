@@ -4,36 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OpcionesUsuario"
-    android:background="@color/purple_200"
-    >
+    android:background="@color/white"
+    tools:context=".OpcionesUsuario">
 
-
-
-
-    <Button
+    <ImageButton
         android:id="@+id/btn_seperdio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="350dp"
-        android:text="SE PERDIO MI MASCOTA"
+        android:backgroundTint="#FBFBFB"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/DogMiss" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Perdiste a tu mascota?"
+        android:layout_marginTop="300dp"
+        android:textAlignment="center"
         android:textSize="18sp"
-        android:textColor="#21F3EC"
-        android:backgroundTint="#FF5722"
-        />
-    <Button
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:text="Esta opción te permite registrar a una mascota extraviada."
+        android:textAlignment="center"
+        android:textColor="#9A9494"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <ImageButton
         android:id="@+id/btn_seguimiento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="500dp"
-        android:text="SEGUIMIENTO DE MI MASCOTA"
-        android:textSize="18sp" />
+        android:backgroundTint="#FBFBFB"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="380dp"
+        android:src="@drawable/DogStatus" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:text="Perdiste a tu mascota?"
+        android:layout_marginTop="520dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:text="Esta opción te permite registrar a una mascota extraviada."
+        android:textAlignment="center"
+        android:textColor="#9A9494"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
 
 

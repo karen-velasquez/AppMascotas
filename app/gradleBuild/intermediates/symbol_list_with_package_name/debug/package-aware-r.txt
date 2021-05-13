@@ -2061,6 +2061,7 @@ id content
 id contentPanel
 id contiguous
 id continuousInferenceButton
+id coordenadas
 id coordinator
 id cos
 id counterclockwise
@@ -2083,6 +2084,7 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id dimensions
+id direccion
 id direccion_location
 id direct
 id disableHome
@@ -2208,6 +2210,8 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id mcoordenadas
+id mdireccion
 id media_actions
 id message
 id messenger_send_button

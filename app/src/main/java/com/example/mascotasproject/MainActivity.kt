@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
         val btcard: Button =findViewById(R.id.btn_cardview)
         btcard.setOnClickListener{
-            val intent= Intent(this, MostrarRecycler:: class.java)
+            val intent= Intent(this, GetLocation:: class.java)
             startActivity(intent)
         }
 

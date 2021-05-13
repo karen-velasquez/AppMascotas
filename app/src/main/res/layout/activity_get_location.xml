@@ -57,6 +57,18 @@
             android:layout_height="wrap_content"
             android:text="VI A LA MASCOTA AQUI"
             android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/mdireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="direccion"/>
+        <TextView
+            android:id="@+id/mcoordenadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="coordenadas"/>
     </LinearLayout>
 
 </ScrollView>

@@ -1,8 +1,14 @@
 package com.example.mascotasproject;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
@@ -29,7 +35,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class GetLocation extends AppCompatActivity {
@@ -42,6 +51,8 @@ public class GetLocation extends AppCompatActivity {
     private Button updatelocation;
 
 
+    TextView direccion,coordenadas;
+    Button donde;
 
     /*Strings obteniendo los datos del Intent*/
     String mcodDueno,mcodMascota,mnombre,mCaracteristicas,mdatosper,image,quien;
@@ -57,29 +68,51 @@ public class GetLocation extends AppCompatActivity {
         rellenar=findViewById(R.id.rellenarimageen);
         updatelocation=findViewById(R.id.subirlocfirebase);
 
+        direccion=findViewById(R.id.mdireccion);
+        coordenadas=findViewById(R.id.mcoordenadas);
+
 
         /*-------------------------------obteniendo los datos del intent*/
-        obteniendovaloresIntent();
+      //  obteniendovaloresIntent();
         /*-------------------------------------------------------------------------------------------------------------*/
         /*-------------------------------subiendo localizaciones-----*/
         updatelocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                subirdatosLocaciones();
+          //      subirdatosLocaciones();
             }
         });
         /*-------------------------------------------------------------------------------------------------------------*/
 
 
-        Bundle bundle=getIntent().getExtras();
 
-        Bitmap bitmap = (Bitmap) getIntent().getParcelableExtra("imagen");
-        rellenar.setImageBitmap(bitmap);
+        LocationManager mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Localizacion localizacion= new Localizacion();
+        localizacion.setGetLocation(this);
+        if (ContextCompat.checkSelfPermission(
+                getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
+        ) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                    GetLocation.this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    REQUEST_CODE_LOCATION_PERMISSION
+            );
+        } else {
+            getCurrentLocation();
+        }
+        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            return;
+        }
+        System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?22222222");
+        mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
+
+
 
 
         findViewById(R.id.buttonGetCurrentLocation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.print("enjghjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
                 if (ContextCompat.checkSelfPermission(
                         getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
                 ) != PackageManager.PERMISSION_GRANTED) {
@@ -98,6 +131,29 @@ public class GetLocation extends AppCompatActivity {
 
 
     }
+
+    public void setLocation(Location loc){
+        //Obtener direccion de la calle a partir de la latitud y longitud
+        if(loc.getLatitude()!=0.0 && loc.getLongitude()!=0.0){
+            try {
+                Geocoder geocoder=new Geocoder(this, Locale.getDefault());
+                List<Address> list=geocoder.getFromLocation(
+                        loc.getLatitude(),loc.getLongitude(),1);
+                System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?33333333333");
+                if(!list.isEmpty()){
+                    Address DirCalle=list.get(0);
+                    direccion.setText("direccion: "+DirCalle.getAddressLine(0));
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
 
     public void obteniendovaloresIntent(){
         mcodDueno=getIntent().getStringExtra("codDueno");
@@ -188,4 +244,41 @@ public class GetLocation extends AppCompatActivity {
                     }
                 }, Looper.getMainLooper());
     }
+
+
+
+    public class Localizacion implements LocationListener{
+        GetLocation getLocation;
+        public GetLocation getGetLocation(){return getLocation;}
+
+        public void setGetLocation(GetLocation getLocation){
+            this.getLocation=getLocation;
+        }
+
+
+        @Override
+        public void onLocationChanged(@NonNull Location location) {
+            //Esto se actualiza cada vez que el GPS obtiene nuevas coordenadas
+
+            location.getLatitude();
+            location.getLongitude();
+            String text="Mi ubicacion actual es: "+"\n Lat="+
+                    location.getLatitude()+"\n Long="+location.getLongitude();
+            coordenadas.setText(text);
+            this.getLocation.setLocation(location);
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider){
+            Toast.makeText(GetLocation.this,"GPS DESACTIVADO",Toast.LENGTH_SHORT).show();
+        }
+        @Override
+        public void onProviderEnabled(String provider){
+            Toast.makeText(GetLocation.this,"GPS ACTIVADO",Toast.LENGTH_SHORT).show();
+        }
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras){}
+    }
+
 }

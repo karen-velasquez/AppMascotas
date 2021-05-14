@@ -6,52 +6,52 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
+8-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml
+9-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml
 10
 11    <uses-feature android:name="android.hardware.camera" />
-11-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:119:5-60
-11-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:119:19-57
+11-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:119:5-60
+11-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:119:19-57
 12    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- remove implicitly added permissions (tensorflow targetSDK < app targetSDK) -->
-12-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:120:5-70
-12-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:120:19-67
+12-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:120:5-70
+12-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:120:19-67
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:121:5-79
-13-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:121:22-76
+13-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:121:5-79
+13-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:121:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:122:5-67
-14-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:122:22-64
+14-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:122:5-67
+14-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:122:22-64
 15    <uses-permission android:name="android.permission.CAMERA" />
-15-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:123:5-65
-15-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:123:22-62
+15-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:123:5-65
+15-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:123:22-62
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:124:5-80
-16-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:124:22-77
+16-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:124:5-80
+16-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:124:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:125:5-81
-17-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:125:22-78
+17-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:125:5-81
+17-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:125:22-78
 18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:126:5-79
-18-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:126:22-76
+18-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:126:5-79
+18-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:126:22-76
 19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-19-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:131:5-81
-19-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:131:22-78
+19-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:131:5-81
+19-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:131:22-78
 20
 21    <uses-feature
-21-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
+21-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
 22        android:glEsVersion="0x00020000"
-22-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
+22-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
 23        android:required="true" />
-23-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
+23-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
 24
 25    <queries>
-25-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+25-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
 26
 27        <!-- Needs to be explicitly declared on Android R+ -->
 28        <package android:name="com.google.android.apps.maps" />
-28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
-28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
 29    </queries>
 30    <!--
 31         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -59,30 +59,30 @@
 33         location permissions for the "MyLocation" functionality.
 34    -->
 35    <application
-35-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:11:5-117:19
+35-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:11:5-117:19
 36        android:allowBackup="true"
-36-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:12:9-35
+36-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:12:9-35
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.3.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3e400367cd43db14a328fa68a9e885d3\core-1.3.2\AndroidManifest.xml:24:18-86
+37-->[androidx.core:core:1.3.2] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\3e400367cd43db14a328fa68a9e885d3\core-1.3.2\AndroidManifest.xml:24:18-86
 38        android:authorities="com.example.mascotasProject.fileprovider"
-38-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:13:9-71
+38-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:13:9-71
 39        android:debuggable="true"
 40        android:exported="false"
-40-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:14:9-33
+40-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:14:9-33
 41        android:extractNativeLibs="false"
 42        android:grantUriPermissions="true"
-42-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:15:9-43
+42-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:15:9-43
 43        android:icon="@mipmap/ic_launcher"
-43-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:16:9-43
+43-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:16:9-43
 44        android:label="@string/app_name"
-44-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:17:9-41
+44-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:17:9-41
 45        android:roundIcon="@mipmap/ic_launcher_round"
-45-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:18:9-54
+45-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:18:9-54
 46        android:supportsRtl="true"
-46-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:19:9-35
+46-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:19:9-35
 47        android:testOnly="true"
 48        android:theme="@style/Theme.MascotasProject" >
-48-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:20:9-53
+48-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:20:9-53
 49
 50        <!--
 51             The API key for Google Maps-based APIs is defined as a string resource.
@@ -93,35 +93,35 @@
 56             You can define the keys for the debug and release targets in src/debug/ and src/release/.
 57        -->
 58        <activity
-58-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:30:9-32:78
+58-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:30:9-32:78
 59            android:name="com.example.mascotasproject.Localizaciones"
-59-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:31:13-43
+59-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:31:13-43
 60            android:label="@string/title_activity_localizaciones" />
-60-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:32:13-66
+60-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:32:13-66
 61        <activity android:name="com.example.mascotasproject.SeguimientoMascotas" />
-61-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:34:9-57
-61-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:34:19-54
+61-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:34:9-57
+61-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:34:19-54
 62        <activity android:name="com.example.mascotasproject.login.ProfileActivity" />
-62-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:35:9-59
-62-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:35:19-56
+62-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:35:9-59
+62-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:35:19-56
 63        <activity android:name="com.example.mascotasproject.login.LoggingInActivity" />
-63-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:9-61
-63-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:36:19-58
+63-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:36:9-61
+63-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:36:19-58
 64        <activity android:name="com.example.mascotasproject.login.RegisterActivity" />
-64-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:9-60
-64-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:37:19-57
+64-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:37:9-60
+64-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:37:19-57
 65        <activity
-65-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:38:9-40:60
+65-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:38:9-40:60
 66            android:name="com.example.mascotasproject.MapsActivity1"
-66-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:39:13-42
+66-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:39:13-42
 67            android:label="@string/title_activity_maps1" />
-67-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:40:13-57
+67-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:40:13-57
 68        <activity android:name="com.example.mascotasproject.OpcionesUsuario" />
-68-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:42:9-53
-68-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:42:19-50
+68-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:42:9-53
+68-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:42:19-50
 69        <activity android:name="com.example.mascotasproject.loginnumero" />
-69-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:44:9-49
-69-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:44:19-46
+69-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:44:9-49
+69-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:44:19-46
 70        <!--
 71             The API key for Google Maps-based APIs is defined as a string resource.
 72             (See the file "res/values/google_maps_api.xml").
@@ -131,225 +131,225 @@
 76             You can define the keys for the debug and release targets in src/debug/ and src/release/.
 77        -->
 78        <activity android:name="com.example.mascotasproject.OpcionesIngreso" />
-78-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:53:9-53
-78-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:53:19-50
+78-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:53:9-53
+78-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:53:19-50
 79        <activity android:name="com.example.mascotasproject.login.LogInActivity" />
-79-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:54:9-57
-79-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:54:19-54
+79-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:54:9-57
+79-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:54:19-54
 80        <activity android:name="com.example.mascotasproject.GetLocation" />
-80-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:55:9-49
-80-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:55:19-46
+80-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:55:9-49
+80-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:55:19-46
 81        <activity android:name="com.example.mascotasproject.AddData" />
-81-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:56:9-45
-81-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:56:19-42
+81-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:56:9-45
+81-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:56:19-42
 82        <activity android:name="com.example.mascotasproject.IA.CameraActivity" />
-82-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:57:9-55
-82-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:57:19-52
+82-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:57:9-55
+82-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:57:19-52
 83        <activity android:name="com.example.mascotasproject.IA.SimpleListActivity" />
-83-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:58:9-59
-83-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:58:19-56
+83-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:58:9-59
+83-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:58:19-56
 84        <activity android:name="com.example.mascotasproject.MostrarRecycler" />
-84-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:59:9-53
-84-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:59:19-50
+84-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:59:9-53
+84-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:59:19-50
 85        <activity android:name="com.example.mascotasproject.desfragment" />
-85-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:60:9-49
-85-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:60:19-46
+85-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:60:9-49
+85-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:60:19-46
 86        <activity
-86-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:61:9-79:20
+86-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:61:9-79:20
 87            android:name="com.example.mascotasproject.MainActivity"
-87-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:62:13-41
+87-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:62:13-41
 88            android:label="@string/app_name"
-88-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:63:13-45
+88-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:63:13-45
 89            android:screenOrientation="portrait"
-89-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:64:13-49
+89-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:64:13-49
 90            android:theme="@style/Theme.MascotasProject.NoActionBar" >
-90-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:65:13-69
+90-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:65:13-69
 91            <intent-filter>
-91-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:67:13-71:29
+91-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:67:13-71:29
 92                <action android:name="android.intent.action.MAIN" />
-92-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:68:17-69
-92-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:68:25-66
+92-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:68:17-69
+92-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:68:25-66
 93
 94                <category android:name="android.intent.category.LAUNCHER" />
-94-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:70:17-77
-94-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:70:27-74
+94-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:70:17-77
+94-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:70:27-74
 95            </intent-filter>
 96            <intent-filter>
-96-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:72:13-78:29
+96-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:72:13-78:29
 97                <action android:name="android.intent.action.SEND" />
-97-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:73:17-69
-97-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:73:25-66
+97-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:73:17-69
+97-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:73:25-66
 98
 99                <category android:name="android.intent.category.DEFAULT" />
-99-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:75:17-76
-99-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:75:27-73
+99-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:75:17-76
+99-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:75:27-73
 100
 101                <data android:mimeType="image/*" />
-101-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:77:17-52
-101-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:77:23-49
+101-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:77:17-52
+101-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:77:23-49
 102            </intent-filter>
 103        </activity>
 104        <activity
-104-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:80:9-97:20
+104-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:80:9-97:20
 105            android:name="com.example.mascotasproject.IA.ClassifierActivity"
-105-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:81:13-50
+105-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:81:13-50
 106            android:label="Identificador"
-106-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:82:13-42
+106-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:82:13-42
 107            android:screenOrientation="portrait" >
-107-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:83:13-49
+107-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:83:13-49
 108            <intent-filter>
-108-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:67:13-71:29
+108-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:67:13-71:29
 109                <action android:name="android.intent.action.MAIN" />
-109-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:68:17-69
-109-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:68:25-66
+109-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:68:17-69
+109-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:68:25-66
 110
 111                <category android:name="android.intent.category.LAUNCHER" />
-111-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:70:17-77
-111-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:70:27-74
+111-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:70:17-77
+111-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:70:27-74
 112            </intent-filter>
 113            <intent-filter>
-113-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:72:13-78:29
+113-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:72:13-78:29
 114                <action android:name="android.intent.action.SEND" />
-114-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:73:17-69
-114-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:73:25-66
+114-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:73:17-69
+114-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:73:25-66
 115
 116                <category android:name="android.intent.category.DEFAULT" />
-116-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:75:17-76
-116-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:75:27-73
+116-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:75:17-76
+116-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:75:27-73
 117
 118                <data android:mimeType="image/*" />
-118-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:77:17-52
-118-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:77:23-49
+118-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:77:17-52
+118-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:77:23-49
 119            </intent-filter>
 120        </activity>
 121
 122        <meta-data
-122-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:99:9-101:71
+122-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:99:9-101:71
 123            android:name="com.google.android.geo.API_KEY"
-123-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:100:13-58
+123-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:100:13-58
 124            android:value="AIzaSyB4ihTl6tPVdRB_76JOdXgfLxQvNPGwAZI" />
-124-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:101:13-68
+124-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:101:13-68
 125        <meta-data
-125-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:102:9-104:69
+125-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:102:9-104:69
 126            android:name="com.google.android.gms.17.0.1"
-126-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:103:13-57
+126-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:103:13-57
 127            android:value="@integer/google_play_services_version" />
-127-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:104:13-66
+127-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:104:13-66
 128
 129        <provider
-129-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:108:9-116:20
+129-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:108:9-116:20
 130            android:name="androidx.core.content.FileProvider"
-130-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:109:13-62
+130-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:109:13-62
 131            android:authorities="com.example.mascotasProject.fileprovider"
-131-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:110:13-75
+131-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:110:13-75
 132            android:exported="false"
-132-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:111:13-37
+132-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:111:13-37
 133            android:grantUriPermissions="true" >
-133-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:112:13-47
+133-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:112:13-47
 134            <meta-data
-134-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:113:13-115:53
+134-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:113:13-115:53
 135                android:name="android.support.FILE_PROVIDER_PATHS"
-135-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:114:17-67
+135-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:114:17-67
 136                android:resource="@xml/filepaths" />
-136-->C:\Users\asus\Downloads\AgendaS\AppMascotas\app\src\main\AndroidManifest.xml:115:17-50
+136-->E:\tall\AppMascotas\app\src\main\AndroidManifest.xml:115:17-50
 137        </provider>
 138
 139        <activity
-139-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
+139-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
 140            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-140-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
+140-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
 141            android:excludeFromRecents="true"
-141-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
+141-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
 142            android:exported="true"
-142-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
+142-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
 143            android:launchMode="singleTask"
-143-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
+143-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
 144            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-144-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
+144-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
 145            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-145-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
+145-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
 146
 147        <service
-147-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:33:9-39:19
+147-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:33:9-39:19
 148            android:name="com.google.firebase.components.ComponentDiscoveryService"
-148-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
+148-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
 149            android:directBootAware="true"
-149-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+149-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
 150            android:exported="false" >
-150-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
+150-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
 151            <meta-data
-151-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
+151-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
 152                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-152-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
+152-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
 153                android:value="com.google.firebase.components.ComponentRegistrar" />
-153-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
+153-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\9075ca695fc3c2a380bd80dbd55e9968\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
 154            <meta-data
-154-->[com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:32:13-34:85
+154-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:32:13-34:85
 155                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-155-->[com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:33:17-109
+155-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:33:17-109
 156                android:value="com.google.firebase.components.ComponentRegistrar" />
-156-->[com.google.firebase:firebase-database:19.7.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:34:17-82
+156-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\b3f17bfa6555fe493b85724d64face5c\jetified-firebase-database-19.7.0\AndroidManifest.xml:34:17-82
 157            <meta-data
-157-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:33:13-35:85
+157-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:33:13-35:85
 158                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-158-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:34:17-107
+158-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:34:17-107
 159                android:value="com.google.firebase.components.ComponentRegistrar" />
-159-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:35:17-82
+159-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\c1934c58e823b6a31bf62ec9b578e184\jetified-firebase-storage-19.2.2\AndroidManifest.xml:35:17-82
 160            <!--
 161                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
 162                clients to use it as well, by defining this registrar in their own core/common library.
 163            -->
 164            <meta-data
-164-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+164-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
 165                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-165-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+165-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
 166                android:value="com.google.firebase.components.ComponentRegistrar" />
-166-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+166-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
 167        </service>
 168
 169        <provider
-169-->[com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3b9d116ed23fd5d07572211d5919f3ff\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+169-->[com.squareup.picasso:picasso:2.71828] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\48c72814bd6a218c1fa399c3e5418bd8\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 170            android:name="com.squareup.picasso.PicassoProvider"
-170-->[com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3b9d116ed23fd5d07572211d5919f3ff\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+170-->[com.squareup.picasso:picasso:2.71828] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\48c72814bd6a218c1fa399c3e5418bd8\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 171            android:authorities="com.example.mascotasproject.com.squareup.picasso"
-171-->[com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3b9d116ed23fd5d07572211d5919f3ff\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+171-->[com.squareup.picasso:picasso:2.71828] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\48c72814bd6a218c1fa399c3e5418bd8\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 172            android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
-172-->[com.squareup.picasso:picasso:2.71828] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3b9d116ed23fd5d07572211d5919f3ff\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+172-->[com.squareup.picasso:picasso:2.71828] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\48c72814bd6a218c1fa399c3e5418bd8\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 173        <uses-library
-173-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+173-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
 174            android:name="org.apache.http.legacy"
-174-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+174-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
 175            android:required="false" />
-175-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+175-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\a55ecc0a31359f010f82d3822403b20b\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
 176
 177        <activity
-177-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+177-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
 178            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-178-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+178-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
 179            android:exported="false"
-179-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+179-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
 180            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-180-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+180-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
 181
 182        <provider
-182-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+182-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
 183            android:name="com.google.firebase.provider.FirebaseInitProvider"
-183-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+183-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
 184            android:authorities="com.example.mascotasproject.firebaseinitprovider"
-184-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+184-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
 185            android:directBootAware="true"
-185-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+185-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
 186            android:exported="false"
-186-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+186-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
 187            android:initOrder="100" />
-187-->[com.google.firebase:firebase-common:19.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+187-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\db84637bf95e07ca5285016c65deb618\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
 188
 189        <meta-data
-189-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+189-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
 190            android:name="com.google.android.gms.version"
-190-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+190-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
 191            android:value="@integer/google_play_services_version" />
-191-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+191-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Desktop\.gradle\caches\transforms-2\files-2.1\5524688c29a0778936457edca6f27e2d\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
 192    </application>
 193
 194</manifest>

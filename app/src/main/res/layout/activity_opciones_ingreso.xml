@@ -68,6 +68,11 @@
             android:textColor="#9A9494"
             android:textSize="18sp"
             android:textStyle="italic" />
+        <Button
+            android:id="@+id/mapsprueba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="maps"/>
 
 
 

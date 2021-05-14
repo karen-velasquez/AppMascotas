@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.Manifest;
 import android.app.ActionBar;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -17,11 +18,17 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -52,8 +59,11 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
     private Marker InfoWindow;
     TextView direccion,coordenadas;
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
-    Button donde;
+    Button enviarubicacion;
+    LocationManager mlocManager;
 
+    String lat="";
+    String longi="";
 
     /*Strings obteniendo los datos del Intent*/
     String mcodDueno,mcodMascota,mnombre,mCaracteristicas,mdatosper,image,quien,codigo;
@@ -66,7 +76,10 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         direccion=findViewById(R.id.direccion);
         coordenadas=findViewById(R.id.coordenadas);
 
+        enviarubicacion=findViewById(R.id.enviarubicacion);
+
         obteniendovaloresIntent();
+        getCurrentLocation();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -75,29 +88,24 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
 
 
+        enviarubicacion.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                subirdatosLocaciones();
+                Intent intent=new Intent(MapsActivity1.this,OpcionesIngreso.class);
+                startActivity(intent);
 
+            }
+        });
 /*        if(quien.equals("Usuario")){
 
 
         }*/
 
 
-        LocationManager mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Localizacion localizacion= new Localizacion();
-        localizacion.setMapsActivity1(this);
-        if (ContextCompat.checkSelfPermission(
-                getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
-        ) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(
-                    MapsActivity1.this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    REQUEST_CODE_LOCATION_PERMISSION
-            );
-        } else {
-           // getCurrentLocation();
-        }
 
-        mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
+
+
 
     }
 
@@ -107,7 +115,34 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mMap = googleMap;
 
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        localizacionesMascotas(mMap,mcodDueno,mcodMascota);
+        if(quien.equals("Usuario")){
+            direccion.setVisibility(View.GONE);
+            coordenadas.setVisibility(View.GONE);
+            enviarubicacion.setVisibility(View.GONE);
+            localizacionesMascotas(mMap,mcodDueno,mcodMascota);
+        }else{
+            if(quien.equals("Invitado")){
+                mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                Localizacion localizacion= new Localizacion();
+                localizacion.setMapsActivity1(this);
+                if (ContextCompat.checkSelfPermission(
+                        getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(
+                            MapsActivity1.this,
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                            REQUEST_CODE_LOCATION_PERMISSION
+                    );
+                } else {
+                    // getCurrentLocation();
+                }
+                mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
+                miubi(googleMap);
+
+
+            }
+        }
+
         Log.d("quien entro","1"+"24324");
 
         //  Antut(mMap);
@@ -135,6 +170,76 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pet1, 15));
     }
 
+    public void miubi(GoogleMap googleMap){
+        mMap=googleMap;
+
+        final LatLng miubicacion = new LatLng(Float.parseFloat(lat), Float.parseFloat(longi));
+        mMap.addMarker(new MarkerOptions().position(miubicacion).title("Mi ubicacion").snippet(lat+","+longi).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(miubicacion));
+        // Add a marker in La Paz
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(miubicacion, 15));
+    }
+
+    public void subirdatosLocaciones(){
+        /*Instanciando el firebase*/
+        FirebaseDatabase mFirebaseDatabase;
+        DatabaseReference mRef;
+        mFirebaseDatabase=FirebaseDatabase.getInstance();
+        mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
+
+        /*Subiendo los datos de donde se vio a la mascota*/
+        Map<String,Object> locationupdate=new HashMap<>();
+        locationupdate.put("latitude",lat);
+        locationupdate.put("longitud",longi);
+        locationupdate.put("nombreMas",mnombre);
+        locationupdate.put("caracteristica",mCaracteristicas);
+        locationupdate.put("codigoDueno",mcodDueno);
+        locationupdate.put("codigoMascota",mcodMascota);
+        mRef.push().setValue(locationupdate);
+    }
+
+
+
+    private void getCurrentLocation() {
+
+        LocationRequest locationRequest = new LocationRequest();
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(3000);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        LocationServices.getFusedLocationProviderClient(MapsActivity1.this)
+                .requestLocationUpdates(locationRequest, new LocationCallback() {
+                    @Override
+                    public void onLocationResult(LocationResult locationResult) {
+                        super.onLocationResult(locationResult);
+                        LocationServices.getFusedLocationProviderClient(MapsActivity1.this)
+                                .removeLocationUpdates(this);
+                        if (locationResult != null && locationResult.getLocations().size() > 0) {
+                            int latestLocationIndex = locationResult.getLocations().size() - 1;
+
+                            double latitude =
+                                    locationResult.getLocations().get(latestLocationIndex).getLatitude();
+                            lat=latitude+"";
+                            double longitude =
+                                    locationResult.getLocations().get(latestLocationIndex).getLongitude();
+                            longi=longitude+"";
+
+                        }
+                    }
+                }, Looper.getMainLooper());
+    }
+
 
 
     /*-----------LLENANDO LAS UBICACIONES DESDE FIREBASE-------------------------------------*/
@@ -153,7 +258,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                         //obtener todos los usuarios menos
                         mascota = new LatLng(Float.parseFloat(locationMascota.getLatitude()), Float.parseFloat(locationMascota.getLongitud()));
                         mMap.addMarker(new MarkerOptions().position(mascota).title(locationMascota.getNombreMas()).snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
-                        System.out.print("LLEGUE AQUI PERO NOSE  COMO");
+
 
                     }
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mascota, 15));
@@ -218,24 +323,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         quien=getIntent().getStringExtra("quien");
     }
 
-    public void subirdatosLocaciones(){
-        /*Instanciando el firebase*/
 
-        FirebaseDatabase mFirebaseDatabase;
-        DatabaseReference mRef;
-        mFirebaseDatabase=FirebaseDatabase.getInstance();
-        mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
-
-        /*Subiendo los datos de donde se vio a la mascota*/
-        Map<String,Object> locationupdate=new HashMap<>();
-      //  locationupdate.put("latitude",lat);
-     //   locationupdate.put("longitud",longi);
-        locationupdate.put("nombreMas",mnombre);
-        locationupdate.put("caracteristica",mCaracteristicas);
-        locationupdate.put("codigoDueno",mcodDueno);
-        locationupdate.put("codigoMascota",mcodMascota);
-        mRef.push().setValue(locationupdate);
-    }
 
 
     public class Localizacion implements LocationListener{

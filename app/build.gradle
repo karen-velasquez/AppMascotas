@@ -108,6 +108,8 @@ dependencies {
 
     //Adicionando Librerias de geolocalización
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
 
 
 }

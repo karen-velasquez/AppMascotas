@@ -24,12 +24,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
 
-        //Botón Show Map
-        val btnmap: Button =findViewById(R.id.btn_showMap)
-        btnmap.setOnClickListener{
-            val intent= Intent(this, MapsActivity1:: class.java)
-            startActivity(intent)
-        }
+
         //Botón Get Location
         val btnsegundo: Button =findViewById(R.id.btn_segundo)
         btnsegundo.setOnClickListener{
@@ -38,14 +33,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-        //botón log In
-        val btn_logIn = findViewById<Button>(R.id.btn_logIn)
-
-        btn_logIn.setOnClickListener{
-            val intent= Intent(this, LogInActivity:: class.java)
-            startActivity(intent)
-        }
         //botón log In
       /*  val btn_nuevo = findViewById<Button>(R.id.nuevo_recycler)
 
@@ -62,17 +49,17 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+   /* override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         //acciones al hacer click en el action bar
 
-        return when (item.itemId) {
+       /* return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
-        }
-    }
+        }*/
+    }*/
 
      fun fetchLocation(){
         val task = fusedLocationProviderClient.lastLocation

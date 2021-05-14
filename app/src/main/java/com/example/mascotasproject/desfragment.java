@@ -1,11 +1,15 @@
 package com.example.mascotasproject;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,6 +22,7 @@ import com.squareup.picasso.Picasso;
 public class desfragment extends AppCompatActivity {
     TextView mnombreMas, mCaractericas, mdatosperdida;
     ImageView mimagen;
+    private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     ImageButton mlocation;
 
 
@@ -68,11 +73,17 @@ public class desfragment extends AppCompatActivity {
         Picasso.get().load(image).into(mimagen);
 
 
-        mlocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent=new Intent(desfragment.this,GetLocation.class);
+        mlocation.setOnClickListener(v-> {
+            if (ContextCompat.checkSelfPermission(
+                    getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(
+                        desfragment.this,
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        REQUEST_CODE_LOCATION_PERMISSION
+                );
+            } else {
+                Intent intent=new Intent(desfragment.this,MapsActivity1.class);
                 intent.putExtra("codDueno",mcodDueno);
                 intent.putExtra("codMascota",mcodMascota);
                 intent.putExtra("nombreMas",mnombre);
@@ -82,7 +93,12 @@ public class desfragment extends AppCompatActivity {
                 intent.putExtra("quien",quien);
                 startActivity(intent);
             }
+
+
+
         });
+
+
 
     }
     void setButtonsVisibility(final int visibility, String quien) {

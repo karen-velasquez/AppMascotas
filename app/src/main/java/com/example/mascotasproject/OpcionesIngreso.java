@@ -1,9 +1,13 @@
 package com.example.mascotasproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -24,12 +28,19 @@ import java.util.Date;
 public class OpcionesIngreso extends AppCompatActivity {
 
     ImageButton musuario,minvitado;
+
+
+
+
+    Button mapsprueba;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_ingreso);
         musuario=findViewById(R.id.usuario);
         minvitado=findViewById(R.id.invitado);
+
+        mapsprueba=findViewById(R.id.mapsprueba);
 
 
         musuario.setOnClickListener(v-> {
@@ -46,6 +57,8 @@ public class OpcionesIngreso extends AppCompatActivity {
             startActivity(intent);
 
         });
+
+
 
 
 

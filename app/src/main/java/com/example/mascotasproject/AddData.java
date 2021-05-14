@@ -125,8 +125,7 @@ public class AddData extends AppCompatActivity {
             nombreAdd.setText(mnombreUp);
             perdidaAdd.setText(mperdidaUp);
             Picasso.get().load(mimagenUp).into(imagenAdd);
-            actionBar.setTitle("Actualizar post");
-            mUploadBtn.setText("Actualizar");
+            mUploadBtn.setText("SUBIR POST");
 
         }
 
@@ -135,6 +134,12 @@ public class AddData extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 uploadDatatoFirebase();
+
+                Intent intent=new Intent(AddData.this, OpcionesUsuario.class);
+                intent.putExtra("usuario",getCodigo());
+                intent.putExtra("quien",  getQuien());
+                startActivity(intent);
+
             }
         });
 

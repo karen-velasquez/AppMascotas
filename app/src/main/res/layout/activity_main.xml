@@ -32,16 +32,6 @@
 
 
 
-    <Button
-        android:id="@+id/btn_logIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="210dp"
-        android:text="Log In"
-        android:backgroundTint="#4CAF50"
-        />
 
 
 
@@ -52,15 +42,6 @@
         android:background="#2180F3"
         app:popupTheme="@style/Theme.MascotasProject.PopupOverlay" />
 
-    <Button
-        android:id="@+id/btn_showMap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="115dp"
-        android:layout_marginTop="280dp"
-        android:text="Mostrar Mapa"
-        android:backgroundTint="#4CAF50"
-        />
 
 
 </RelativeLayout>

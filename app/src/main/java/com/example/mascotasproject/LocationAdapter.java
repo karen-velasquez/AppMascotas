@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -109,8 +110,8 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
     class  MyHolder extends RecyclerView.ViewHolder{
 
         TextView mvisto_Location,mlatitude_location,mlongitud_location,mdireccion_location;
-        ImageView mimagen_location;
-        Button mmapa_location;
+
+        ImageButton mmapa_location;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -118,7 +119,7 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
             mlatitude_location = itemView.findViewById(R.id.latitud_location);
             mlongitud_location = itemView.findViewById(R.id.longitud_location);
             mdireccion_location=itemView.findViewById(R.id.direccion_location);
-            mimagen_location = itemView.findViewById(R.id.imagen_location);
+
             mmapa_location=itemView.findViewById(R.id.mapa_location);
 
 

@@ -35,6 +35,7 @@ MERGED from [org.tensorflow:tensorflow-android:1.8.0] C:\Users\asus\.gradle\cach
 MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f80da4043ca5eb5fefdaf144e6c47051\jetified-tensorflow-lite-2.4.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\59576733a83af8aa5eaf55fb5b21e0a8\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e17fc29dd1957c9a47442348ae90b221\jetified-play-services-location-18.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f0cb0da2ae1fe7402a5c8305cca83edc\jetified-floatingactionbutton-1.10.1\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c5982cb56794cfc65e4212172514dc8f\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\404877eefdbc99ef13c65251d86ebf1a\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\41686c23748e083511dcfcf3b04c8135\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -124,6 +125,8 @@ MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\asus\.gradle\caches\
 MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f80da4043ca5eb5fefdaf144e6c47051\jetified-tensorflow-lite-2.4.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e17fc29dd1957c9a47442348ae90b221\jetified-play-services-location-18.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e17fc29dd1957c9a47442348ae90b221\jetified-play-services-location-18.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f0cb0da2ae1fe7402a5c8305cca83edc\jetified-floatingactionbutton-1.10.1\AndroidManifest.xml:12:5-20
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f0cb0da2ae1fe7402a5c8305cca83edc\jetified-floatingactionbutton-1.10.1\AndroidManifest.xml:12:5-20
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1f78a72233ca11e1f2cdf54d922f86dc\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\91de0631f4fb69fe0082f3f545edc300\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
@@ -424,6 +427,8 @@ MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\asus\.gradle\cac
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\59576733a83af8aa5eaf55fb5b21e0a8\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e17fc29dd1957c9a47442348ae90b221\jetified-play-services-location-18.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\e17fc29dd1957c9a47442348ae90b221\jetified-play-services-location-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f0cb0da2ae1fe7402a5c8305cca83edc\jetified-floatingactionbutton-1.10.1\AndroidManifest.xml:8:5-10:41
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\f0cb0da2ae1fe7402a5c8305cca83edc\jetified-floatingactionbutton-1.10.1\AndroidManifest.xml:8:5-10:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c5982cb56794cfc65e4212172514dc8f\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\c5982cb56794cfc65e4212172514dc8f\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\404877eefdbc99ef13c65251d86ebf1a\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44

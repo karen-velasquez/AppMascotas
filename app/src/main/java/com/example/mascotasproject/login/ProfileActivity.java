@@ -89,10 +89,10 @@ public class ProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //get item id
         int id = item.getItemId();
-        if (id== R.id.action_logout){
+        /*if (id== R.id.action_logout){
             firebaseAuth.signOut();
             checkUSerStatus();
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 

@@ -1937,6 +1937,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
+id botonimageGallery
 id bottom
 id bounce
 id breed_image
@@ -1944,8 +1945,11 @@ id btn_logincodigo
 id btn_seguimiento
 id btn_segundo
 id btn_seperdio
+id btngallery
 id buttonGetCurrentLocation
 id buttonPanel
+id button_first
+id button_second
 id buttonupload
 id cache_measures
 id cameraButton
@@ -2075,6 +2079,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageGallery
 id imageView
 id imageholder
 id imagenAdd
@@ -2326,6 +2331,8 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id texture
+id textview_first
+id textview_second
 id time
 id title
 id titleDividerNoCustom
@@ -2433,6 +2440,7 @@ layout activity_log_in
 layout activity_logging_in
 layout activity_loginnumero
 layout activity_main
+layout activity_main2
 layout activity_maps1
 layout activity_mostrar_recycler
 layout activity_opciones_ingreso
@@ -2441,6 +2449,7 @@ layout activity_profile
 layout activity_register
 layout activity_seguimiento_mascotas
 layout camera_connection_fragment
+layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2458,6 +2467,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_desfragment
+layout fragment_first
+layout fragment_second
 layout lang_dialog
 layout list_group
 layout list_item
@@ -2699,6 +2710,7 @@ string second_fragment_label
 string share_with
 string status_bar_notification_info_overflow
 string title_activity_localizaciones
+string title_activity_main2
 string title_activity_maps1
 string title_activity_mascotas_fragment
 string yes

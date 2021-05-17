@@ -39,12 +39,12 @@
     <string name="PetInfo">Muestra Información de dicha mascota</string>
 
 
-
     <string name="title_activity_maps1">Map</string>
 
     //for fb
     <string name="title_activity_mascotas_fragment">MascotasFragment</string>
     <string name="title_activity_localizaciones">Map</string>
+    <string name="title_activity_main2">MainActivity</string>
     <string-array name="breeds_array">
         <item>Affenpinscher</item>
         <item>Afghan Hound</item>

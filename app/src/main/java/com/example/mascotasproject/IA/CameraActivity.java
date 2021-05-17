@@ -2,6 +2,8 @@ package com.example.mascotasproject.IA;
 
 import android.Manifest;
 import android.content.ContentResolver;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Environment;
 import android.os.Handler;
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -83,6 +85,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -111,7 +115,6 @@ public abstract class CameraActivity extends FragmentActivity
 
     public static List<String> supportedLanguageNames;
     public static List<String> supportedLanguageCodes;
-
     public static String cameraId;
     private static int cameraPermissionRequests = 0;
     protected ArrayList<String> currentRecognitions;
@@ -274,6 +277,7 @@ public abstract class CameraActivity extends FragmentActivity
             }
 
             vigenciaafalse(getCodigo());
+
             final View pnlFlash = findViewById(R.id.pnlFlash);
 
             cameraButton.setEnabled(false);
@@ -965,6 +969,11 @@ public abstract class CameraActivity extends FragmentActivity
         String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
         return Uri.parse(path);
     }
+
+
+
+
+
 
 
 

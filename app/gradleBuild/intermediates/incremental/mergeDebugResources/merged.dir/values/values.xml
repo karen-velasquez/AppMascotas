@@ -1345,6 +1345,7 @@
     <string name="share_with">Share with..</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_localizaciones">Map</string>
+    <string name="title_activity_main2">MainActivity</string>
     <string name="title_activity_maps1">Map</string>
     <string name="title_activity_mascotas_fragment">MascotasFragment</string>
     <string name="yes">Yes</string>

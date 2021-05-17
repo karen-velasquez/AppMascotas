@@ -33,6 +33,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //Botón Get Location
+        val btngallery: Button =findViewById(R.id.btngallery)
+        btngallery.setOnClickListener{
+            val intent= Intent(this, MainActivity2:: class.java)
+            startActivity(intent)
+        }
+
         //botón log In
       /*  val btn_nuevo = findViewById<Button>(R.id.nuevo_recycler)
 

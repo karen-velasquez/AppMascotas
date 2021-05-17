@@ -8,8 +8,9 @@
         android:minSdkVersion="26"
         android:targetSdkVersion="30" />
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- remove implicitly added permissions (tensorflow targetSDK < app targetSDK) -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- remove implicitly added permissions (tensorflow targetSDK < app targetSDK) -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -27,11 +28,7 @@
         <!-- Needs to be explicitly declared on Android R+ -->
         <package android:name="com.google.android.apps.maps" />
     </queries>
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -46,7 +43,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MascotasProject" >
-
+        <activity
+            android:name="com.example.mascotasproject.MainActivity2"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.MascotasProject.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -18,10 +18,14 @@
             android:hint="Ingresar nombre Mascota"
             android:singleLine="true"
             android:textAlignment="center" />
+
         <ImageView
             android:id="@+id/imagenAdd"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"/>
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:background="@mipmap/ic_action_gallery_icon" />
 
         <EditText
             android:id="@+id/caracteristicaAdd"

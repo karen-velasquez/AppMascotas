@@ -1,3 +1,6 @@
+com/example/mascotasproject/FirstFragment.java
+ com.example.mascotasproject.FirstFragment
+ com.example.mascotasproject.FirstFragment$1
 com/example/mascotasproject/IA/CameraConnectionFragment.java
  com.example.mascotasproject.IA.CameraConnectionFragment
  com.example.mascotasproject.IA.CameraConnectionFragment$1
@@ -26,16 +29,23 @@ com/example/mascotasproject/login/LogInActivity.java
  com.example.mascotasproject.login.LogInActivity
  com.example.mascotasproject.login.LogInActivity$1
  com.example.mascotasproject.login.LogInActivity$2
-com/example/mascotasproject/modeltemporal.java
- com.example.mascotasproject.modeltemporal
+com/example/mascotasproject/MainActivity2.java
+ com.example.mascotasproject.MainActivity2
+ com.example.mascotasproject.MainActivity2$1
+ com.example.mascotasproject.MainActivity2$InferenceTask
+com/example/mascotasproject/MascotasAdapter.java
+ com.example.mascotasproject.MascotasAdapter
+ com.example.mascotasproject.MascotasAdapter$1
+ com.example.mascotasproject.MascotasAdapter$2
+ com.example.mascotasproject.MascotasAdapter$MyHolder
 com/example/mascotasproject/IA/ListAdapter.java
  com.example.mascotasproject.IA.ListAdapter
 com/example/mascotasproject/IA/TensorFlowImageClassifier.java
  com.example.mascotasproject.IA.TensorFlowImageClassifier
 com/example/mascotasproject/IA/AutoFitTextureView.java
  com.example.mascotasproject.IA.AutoFitTextureView
-com/example/mascotasproject/login/ProfileActivity.java
- com.example.mascotasproject.login.ProfileActivity
+com/example/mascotasproject/desfragment.java
+ com.example.mascotasproject.desfragment
 com/example/mascotasproject/IA/LegacyCameraConnectionFragment.java
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment
  com.example.mascotasproject.IA.LegacyCameraConnectionFragment$1
@@ -58,10 +68,12 @@ com/example/mascotasproject/login/LoggingInActivity.java
  com.example.mascotasproject.login.LoggingInActivity$2
  com.example.mascotasproject.login.LoggingInActivity$3
  com.example.mascotasproject.login.LoggingInActivity$4
-com/example/mascotasproject/MostrarRecycler.java
- com.example.mascotasproject.MostrarRecycler
- com.example.mascotasproject.MostrarRecycler$1
- com.example.mascotasproject.MostrarRecycler$2
+com/example/mascotasproject/MapsActivity1.java
+ com.example.mascotasproject.MapsActivity1
+ com.example.mascotasproject.MapsActivity1$1
+ com.example.mascotasproject.MapsActivity1$2
+ com.example.mascotasproject.MapsActivity1$3
+ com.example.mascotasproject.MapsActivity1$Localizacion
 com/example/mascotasproject/LocationAdapter.java
  com.example.mascotasproject.LocationAdapter
  com.example.mascotasproject.LocationAdapter$1
@@ -71,6 +83,12 @@ com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData
  com.example.mascotasproject.AddData$1
  com.example.mascotasproject.AddData$10
+ com.example.mascotasproject.AddData$11
+ com.example.mascotasproject.AddData$11$1
+ com.example.mascotasproject.AddData$11$2
+ com.example.mascotasproject.AddData$11$3
+ com.example.mascotasproject.AddData$12
+ com.example.mascotasproject.AddData$13
  com.example.mascotasproject.AddData$2
  com.example.mascotasproject.AddData$3
  com.example.mascotasproject.AddData$4
@@ -78,10 +96,8 @@ com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData$6
  com.example.mascotasproject.AddData$7
  com.example.mascotasproject.AddData$8
- com.example.mascotasproject.AddData$8$1
- com.example.mascotasproject.AddData$8$2
- com.example.mascotasproject.AddData$8$3
  com.example.mascotasproject.AddData$9
+ com.example.mascotasproject.AddData$InferenceTask
 com/example/mascotasproject/locationMascota.java
  com.example.mascotasproject.locationMascota
 com/example/mascotasproject/BuildConfig.java
@@ -104,18 +120,16 @@ com/example/mascotasproject/IA/ClassifierActivity.java
  com.example.mascotasproject.IA.ClassifierActivity
  com.example.mascotasproject.IA.ClassifierActivity$1
  com.example.mascotasproject.IA.ClassifierActivity$InferenceTask
-com/example/mascotasproject/desfragment.java
- com.example.mascotasproject.desfragment
-com/example/mascotasproject/MascotasAdapter.java
- com.example.mascotasproject.MascotasAdapter
- com.example.mascotasproject.MascotasAdapter$1
- com.example.mascotasproject.MascotasAdapter$2
- com.example.mascotasproject.MascotasAdapter$MyHolder
-com/example/mascotasproject/MapsActivity1.java
- com.example.mascotasproject.MapsActivity1
- com.example.mascotasproject.MapsActivity1$1
- com.example.mascotasproject.MapsActivity1$2
- com.example.mascotasproject.MapsActivity1$3
- com.example.mascotasproject.MapsActivity1$Localizacion
+com/example/mascotasproject/login/ProfileActivity.java
+ com.example.mascotasproject.login.ProfileActivity
+com/example/mascotasproject/MostrarRecycler.java
+ com.example.mascotasproject.MostrarRecycler
+ com.example.mascotasproject.MostrarRecycler$1
+ com.example.mascotasproject.MostrarRecycler$2
+com/example/mascotasproject/modeltemporal.java
+ com.example.mascotasproject.modeltemporal
 com/example/mascotasproject/OpcionesIngreso.java
  com.example.mascotasproject.OpcionesIngreso
+com/example/mascotasproject/SecondFragment.java
+ com.example.mascotasproject.SecondFragment
+ com.example.mascotasproject.SecondFragment$1

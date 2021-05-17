@@ -62,8 +62,8 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
     Button enviarubicacion;
     LocationManager mlocManager;
 
-    String lat="";
-    String longi="";
+    double lat;
+    double longi;
 
     /*Strings obteniendo los datos del Intent*/
     String mcodDueno,mcodMascota,mnombre,mCaracteristicas,mdatosper,image,quien,codigo;
@@ -79,7 +79,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         enviarubicacion=findViewById(R.id.enviarubicacion);
 
         obteniendovaloresIntent();
-        getCurrentLocation();
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -115,13 +115,18 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mMap = googleMap;
 
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        if(quien.equals("Usuario")){
-            direccion.setVisibility(View.GONE);
-            coordenadas.setVisibility(View.GONE);
-            enviarubicacion.setVisibility(View.GONE);
-            localizacionesMascotas(mMap,mcodDueno,mcodMascota);
+        Log.d("quieb eseeseese",getquien());
+        Log.d("quien entro","entre");
+//        Log.d("mcoddueno",mcodDueno);
+//        Log.d("mcodMascota",mcodMascota);
+        if(getquien().equals("Usuario")){
+            mcodDueno=getIntent().getStringExtra("codigo");
+            mcodMascota=getIntent().getStringExtra("codigoMascota");
+            Log.d("quien entro","entre");
+            localizacionesMascotas(mMap,"RUcA2UVjmjNGfceHHgiZZatwPuL2","vsnypZMy7K");
+            Log.d("quien entro","entre");
         }else{
-            if(quien.equals("Invitado")){
+            if(getquien().equals("Invitado")){
                 mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
                 Localizacion localizacion= new Localizacion();
                 localizacion.setMapsActivity1(this);
@@ -137,48 +142,18 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                     // getCurrentLocation();
                 }
                 mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
-                miubi(googleMap);
+               // miubi(mMap);
 
 
             }
         }
 
-        Log.d("quien entro","1"+"24324");
 
         //  Antut(mMap);
         //mMap.getUiSettings().setMyLocationButtonEnabled(true);
        // mMap.getUiSettings().setMapToolbarEnabled(true);
 
 
-    }
-    public void Antut(GoogleMap googleMap){
-        mMap=googleMap;
-
-        final LatLng lapaz = new LatLng(-16.540280161376856, -68.08833198852622);
-        mMap.addMarker(new MarkerOptions().position(lapaz).title("Marker in La Paz").snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(lapaz));
-        // Add a marker in La Paz
-
-        LatLng pet1 = new LatLng(-16.522954746025434, -68.08032188119428);
-        mMap.addMarker(new MarkerOptions()
-                .position(pet1)
-                .title("Lost Pet 1").snippet("Quizá un resúmen de mascotas perdidas.")
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_weso)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(lapaz));
-
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pet1, 15));
-    }
-
-    public void miubi(GoogleMap googleMap){
-        mMap=googleMap;
-
-        final LatLng miubicacion = new LatLng(Float.parseFloat(lat), Float.parseFloat(longi));
-        mMap.addMarker(new MarkerOptions().position(miubicacion).title("Mi ubicacion").snippet(lat+","+longi).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(miubicacion));
-        // Add a marker in La Paz
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(miubicacion, 15));
     }
 
     public void subirdatosLocaciones(){
@@ -201,49 +176,10 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
 
 
-    private void getCurrentLocation() {
-
-        LocationRequest locationRequest = new LocationRequest();
-        locationRequest.setInterval(10000);
-        locationRequest.setFastestInterval(3000);
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        LocationServices.getFusedLocationProviderClient(MapsActivity1.this)
-                .requestLocationUpdates(locationRequest, new LocationCallback() {
-                    @Override
-                    public void onLocationResult(LocationResult locationResult) {
-                        super.onLocationResult(locationResult);
-                        LocationServices.getFusedLocationProviderClient(MapsActivity1.this)
-                                .removeLocationUpdates(this);
-                        if (locationResult != null && locationResult.getLocations().size() > 0) {
-                            int latestLocationIndex = locationResult.getLocations().size() - 1;
-
-                            double latitude =
-                                    locationResult.getLocations().get(latestLocationIndex).getLatitude();
-                            lat=latitude+"";
-                            double longitude =
-                                    locationResult.getLocations().get(latestLocationIndex).getLongitude();
-                            longi=longitude+"";
-
-                        }
-                    }
-                }, Looper.getMainLooper());
-    }
-
-
 
     /*-----------LLENANDO LAS UBICACIONES DESDE FIREBASE-------------------------------------*/
     public void localizacionesMascotas(GoogleMap googleMap,String codDueno,String codMascota){
+        Log.d("quien entro","pude entrar");
         System.out.print("PUDE ENTRAR FFFFFFFFFFFFFFFFFFFF" );
         mMap=googleMap;
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Locaciones");
@@ -256,6 +192,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                     LatLng mascota=new LatLng(0.0,0.0);
                     if(locationMascota.getCodigoMascota().equals(codMascota) && locationMascota.getCodigoDueno().equals(codDueno)){
                         //obtener todos los usuarios menos
+                        Log.d("entre latirud",locationMascota.getLatitude()+"longitud"+locationMascota.getLongitud());
                         mascota = new LatLng(Float.parseFloat(locationMascota.getLatitude()), Float.parseFloat(locationMascota.getLongitud()));
                         mMap.addMarker(new MarkerOptions().position(mascota).title(locationMascota.getNombreMas()).snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
 
@@ -314,13 +251,16 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
 
     public void obteniendovaloresIntent(){
-        mcodDueno=getIntent().getStringExtra("codDueno");
-        mcodMascota=getIntent().getStringExtra("codMascota");
+
         mnombre=getIntent().getStringExtra("nombreMas");
         mCaracteristicas=getIntent().getStringExtra("caracteristica");
         mdatosper=getIntent().getStringExtra("perdida");
         image=getIntent().getStringExtra("image");
         quien=getIntent().getStringExtra("quien");
+    }
+    public String getquien(){
+        String quien =getIntent().getStringExtra("quien");
+        return quien;
     }
 
 
@@ -339,10 +279,21 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         public void onLocationChanged(@NonNull Location location) {
             //Esto se actualiza cada vez que el GPS obtiene nuevas coordenadas
 
+
+            final LatLng miubicacion = new LatLng(lat, longi);
+            mMap.addMarker(new MarkerOptions().position(miubicacion).title("Mi ubicacion").snippet(lat+","+longi).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(miubicacion));
+            // Add a marker in La Paz
+
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(miubicacion, 15));
+
+
             location.getLatitude();
             location.getLongitude();
             String text="Mi ubicacion actual es: "+"\n Lat="+
                     location.getLatitude()+"\n Long="+location.getLongitude();
+            lat=location.getLatitude();
+            longi=location.getLongitude();
             coordenadas.setText(text);
             this.mapsActivity1.setLocation(location);
 

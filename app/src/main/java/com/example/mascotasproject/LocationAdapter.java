@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,17 +83,21 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
             }
         });
 
+
         holder.mmapa_location.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,MapsActivity1.class);
-                intent.putExtra("codigo",getcodigo());
-                intent.putExtra("quien",getquien());
-                intent.putExtra("codigoMascota", ((SeguimientoMascotas) context).getIntent().getStringExtra("codMascota"));
-                v.getContext().startActivity(intent);
+                    Intent intent=new Intent(context,MapsActivity1.class);
+                    intent.putExtra("codigo",getcodigo());
+                    intent.putExtra("quien",getquien());
+                    intent.putExtra("codigoMascota", ((SeguimientoMascotas) context).getIntent().getStringExtra("codMascota"));
+                    v.getContext().startActivity(intent);
 
-               // Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
+
+                // Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
             }
+
         });
 
 

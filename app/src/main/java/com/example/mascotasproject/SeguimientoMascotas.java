@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -68,6 +69,8 @@ public class SeguimientoMascotas extends AppCompatActivity {
         mlocationRecyclerView.setHasFixedSize(true);
         locationlist=new ArrayList<>();
 
+        String codigo=getIntent().getStringExtra("codDueno");
+        String codMascota=getIntent().getStringExtra("codMascota");
 
         imageButton.setOnClickListener(v-> {
             if (ContextCompat.checkSelfPermission(
@@ -79,10 +82,11 @@ public class SeguimientoMascotas extends AppCompatActivity {
                         REQUEST_CODE_LOCATION_PERMISSION
                 );
             } else {
-                Intent intent=new Intent(SeguimientoMascotas.this,MapsActivity1.class);
-                intent.putExtra("codigo",getcodigo());
+                Intent intent=new Intent(SeguimientoMascotas.this,mapsuser.class);
+                intent.putExtra("codigo",codigo);
                 intent.putExtra("quien",getquien());
-                intent.putExtra("codigoMascota",getIntent().getStringExtra("codMascota"));
+                Log.d("que estoy enviandooooooo"+getquien()+"a quien"+codMascota,"--------------envie eso"+getcodigo());
+                intent.putExtra("codigoMascota",codMascota);
                 startActivity(intent);
             }
 
@@ -95,9 +99,6 @@ public class SeguimientoMascotas extends AppCompatActivity {
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
         mAuth = FirebaseAuth.getInstance();
-
-        /*Obteniendo el intent de quien es, si usuario o invitado*/
-        String quien=getIntent().getStringExtra("quien");
 
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -115,12 +116,11 @@ public class SeguimientoMascotas extends AppCompatActivity {
 
 
         /*Si es usuario rellenar con datos de sus mascotas, si es invitados con datos de razas iguales*/
-        if(quien.equals("Invitado")){
+        if(getquien().equals("Invitado")){
            // mascotasrecyclerInvitados();
         }else{
-            if(quien.equals("Usuario")){
-                String codigo=getIntent().getStringExtra("codigo");
-                String codMascota=getIntent().getStringExtra("codMascota");
+            if(getquien().equals("Usuario")){
+
                 positionrecyclerUsuarios(codigo,codMascota);
             }
         }

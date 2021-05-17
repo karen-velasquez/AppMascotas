@@ -28,7 +28,11 @@
         <!-- Needs to be explicitly declared on Android R+ -->
         <package android:name="com.google.android.apps.maps" />
     </queries>
-
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -43,6 +47,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MascotasProject" >
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name="com.example.mascotasproject.mapsuser"
+            android:label="@string/title_activity_mapsuser" />
         <activity
             android:name="com.example.mascotasproject.MainActivity2"
             android:label="@string/title_activity_main2"
@@ -55,9 +71,6 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <activity
-            android:name="com.example.mascotasproject.Localizaciones"
-            android:label="@string/title_activity_localizaciones" />
         <activity android:name="com.example.mascotasproject.SeguimientoMascotas" />
         <activity android:name="com.example.mascotasproject.login.ProfileActivity" />
         <activity android:name="com.example.mascotasproject.login.LoggingInActivity" />
@@ -67,6 +80,7 @@
             android:label="@string/title_activity_maps1" />
         <activity android:name="com.example.mascotasproject.OpcionesUsuario" />
         <activity android:name="com.example.mascotasproject.loginnumero" />
+        <activity android:name="com.example.mascotasproject.OpcionesIngreso" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -75,7 +89,6 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <activity android:name="com.example.mascotasproject.OpcionesIngreso" />
         <activity android:name="com.example.mascotasproject.login.LogInActivity" />
         <activity android:name="com.example.mascotasproject.GetLocation" />
         <activity android:name="com.example.mascotasproject.AddData" />
@@ -121,7 +134,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB4ihTl6tPVdRB_76JOdXgfLxQvNPGwAZI" />
+            android:value="@string/google_maps_key" />
         <meta-data
             android:name="com.google.android.gms.17.0.1"
             android:value="@integer/google_play_services_version" />

@@ -1946,6 +1946,7 @@ id btn_seguimiento
 id btn_segundo
 id btn_seperdio
 id btngallery
+id btnmaps
 id buttonGetCurrentLocation
 id buttonPanel
 id button_first
@@ -2435,13 +2436,13 @@ layout activity_add_data
 layout activity_camera
 layout activity_get_location
 layout activity_list
-layout activity_localizaciones
 layout activity_log_in
 layout activity_logging_in
 layout activity_loginnumero
 layout activity_main
 layout activity_main2
 layout activity_maps1
+layout activity_mapsuser
 layout activity_mostrar_recycler
 layout activity_opciones_ingreso
 layout activity_opciones_usuario
@@ -2712,6 +2713,7 @@ string status_bar_notification_info_overflow
 string title_activity_localizaciones
 string title_activity_main2
 string title_activity_maps1
+string title_activity_mapsuser
 string title_activity_mascotas_fragment
 string yes
 style AlertDialog_AppCompat

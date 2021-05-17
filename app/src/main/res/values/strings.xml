@@ -45,6 +45,7 @@
     <string name="title_activity_mascotas_fragment">MascotasFragment</string>
     <string name="title_activity_localizaciones">Map</string>
     <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_mapsuser">Map</string>
     <string-array name="breeds_array">
         <item>Affenpinscher</item>
         <item>Afghan Hound</item>

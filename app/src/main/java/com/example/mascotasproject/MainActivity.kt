@@ -1,22 +1,23 @@
 package com.example.mascotasproject
 
+import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.example.mascotasproject.IA.ClassifierActivity
-import com.example.mascotasproject.login.LogInActivity
+import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+    val REQUEST_CODE_LOCATION_PERMISSION = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         //Botón Get Location
         val btnsegundo: Button =findViewById(R.id.btn_segundo)
         btnsegundo.setOnClickListener{
-            val intent= Intent(this, OpcionesIngreso:: class.java)
+            val intent= Intent(this, OpcionesIngreso::class.java)
             startActivity(intent)
         }
 
@@ -36,8 +37,27 @@ class MainActivity : AppCompatActivity() {
         //Botón Get Location
         val btngallery: Button =findViewById(R.id.btngallery)
         btngallery.setOnClickListener{
-            val intent= Intent(this, MainActivity2:: class.java)
+            val intent= Intent(this, MainActivity2::class.java)
             startActivity(intent)
+        }
+
+
+        //Botón Get Location
+        val btnmaps: Button =findViewById(R.id.btnmaps)
+        btnmaps.setOnClickListener{
+
+            if (ContextCompat.checkSelfPermission(
+                    applicationContext, Manifest.permission.ACCESS_FINE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this@MainActivity, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                    REQUEST_CODE_LOCATION_PERMISSION
+                )
+            } else {
+            val intent= Intent(this, mapsuser::class.java)
+            startActivity(intent)
+            }
         }
 
         //botón log In
@@ -71,15 +91,29 @@ class MainActivity : AppCompatActivity() {
      fun fetchLocation(){
         val task = fusedLocationProviderClient.lastLocation
 
-        if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+        if(ActivityCompat.checkSelfPermission(
+                this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION
+            )
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                this,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
         ){
-            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 101)
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                101
+            )
             return
         }
         task.addOnSuccessListener {
             if(it != null){
-                Toast.makeText(applicationContext, "${it.latitude} ${it.longitude}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    "${it.latitude} ${it.longitude}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 

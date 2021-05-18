@@ -15,7 +15,7 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginTop="40dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/placeholder" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text=" Latitud"
                 android:textColor="#000" />
 
@@ -51,7 +51,7 @@
                 android:layout_marginBottom="15dp"
                 android:text=" longitud"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/direccion_location"
@@ -61,15 +61,10 @@
                 android:layout_marginBottom="15dp"
                 android:text=" Direccion"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 />
-            <ImageButton
-                android:id="@+id/mapa_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#FBFBFB"
-                android:layout_marginLeft="50dp"
-                android:src="@drawable/more" />
+
+
 
         </LinearLayout>
 

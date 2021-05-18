@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:text="Perdiste a tu mascota?"
+        android:text="Seguimiento de mi mascota"
         android:layout_marginTop="520dp"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="550dp"
-        android:text="Esta opción te permite registrar a una mascota extraviada."
+        android:text="Esta opción te permite hacer seguimiento a tu mascota extraviada."
         android:textAlignment="center"
         android:textColor="#9A9494"
         android:textSize="18sp"

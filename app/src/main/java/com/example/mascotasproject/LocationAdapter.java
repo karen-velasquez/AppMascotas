@@ -54,15 +54,15 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
 
 
         //obteniendo datos
-        String dnombreMas=locationList.get(position).getNombreMas();
-        String dCaracteristica=locationList.get(position).getCaracteristica();
+        String ddireccion=locationList.get(position).getDireccion();
         String dlatitude=locationList.get(position).getLatitude();
         String dlongitud=locationList.get(position).getLongitud();
+        String dfecha=locationList.get(position).getFecha();
 
 
         /*ingresando los datos al holder---------------------*/
-        holder.mvisto_Location.setText(dnombreMas);
-        holder.mdireccion_location.setText(dCaracteristica);
+        holder.mvisto_Location.setText(dfecha);
+        holder.mdireccion_location.setText(ddireccion);
         holder.mlatitude_location.setText(dlatitude);
         holder.mlongitud_location.setText(dlongitud);
 
@@ -84,21 +84,6 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
         });
 
 
-        holder.mmapa_location.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                    Intent intent=new Intent(context,MapsActivity1.class);
-                    intent.putExtra("codigo",getcodigo());
-                    intent.putExtra("quien",getquien());
-                    intent.putExtra("codigoMascota", ((SeguimientoMascotas) context).getIntent().getStringExtra("codMascota"));
-                    v.getContext().startActivity(intent);
-
-
-                // Toast.makeText(context,""+dnombreMas,Toast.LENGTH_SHORT).show();
-            }
-
-        });
 
 
 
@@ -125,7 +110,6 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
 
         TextView mvisto_Location,mlatitude_location,mlongitud_location,mdireccion_location;
 
-        ImageButton mmapa_location;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -134,7 +118,6 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
             mlongitud_location = itemView.findViewById(R.id.longitud_location);
             mdireccion_location=itemView.findViewById(R.id.direccion_location);
 
-            mmapa_location=itemView.findViewById(R.id.mapa_location);
 
 
 

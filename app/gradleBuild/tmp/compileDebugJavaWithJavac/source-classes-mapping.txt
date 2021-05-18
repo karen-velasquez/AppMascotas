@@ -72,12 +72,10 @@ com/example/mascotasproject/login/LoggingInActivity.java
 com/example/mascotasproject/MapsActivity1.java
  com.example.mascotasproject.MapsActivity1
  com.example.mascotasproject.MapsActivity1$1
- com.example.mascotasproject.MapsActivity1$2
  com.example.mascotasproject.MapsActivity1$Localizacion
 com/example/mascotasproject/LocationAdapter.java
  com.example.mascotasproject.LocationAdapter
  com.example.mascotasproject.LocationAdapter$1
- com.example.mascotasproject.LocationAdapter$2
  com.example.mascotasproject.LocationAdapter$MyHolder
 com/example/mascotasproject/AddData.java
  com.example.mascotasproject.AddData

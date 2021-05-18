@@ -45,9 +45,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -66,7 +68,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
     double longi;
 
     /*Strings obteniendo los datos del Intent*/
-    String mcodDueno,mcodMascota,mnombre,mCaracteristicas,mdatosper,image,quien,codigo;
+    String mcodDueno,mcodMascota,mnombre,mCaracteristicas,mdatosper,image,quien,codigo,mdireccion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +79,6 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         coordenadas=findViewById(R.id.coordenadas);
 
         enviarubicacion=findViewById(R.id.enviarubicacion);
-
-        obteniendovaloresIntent();
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -117,15 +117,6 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mMap.getUiSettings().setZoomControlsEnabled(true);
         Log.d("quieb eseeseese",getquien());
         Log.d("quien entro","entre");
-//        Log.d("mcoddueno",mcodDueno);
-//        Log.d("mcodMascota",mcodMascota);
-        if(getquien().equals("Usuario")){
-            mcodDueno=getIntent().getStringExtra("codigo");
-            mcodMascota=getIntent().getStringExtra("codigoMascota");
-            Log.d("quien entro","entre");
-            localizacionesMascotas(mMap,"RUcA2UVjmjNGfceHHgiZZatwPuL2","vsnypZMy7K");
-            Log.d("quien entro","entre");
-        }else{
             if(getquien().equals("Invitado")){
                 mlocManager=(LocationManager) getSystemService(Context.LOCATION_SERVICE);
                 Localizacion localizacion= new Localizacion();
@@ -142,10 +133,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                     // getCurrentLocation();
                 }
                 mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,(LocationListener)localizacion);
-               // miubi(mMap);
 
-
-            }
         }
 
 
@@ -163,50 +151,42 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
 
+
+        mnombre=getIntent().getStringExtra("nombreMas");
+        mcodDueno=getIntent().getStringExtra("codDueno");
+        mcodMascota=getIntent().getStringExtra("codMascota");
+        mCaracteristicas=getIntent().getStringExtra("caracteristica");
+        mdatosper=getIntent().getStringExtra("perdida");
+        image=getIntent().getStringExtra("image");
+        quien=getIntent().getStringExtra("quien");
+
         /*Subiendo los datos de donde se vio a la mascota*/
         Map<String,Object> locationupdate=new HashMap<>();
-        locationupdate.put("latitude",lat);
-        locationupdate.put("longitud",longi);
+        locationupdate.put("latitude",lat+"");
+        locationupdate.put("longitud",longi+"");
         locationupdate.put("nombreMas",mnombre);
-        locationupdate.put("caracteristica",mCaracteristicas);
+        locationupdate.put("direccion",mdireccion);
         locationupdate.put("codigoDueno",mcodDueno);
         locationupdate.put("codigoMascota",mcodMascota);
+        locationupdate.put("fecha",gethora_fecha());
         mRef.push().setValue(locationupdate);
+        Toast.makeText(MapsActivity1.this,"Ubicacion enviada correctamente",Toast.LENGTH_SHORT).show();
+    }
+
+    public String gethora_fecha(){
+        Calendar calendar= Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd-MM-yyyy");
+        String dateTime=simpleDateFormat.format(calendar.getTime());
+
+        SimpleDateFormat simpleDateFormat2=new SimpleDateFormat("hh:mm:ss a");
+        String dateTime2=simpleDateFormat2.format(calendar.getTime());
+
+        return dateTime+" a las "+dateTime2;
     }
 
 
 
 
-    /*-----------LLENANDO LAS UBICACIONES DESDE FIREBASE-------------------------------------*/
-    public void localizacionesMascotas(GoogleMap googleMap,String codDueno,String codMascota){
-        Log.d("quien entro","pude entrar");
-        System.out.print("PUDE ENTRAR FFFFFFFFFFFFFFFFFFFF" );
-        mMap=googleMap;
-        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Mascotas/Locaciones");
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds: snapshot.getChildren()){
-                    /*obteniendo los datos de razas desde firebase*/
-                    locationMascota locationMascota=ds.getValue(locationMascota.class);
-                    LatLng mascota=new LatLng(0.0,0.0);
-                    if(locationMascota.getCodigoMascota().equals(codMascota) && locationMascota.getCodigoDueno().equals(codDueno)){
-                        //obtener todos los usuarios menos
-                        Log.d("entre latirud",locationMascota.getLatitude()+"longitud"+locationMascota.getLongitud());
-                        mascota = new LatLng(Float.parseFloat(locationMascota.getLatitude()), Float.parseFloat(locationMascota.getLongitud()));
-                        mMap.addMarker(new MarkerOptions().position(mascota).title(locationMascota.getNombreMas()).snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
-
-
-                    }
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mascota, 15));
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 
 
 
@@ -218,10 +198,11 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                 Geocoder geocoder=new Geocoder(this, Locale.getDefault());
                 List<Address> list=geocoder.getFromLocation(
                         loc.getLatitude(),loc.getLongitude(),1);
-                System.out.print("LLEGUE AQUIIIIIIIIIIIIIIII?33333333333");
                 if(!list.isEmpty()){
                     Address DirCalle=list.get(0);
-                    direccion.setText("direccion: "+DirCalle.getAddressLine(0));
+                    mdireccion=DirCalle.getAddressLine(0)+"";
+                    direccion.setText("DIRECCION: "+DirCalle.getAddressLine(0));
+
 
                 }
 
@@ -250,14 +231,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
 
 
-    public void obteniendovaloresIntent(){
 
-        mnombre=getIntent().getStringExtra("nombreMas");
-        mCaracteristicas=getIntent().getStringExtra("caracteristica");
-        mdatosper=getIntent().getStringExtra("perdida");
-        image=getIntent().getStringExtra("image");
-        quien=getIntent().getStringExtra("quien");
-    }
     public String getquien(){
         String quien =getIntent().getStringExtra("quien");
         return quien;
@@ -290,7 +264,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
             location.getLatitude();
             location.getLongitude();
-            String text="Mi ubicacion actual es: "+"\n Lat="+
+            String text="Tu ubicacion actual es: "+"\n Lat="+
                     location.getLatitude()+"\n Long="+location.getLongitude();
             lat=location.getLatitude();
             longi=location.getLongitude();

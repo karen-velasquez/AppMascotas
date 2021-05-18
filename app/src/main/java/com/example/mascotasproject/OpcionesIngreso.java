@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.mascotasproject.IA.CameraActivity;
 import com.example.mascotasproject.IA.Classifier;
@@ -19,6 +20,7 @@ import com.example.mascotasproject.IA.ClassifierActivity;
 import com.example.mascotasproject.login.LogInActivity;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -30,9 +32,6 @@ public class OpcionesIngreso extends AppCompatActivity {
     ImageButton musuario,minvitado;
 
 
-
-
-    Button mapsprueba;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +39,9 @@ public class OpcionesIngreso extends AppCompatActivity {
         musuario=findViewById(R.id.usuario);
         minvitado=findViewById(R.id.invitado);
 
-        mapsprueba=findViewById(R.id.mapsprueba);
+
+
+
 
 
         musuario.setOnClickListener(v-> {

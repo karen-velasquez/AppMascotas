@@ -42,23 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //Botón Get Location
-        val btnmaps: Button =findViewById(R.id.btnmaps)
-        btnmaps.setOnClickListener{
 
-            if (ContextCompat.checkSelfPermission(
-                    applicationContext, Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                ActivityCompat.requestPermissions(
-                    this@MainActivity, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                    REQUEST_CODE_LOCATION_PERMISSION
-                )
-            } else {
-            val intent= Intent(this, mapsuser::class.java)
-            startActivity(intent)
-            }
-        }
 
         //botón log In
       /*  val btn_nuevo = findViewById<Button>(R.id.nuevo_recycler)

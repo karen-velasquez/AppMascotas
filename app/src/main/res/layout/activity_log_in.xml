@@ -14,26 +14,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         />
-
-    <!--Button Register-->
-    <ImageButton
-        android:id="@+id/register_btn"
-        android:layout_width="123dp"
-        android:layout_height="121dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="300dp"
-        android:backgroundTint="#FBFBFB"
-        android:src="@drawable/edit" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Registrarse"
-        android:layout_marginTop="400dp"
-        android:textAlignment="center"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
     <!--Button Login-->
 
     <ImageButton
@@ -41,7 +21,7 @@
         android:layout_width="84dp"
         android:layout_height="73dp"
         android:layout_marginLeft="170dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="300dp"
         android:backgroundTint="#FBFBFB"
         android:src="@drawable/user" />
 
@@ -49,10 +29,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="400dp"
         android:textAlignment="center"
         android:textSize="22sp"
         android:textStyle="bold" />
+
+    <!--Button Register-->
+    <ImageButton
+        android:id="@+id/register_btn"
+        android:layout_width="123dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="450dp"
+        android:backgroundTint="#FBFBFB"
+        android:src="@drawable/edit" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:layout_marginTop="580dp"
+
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
 
 
 

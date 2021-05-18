@@ -879,6 +879,7 @@ public abstract class CameraActivity extends FragmentActivity
                 mensaje=("Imagen correctamente analizada");
             } else {
               //  sb.append(getString(R.string.no_detection));
+                checkButtonGral.setVisibility(View.GONE);
                 mensaje=("Saca una mejor foto a la mascota, no se reconocio a la mascota");
             }
         } else {

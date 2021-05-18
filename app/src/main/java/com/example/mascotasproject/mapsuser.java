@@ -59,7 +59,6 @@ public class mapsuser extends FragmentActivity implements OnMapReadyCallback {
     /*-----------LLENANDO LAS UBICACIONES DESDE FIREBASE-------------------------------------*/
     public void localizacionesMascotas(GoogleMap googleMap,String codDueno,String codMascota){
         Log.d("quien entro","pude entrar");
-        System.out.print("PUDE ENTRAR FFFFFFFFFFFFFFFFFFFF" );
         LatLng laPaz=new LatLng( -16.5,-68.15);
         mMap=googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
@@ -75,7 +74,7 @@ public class mapsuser extends FragmentActivity implements OnMapReadyCallback {
                         //obtener todos los usuarios menos
                         Log.d("entre latirud",locationMascota.getLatitude()+"longitud"+locationMascota.getLongitud());
                         mascota = new LatLng(Float.parseFloat(locationMascota.getLatitude()), Float.parseFloat(locationMascota.getLongitud()));
-                        mMap.addMarker(new MarkerOptions().position(mascota).title(locationMascota.getNombreMas()).snippet("Quizá un resúmen de mascotas perdidas.").icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
+                        mMap.addMarker(new MarkerOptions().position(mascota).title(locationMascota.getNombreMas()).snippet(locationMascota.getFecha()).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)));
 
 
                     }

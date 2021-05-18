@@ -19,13 +19,6 @@
             android:singleLine="true"
             android:textAlignment="center" />
 
-        <ImageView
-            android:id="@+id/imagenAdd"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:visibility="visible"
-            android:background="@mipmap/ic_action_gallery_icon" />
 
         <EditText
             android:id="@+id/caracteristicaAdd"
@@ -41,11 +34,28 @@
             android:id="@+id/perdidaAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:hint="Ingrese datos de la perdida"
             android:minHeight="100dp"
             android:padding="10dp"
             android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/chooseGalleryAdd"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roundedbutton"
+            android:src="@mipmap/ic_action_gallery_icon"
+          />
+
+        <ImageView
+            android:id="@+id/imagenAdd"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@mipmap/ic_action_gallery_icon" />
+
         <Button
             android:id="@+id/buttonupload"
             android:layout_width="wrap_content"

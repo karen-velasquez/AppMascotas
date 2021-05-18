@@ -28,6 +28,7 @@ import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -83,6 +84,7 @@ public class AddData extends AppCompatActivity {
     EditText nombreAdd, perdidaAdd, caracteristicaAdd;
     ImageView imagenAdd;
     Button mUploadBtn;
+    ImageButton chooseGalleryAdd;
 
     //CARPETA DONDE SE ENCONTRARAN LAS IMAGENES
     String mStoragePath = "ImagenesMascotas/";
@@ -125,6 +127,7 @@ public class AddData extends AppCompatActivity {
         caracteristicaAdd=findViewById(R.id.caracteristicaAdd);
         imagenAdd=findViewById(R.id.imagenAdd);
         mUploadBtn=findViewById(R.id.buttonupload);
+        chooseGalleryAdd=findViewById(R.id.chooseGalleryAdd);
 
 
 
@@ -138,7 +141,7 @@ public class AddData extends AppCompatActivity {
 
 
         //AL TOCAR LA IMAGEN
-        imagenAdd.setOnClickListener(new View.OnClickListener() {
+        chooseGalleryAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)==
@@ -174,12 +177,25 @@ public class AddData extends AppCompatActivity {
         mUploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadDatatoFirebase();
+                String mnombreAdd=nombreAdd.getText().toString().trim();
+                String mperdidaAdd=perdidaAdd.getText().toString().trim();
+                String mcaracteristicaAdd=caracteristicaAdd.getText().toString().trim();
+                if((mnombreAdd.isEmpty() || mperdidaAdd.isEmpty() || mcaracteristicaAdd.isEmpty())!=true){
 
-                Intent intent=new Intent(AddData.this, OpcionesUsuario.class);
-                intent.putExtra("usuario",getCodigo());
-                intent.putExtra("quien",  getQuien());
-                startActivity(intent);
+                    if(imagenAdd.getVisibility() == View.VISIBLE)
+                    {
+                        uploadDatatoFirebase();
+                        Intent intent=new Intent(AddData.this, OpcionesUsuario.class);
+                        intent.putExtra("usuario",getCodigo());
+                        intent.putExtra("quien",  getQuien());
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(AddData.this,"Debes escoger una imagen que se pueda reconocer",Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(AddData.this,"Todos los datos deben estar llenos",Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });
@@ -334,13 +350,18 @@ public class AddData extends AppCompatActivity {
 
 
                             if((mnombreAdd.isEmpty() || mperdidaAdd.isEmpty() || url.toString().isEmpty()|| mcaracteristicaAdd.isEmpty())!=true){
-                                model modelo=new model(mnombreAdd, mperdidaAdd, url.toString() ,mcaracteristicaAdd,mcoddueno,mcodmascota,mvigencia,raza1+"/"+raza2);
-                                //obteniendo el id de la imagen subida
-                                Toast.makeText(AddData.this,url.toString()+"ESETE ES EL URL",Toast.LENGTH_SHORT).show();
-                                String imageUploadId= mDatabaseReference.push().getKey();
-                                //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
-                                mDatabaseReference.child(imageUploadId).setValue(modelo);
-                                Toast.makeText(AddData.this,"Post cargado correctamente",Toast.LENGTH_SHORT).show();
+                                if(imagenAdd.getVisibility() == View.VISIBLE)
+                                {
+                                    model modelo=new model(mnombreAdd, mperdidaAdd, url.toString() ,mcaracteristicaAdd,mcoddueno,mcodmascota,mvigencia,raza1+"/"+raza2);
+                                    //obteniendo el id de la imagen subida
+                                    Toast.makeText(AddData.this,url.toString()+"ESETE ES EL URL",Toast.LENGTH_SHORT).show();
+                                    String imageUploadId= mDatabaseReference.push().getKey();
+                                    //adicionando la imagen cargada a los id's de los elementos hijos dentro databasereference
+                                    mDatabaseReference.child(imageUploadId).setValue(modelo);
+                                    Toast.makeText(AddData.this,"Post cargado correctamente",Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(AddData.this,"Debes escoger una imagen que se pueda reconocer",Toast.LENGTH_SHORT).show();
+                                }
                             }else{
                                 Toast.makeText(AddData.this,"Todos los datos deben estar llenos",Toast.LENGTH_SHORT).show();
                             }
@@ -734,7 +755,8 @@ public class AddData extends AppCompatActivity {
 
             } else {
                 //  sb.append(getString(R.string.no_detection));
-                imagenAdd.setImageResource(R.mipmap.ic_action_gallery_icon);
+                imagenAdd.setImageDrawable(null);
+                imagenAdd.setVisibility(View.GONE);
                 mensaje=("No se reconocio a la mascota, ingresa una mejor foto");
                 Toast.makeText(getApplicationContext(),mensaje, Toast.LENGTH_LONG).show();
             }

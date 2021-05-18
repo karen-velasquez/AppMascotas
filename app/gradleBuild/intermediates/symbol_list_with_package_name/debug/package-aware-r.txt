@@ -1796,6 +1796,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable map
+drawable mapblank
+drawable mapse
 drawable marker
 drawable marker_weso
 drawable material_cursor_drawable
@@ -1832,6 +1835,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable perro
+drawable placeholder
 drawable roundedbutton
 drawable roundedbuttonfont
 drawable sad_dog
@@ -1946,7 +1950,6 @@ id btn_seguimiento
 id btn_segundo
 id btn_seperdio
 id btngallery
-id btnmaps
 id buttonGetCurrentLocation
 id buttonPanel
 id button_first
@@ -1974,6 +1977,7 @@ id chip1
 id chip2
 id chip3
 id chip_group
+id chooseGalleryAdd
 id chronometer
 id circle_center
 id clear_text
@@ -2118,9 +2122,7 @@ id longitud_location
 id lvExp
 id mRecyclerView
 id map
-id mapa_location
 id mapas
-id mapsprueba
 id masked
 id material_clock_display
 id material_clock_face

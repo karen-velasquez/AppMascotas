@@ -101,19 +101,6 @@ public class SeguimientoMascotas extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            LocalTime horaActual = LocalTime.now();
-            System.out.print("hora actual" + horaActual);
-            LocalDate fechaActual = null;
-
-            fechaActual = LocalDate.now();
-
-            System.out.print("fecha actual" + fechaActual);
-
-            LocalDateTime fechaHora = LocalDateTime.now();
-            System.out.print("fecaha y hora" + fechaHora);
-        }
-
 
         /*Si es usuario rellenar con datos de sus mascotas, si es invitados con datos de razas iguales*/
         if(getquien().equals("Invitado")){

@@ -88,6 +88,7 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MyHold
         holder.muser_maslocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent=new Intent(context,SeguimientoMascotas.class);
                 intent.putExtra("codDueno",mascotaList.get(position).getCodigoDueno());
                 intent.putExtra("codMascota",mascotaList.get(position).getCodigoMascota());

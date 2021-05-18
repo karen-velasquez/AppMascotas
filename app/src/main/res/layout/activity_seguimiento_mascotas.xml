@@ -17,12 +17,13 @@
 
     <ImageButton
         android:id="@+id/mapas"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@mipmap/camera_icon"
+        android:backgroundTint="#FBFBFB"
+        android:src="@drawable/mapse"
     />
 
 

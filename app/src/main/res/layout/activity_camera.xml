@@ -18,6 +18,7 @@
         android:background="@drawable/roundedbutton"
         android:textSize="8sp"
         android:translationZ="50dp"
+        android:visibility="invisible"
         tools:ignore="RtlHardcoded,SmallSp" />
 
     <ImageButton

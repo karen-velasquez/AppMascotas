@@ -95,5 +95,11 @@ public class ProfileActivity extends AppCompatActivity {
         }*/
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public boolean onSupportNavigateUp(){
+        onBackPressed(); //go previous activity
+        return super.onSupportNavigateUp();
+    }
+
 
 }

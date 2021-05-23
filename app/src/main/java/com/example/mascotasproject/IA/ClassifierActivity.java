@@ -101,7 +101,6 @@ public class ClassifierActivity extends com.example.mascotasproject.IA.CameraAct
                 setImage(croppedFromGallery);
                 inferenceTask = new InferenceTask();
                 inferenceTask.execute(croppedFromGallery);
-                Toast.makeText(getApplicationContext(), "ESTOY AQUI WE", Toast.LENGTH_LONG).show();
                 if(getQuien().equals("Usuario")){
                     upload_storage(imageUri);
                 }

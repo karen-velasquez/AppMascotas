@@ -12,13 +12,14 @@ import com.example.mascotasproject.IA.ClassifierActivity;
 
 public class OpcionesUsuario extends AppCompatActivity {
 
-    ImageButton mbtn_seperdio, mbtn_seguimiento;
+    ImageButton mbtn_seperdio, mbtn_seguimiento,msalir;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_usuario);
         mbtn_seperdio=findViewById(R.id.btn_seperdio);
         mbtn_seguimiento=findViewById(R.id.btn_seguimiento);
+        msalir=findViewById(R.id.salir);
 
 
         String usuario=getIntent().getStringExtra("usuario");
@@ -38,6 +39,14 @@ public class OpcionesUsuario extends AppCompatActivity {
             intent.putExtra("codigo",usuario);
             intent.putExtra("quien",  quien);
             startActivity(intent);
+        });
+
+        msalir.setOnClickListener(v->{
+            Intent intent=new Intent(OpcionesUsuario.this, OpcionesIngreso.class);
+            intent.putExtra("codigo",usuario);
+            intent.putExtra("quien",  quien);
+            startActivity(intent);
+            finish();
         });
 
     }

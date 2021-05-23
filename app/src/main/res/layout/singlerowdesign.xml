@@ -46,7 +46,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
                 android:text="   Caracteristicas"
-                android:textAlignment="textEnd"
                 android:textColor="#000"
                 android:textSize="20sp" />
 

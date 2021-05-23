@@ -17,29 +17,32 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60dp"
+        />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/walldog" />
+
+    <ImageButton
         android:id="@+id/btn_segundo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="350dp"
-        android:text="COMENZAR"
-        android:textSize="18sp"
-        android:backgroundTint="#4CAF50"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/roundedbuttonfont"
+        android:src="@drawable/whitestart"
+
         />
 
-    <Button
-        android:id="@+id/btngallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="400dp"
-        android:text="GALLERY"
-        android:textSize="18sp"
-        android:backgroundTint="#4CAF50"
-        />
 
 
 

@@ -47,6 +47,7 @@ import java.util.List;
 public class MostrarRecycler extends AppCompatActivity {
     private static final String TAG = "MostrarRecycler";
     RecyclerView mRecyclerView;
+    TextView nomascotas;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mRef;
     FirebaseAuth mAuth;
@@ -63,6 +64,8 @@ public class MostrarRecycler extends AppCompatActivity {
         //RecyclerView
         mRecyclerView=findViewById(R.id.mRecyclerView);
         mRecyclerView.setHasFixedSize(true);
+
+        nomascotas=findViewById(R.id.nomascotas);
 
         //Colocando los valores del Firebase
         mFirebaseDatabase=FirebaseDatabase.getInstance();
@@ -108,8 +111,14 @@ public class MostrarRecycler extends AppCompatActivity {
 
                     }
                 }
-                mascotasAdapter=new MascotasAdapter(MostrarRecycler.this,mascotaslist);
-                mRecyclerView.setAdapter(mascotasAdapter);
+                if(mascotaslist.size()!=0){
+                      mascotasAdapter=new MascotasAdapter(MostrarRecycler.this,mascotaslist);
+                      mRecyclerView.setAdapter(mascotasAdapter);
+                }else{
+                    final boolean enabled = View.VISIBLE == View.VISIBLE;
+                    nomascotas.setVisibility(View.VISIBLE);
+                    nomascotas.setEnabled(enabled);
+                }
 
 
             }

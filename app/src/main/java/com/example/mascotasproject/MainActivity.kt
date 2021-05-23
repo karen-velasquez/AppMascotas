@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -27,17 +28,9 @@ class MainActivity : AppCompatActivity() {
 
 
         //Botón Get Location
-        val btnsegundo: Button =findViewById(R.id.btn_segundo)
+        val btnsegundo: ImageButton =findViewById(R.id.btn_segundo)
         btnsegundo.setOnClickListener{
             val intent= Intent(this, OpcionesIngreso::class.java)
-            startActivity(intent)
-        }
-
-
-        //Botón Get Location
-        val btngallery: Button =findViewById(R.id.btngallery)
-        btngallery.setOnClickListener{
-            val intent= Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
 

@@ -1839,11 +1839,16 @@ drawable placeholder
 drawable roundedbutton
 drawable roundedbuttonfont
 drawable sad_dog
+drawable salida
+drawable start
+drawable startnumbertwo
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
 drawable waldog_logo
+drawable walldog
+drawable whitestart
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1949,7 +1954,6 @@ id btn_logincodigo
 id btn_seguimiento
 id btn_segundo
 id btn_seperdio
-id btngallery
 id buttonGetCurrentLocation
 id buttonPanel
 id button_first
@@ -2186,6 +2190,7 @@ id nav_host_fragment_container
 id navigation_header_container
 id never
 id noScroll
+id nomascotas
 id nombre
 id nombreAdd
 id nombreholder
@@ -2195,6 +2200,7 @@ id nothave_accountTv
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id noubicaciones
 id off
 id on
 id outline
@@ -2239,6 +2245,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id salir
 id satellite
 id save_non_transition_alpha
 id save_overlay_view

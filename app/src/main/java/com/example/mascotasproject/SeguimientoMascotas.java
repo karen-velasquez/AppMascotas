@@ -14,6 +14,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -45,6 +46,7 @@ public class SeguimientoMascotas extends AppCompatActivity {
     List<locationMascota> locationlist;
     LocationAdapter locationAdapter;
     ImageButton imageButton;
+    TextView noubicaciones;
 
 
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
@@ -68,6 +70,10 @@ public class SeguimientoMascotas extends AppCompatActivity {
         mlocationRecyclerView=findViewById(R.id.locationRecyclerView);
         mlocationRecyclerView.setHasFixedSize(true);
         locationlist=new ArrayList<>();
+        noubicaciones=findViewById(R.id.noubicaciones);
+
+
+
 
         String codigo=getIntent().getStringExtra("codDueno");
         String codMascota=getIntent().getStringExtra("codMascota");
@@ -132,17 +138,30 @@ public class SeguimientoMascotas extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 locationlist.clear();
+
                 for(DataSnapshot ds: snapshot.getChildren()){
                     /*obteniendo los datos de razas desde firebase*/
-                   locationMascota locationMascotas=ds.getValue(locationMascota.class);
-                    if(locationMascotas.getCodigoDueno().equals(codigo) && locationMascotas.getCodigoMascota().equals(codMascota)){
-                        //obtener todos los usuarios menos
-                        locationlist.add(locationMascotas);
 
-                    }
+                        locationMascota locationMascotas=ds.getValue(locationMascota.class);
+                        if(locationMascotas.getCodigoDueno().equals(codigo) && locationMascotas.getCodigoMascota().equals(codMascota)){
+                            //obtener todos los usuarios menos
+                            locationlist.add(locationMascotas);
+
+                        }
+
+
                 }
-                locationAdapter=new LocationAdapter(SeguimientoMascotas.this,locationlist);
-                mlocationRecyclerView.setAdapter(locationAdapter);
+                if(locationlist.size()!=0){
+                    Log.d("size",locationlist.size()+"");
+                    locationAdapter=new LocationAdapter(SeguimientoMascotas.this,locationlist);
+                    mlocationRecyclerView.setAdapter(locationAdapter);
+                }else{
+                    final boolean enabled = View.VISIBLE == View.VISIBLE;
+                    noubicaciones.setVisibility(View.VISIBLE);
+                    noubicaciones.setEnabled(enabled);
+                    imageButton.setVisibility(View.GONE);
+                    imageButton.setEnabled(View.GONE==View.GONE);
+                }
 
 
             }

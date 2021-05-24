@@ -83,7 +83,7 @@ public class AddData extends AppCompatActivity {
     //hola probando
     EditText nombreAdd, perdidaAdd, caracteristicaAdd;
     ImageView imagenAdd;
-    Button mUploadBtn;
+    Button mUploadBtn,mUpdateBtn;
     ImageButton chooseGalleryAdd;
 
     //CARPETA DONDE SE ENCONTRARAN LAS IMAGENES
@@ -127,6 +127,7 @@ public class AddData extends AppCompatActivity {
         caracteristicaAdd=findViewById(R.id.caracteristicaAdd);
         imagenAdd=findViewById(R.id.imagenAdd);
         mUploadBtn=findViewById(R.id.buttonupload);
+        mUpdateBtn=findViewById(R.id.buttonupdate);
         chooseGalleryAdd=findViewById(R.id.chooseGalleryAdd);
 
 
@@ -189,6 +190,7 @@ public class AddData extends AppCompatActivity {
                         intent.putExtra("usuario",getCodigo());
                         intent.putExtra("quien",  getQuien());
                         startActivity(intent);
+                        finish();
                     }else{
                         Toast.makeText(AddData.this,"Debes escoger una imagen que se pueda reconocer",Toast.LENGTH_SHORT).show();
                     }
@@ -220,6 +222,61 @@ public class AddData extends AppCompatActivity {
 
         //progress dialog
         mProgressDialog=new ProgressDialog(AddData.this);
+
+
+        String funcion=intent.getString("funcion");
+        if(funcion.equals("update")){
+            String nombreMas=intent.getString("nombreMas");
+            String caracteristica=intent.getString("caracteristica");
+            String perdida=intent.getString("perdida");
+            String imagen=intent.getString("image");
+
+            nombreAdd.setText(nombreMas);
+            caracteristicaAdd.setText(caracteristica);
+            perdidaAdd.setText(perdida);
+
+            chooseGalleryAdd.setVisibility(View.GONE);
+            imagenAdd.setVisibility(View.GONE);
+            mUploadBtn.setVisibility(View.GONE);
+
+            mUpdateBtn.setVisibility(View.VISIBLE);
+            mUpdateBtn.setEnabled(View.VISIBLE==View.VISIBLE);
+           // imagenAdd.setImageDrawable(null);
+           // imagenAdd.setVisibility(View.VISIBLE);
+          //  Picasso.get().load(imagen).into(imagenAdd);
+
+
+
+
+
+
+        }
+        mUpdateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String codDueno=intent.getString("codDueno");
+                String codMascota=intent.getString("codMascota");
+                Log.d("codDueno",codDueno);
+                Log.d("codMascota",codMascota);
+                String mnombreAdd=nombreAdd.getText().toString().trim();
+                String mperdidaAdd=perdidaAdd.getText().toString().trim();
+                String mcaracteristicaAdd=caracteristicaAdd.getText().toString().trim();
+                if((mnombreAdd.isEmpty() || mperdidaAdd.isEmpty() || mcaracteristicaAdd.isEmpty())!=true){
+                        updateDatatoFirebase(codDueno,codMascota);
+                        Intent intent=new Intent(AddData.this, OpcionesUsuario.class);
+                        intent.putExtra("usuario",getCodigo());
+                        intent.putExtra("quien",  getQuien());
+                        startActivity(intent);
+                        finish();
+                }else{
+                    Toast.makeText(AddData.this,"Todos los datos deben estar llenos",Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+
+
 
     }
 
@@ -312,6 +369,51 @@ public class AddData extends AppCompatActivity {
 
 
     }
+
+
+    /*-------------------------------ACTUALIZANDO LOS NUEVOS DATOS------------------------------------------------------------*/
+    private void updateDatatoFirebase(String codDueno, String codMascota) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Mascotas/Datos");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    /*obteniendo los datos de razas desde firebase*/
+                    model modelmascotas = ds.getValue(model.class);
+                    if (modelmascotas.getCodigoDueno().equals(codDueno) && modelmascotas.getCodigoMascota().equals(codMascota)) {
+                        //obtener todos los usuarios menos
+                        String mnombreAdd = nombreAdd.getText().toString().trim();
+                        String mperdidaAdd = perdidaAdd.getText().toString().trim();
+                        String mcaracteristicaAdd = caracteristicaAdd.getText().toString().trim();
+                        Log.d("nombreadd",mnombreAdd);
+                        Log.d("perdidaadd",mperdidaAdd);
+                        Log.d("caracteristicaadd",mcaracteristicaAdd);
+                        ds.getRef().child("nombreMas").setValue(mnombreAdd);
+                        ds.getRef().child("ubicacionPerdida").setValue(mperdidaAdd);
+                        ds.getRef().child("caracteristicas").setValue(mcaracteristicaAdd);
+                        Toast.makeText(AddData.this,"Datos actualizados",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(AddData.this,error+"",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*-------------------------------SE SUBE LOS NUEVOS DATOS A FIREBASE CUANDO SE SELECCIONO UNA IMAGEN------------------------------------------------------------*/
     private void uploadDatatoFirebase(){

@@ -94,6 +94,7 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                 subirdatosLocaciones();
                 Intent intent=new Intent(MapsActivity1.this,OpcionesIngreso.class);
                 startActivity(intent);
+                finish();
 
             }
         });

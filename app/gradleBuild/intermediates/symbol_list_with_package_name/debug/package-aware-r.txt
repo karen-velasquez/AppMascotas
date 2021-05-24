@@ -1958,6 +1958,7 @@ id buttonGetCurrentLocation
 id buttonPanel
 id button_first
 id button_second
+id buttonupdate
 id buttonupload
 id cache_measures
 id cameraButton

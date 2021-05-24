@@ -108,7 +108,7 @@ public class LoggingInActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             //User us logged in,so start LoginActivity
                             startActivity(new Intent(LoggingInActivity.this, ProfileActivity.class));
-                            finish();
+
                         } else {
                             //dismiss progress dialog
                             pd.dismiss();

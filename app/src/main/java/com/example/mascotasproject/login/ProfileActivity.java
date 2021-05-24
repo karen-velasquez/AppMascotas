@@ -53,6 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
             intent.putExtra("usuario",user.getUid());
             intent.putExtra("quien","Usuario");
             startActivity(intent);
+            finish();
             //user is signed in stay here
             //set email of logged in user
             //mProfileTv.setText(user.getEmail());

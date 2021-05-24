@@ -30,6 +30,7 @@ public class OpcionesUsuario extends AppCompatActivity {
             Intent intent=new Intent(OpcionesUsuario.this, AddData.class);
             intent.putExtra("codigo",usuario);
             intent.putExtra("quien",  quien);
+            intent.putExtra("funcion","add");
             startActivity(intent);
         });
 

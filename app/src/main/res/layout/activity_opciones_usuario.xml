@@ -14,7 +14,7 @@
         android:backgroundTint="#FBFBFB"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="150dp"
-        android:src="@drawable/dog_miss" />
+        android:src="@drawable/wanted" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:backgroundTint="#FBFBFB"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="380dp"
-        android:src="@drawable/dog_status" />
+        android:src="@drawable/search" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,8 +70,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="310dp"
         android:backgroundTint="#FBFBFB"
-        android:src="@drawable/salida"
+        android:src="@drawable/exit"
         />
 
 

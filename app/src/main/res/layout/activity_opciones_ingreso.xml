@@ -22,7 +22,7 @@
             android:backgroundTint="#FBFBFB"
             android:layout_marginLeft="1dp"
             android:layout_marginTop="150dp"
-            android:src="@drawable/sad_dog" />
+            android:src="@drawable/wanted" />
 
         <TextView
             android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:backgroundTint="#FBFBFB"
             android:layout_marginLeft="1dp"
             android:layout_marginTop="50dp"
-            android:src="@drawable/found_dog" />
+            android:src="@drawable/dog" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

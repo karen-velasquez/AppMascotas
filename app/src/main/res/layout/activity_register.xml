@@ -12,8 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Register"
+        android:text="REGISTRO"
         android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Ingresa una contraseña con mas de 6 caracteres"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_marginTop="170dp"
         android:textSize="25dp"
         />
 
@@ -60,7 +72,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/passwordTIL"
         android:layout_centerInParent="true"
-        android:text="Register" />
+        android:text="Registrar" />
 
 
     <!--TextView: Click go to LoginActivity-->

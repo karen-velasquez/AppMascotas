@@ -1,8 +1,5 @@
 package com.example.mascotasproject.login;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -18,7 +15,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.mascotasproject.R;
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -30,9 +38,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
 
 public class LoggingInActivity extends AppCompatActivity {
 
@@ -40,14 +50,19 @@ public class LoggingInActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 100;
     GoogleSignInClient mGoogleSignInClient;
 
+    private static final String TAG ="FacebookAuth";
+
     //views
     EditText mEmailEt, mPasswordEt;
     TextView nothave_accountTv, mRecoverPassTv;
     Button mLoginBtn;
     SignInButton mGoogleloginBtn;
+    LoginButton mFacebookLoginBtn;
+
 
     //Declare an instance of FirebaseAuth
     private FirebaseAuth mAuth;
+    private CallbackManager mCallBackManager;
 
     //progress Dialog
     ProgressDialog pd;
@@ -78,6 +93,9 @@ public class LoggingInActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
+        //fb instance auth
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
 
         //init
         mEmailEt =findViewById(R.id.emailEt);
@@ -86,6 +104,10 @@ public class LoggingInActivity extends AppCompatActivity {
         mRecoverPassTv =findViewById(R.id.recoverPassTv);
         mLoginBtn =findViewById(R.id.loginBtn);
         mGoogleloginBtn = findViewById(R.id.googleLoginBtn);
+        mFacebookLoginBtn = findViewById(R.id.fbLoginBtn);
+        mCallBackManager = CallbackManager.Factory.create();
+
+
 
 
         //Login btn click
@@ -136,10 +158,54 @@ public class LoggingInActivity extends AppCompatActivity {
             }
         });
 
+
+        //handle fb btn
+        mFacebookLoginBtn.registerCallback(mCallBackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d(TAG, "onSuccess" + loginResult);
+                handleFacebookToken(loginResult.getAccessToken());
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d(TAG, "onCancel");
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d(TAG, "onError" + error);
+            }
+        });
+
         //init progress dialog
         pd = new ProgressDialog(this);
 
     }
+
+    private void handleFacebookToken(AccessToken accessToken) {
+        Log.d(TAG, "handleFacebookToken" + accessToken);
+
+        AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
+        mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Log.d(TAG, "sign in with credential: successful");
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    //updateUI(user);
+                    startActivity(new Intent(LoggingInActivity.this, ProfileActivity.class));
+                }else{
+                    Log.d(TAG, "sign in with credential: failure", task.getException());
+                    Toast.makeText(LoggingInActivity.this, "Autenticación fallada", Toast.LENGTH_SHORT).show();
+                    //updateUI(null);
+                }
+            }
+        });
+    }
+
+
 
 
     private void showRecoverPasswordDialog() {

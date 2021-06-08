@@ -99,6 +99,8 @@ dependencies {
     implementation 'com.firebase:firebase-client-android:2.4.0'
     //google sign in library
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    //fb sign in library
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 
 
 

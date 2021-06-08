@@ -66,6 +66,26 @@
         android:drawableLeft="@color/black"
         android:text="INGRESAR" />
 
+    <!--TextView: Recuperación de contraseña-->
+    <TextView
+        android:id="@+id/recoverPassTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="¿Olvidó su contraseña? Recuperar"
+        android:layout_below="@+id/loginBtn"
+        android:textColor="@color/black"
+        />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/recoverPassTv"
+        />
+
+
 
     <!--TextView: Click go to RegisterActivity-->
 

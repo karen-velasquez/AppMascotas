@@ -58,6 +58,7 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
         String dlatitude=locationList.get(position).getLatitude();
         String dlongitud=locationList.get(position).getLongitud();
         String dfecha=locationList.get(position).getFecha();
+        String dimagen=locationList.get(position).getUrl();
 
 
         /*ingresando los datos al holder---------------------*/
@@ -65,6 +66,12 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
         holder.mdireccion_location.setText(ddireccion);
         holder.mlatitude_location.setText(dlatitude);
         holder.mlongitud_location.setText(dlongitud);
+        try{
+            Picasso.get().load(dimagen)
+                    .into(holder.mimagen_location);
+        }catch (Exception e){
+            Toast.makeText(context, "Hay un error al cargar la imagen", Toast.LENGTH_SHORT).show();
+        }
 
         //handle item click
         holder.itemView.setOnClickListener(new View.OnClickListener(){
@@ -109,10 +116,11 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyHold
     class  MyHolder extends RecyclerView.ViewHolder{
 
         TextView mvisto_Location,mlatitude_location,mlongitud_location,mdireccion_location;
+        ImageView mimagen_location;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
-
+            mimagen_location=itemView.findViewById(R.id.imagen_location);
             mvisto_Location = itemView.findViewById(R.id.visto_location);
             mlatitude_location = itemView.findViewById(R.id.latitud_location);
             mlongitud_location = itemView.findViewById(R.id.longitud_location);

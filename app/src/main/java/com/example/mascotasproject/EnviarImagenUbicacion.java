@@ -15,10 +15,17 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.example.mascotasproject.IA.Classifier;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,6 +71,8 @@ public class EnviarImagenUbicacion extends AppCompatActivity {
     private static final int CAMERA_PERM_CODE=100;
     private static final int CAMERA_REQUEST_CODE = 100;
 
+    //CARPETA DONDE SE ENCONTRARAN LAS IMAGENES
+    String mStoragePath = "ImagenesMascotas/";
     // mobilenet: 224, inception_v3: 299
     private static final int INPUT_SIZE = 299;
     private static final int IMAGE_MEAN = 128;
@@ -80,6 +89,10 @@ public class EnviarImagenUbicacion extends AppCompatActivity {
 
 
     String currentPhotoPath;
+
+    //CREANDO EL REFERENCE DEL DATABASE Y STORAGE
+    StorageReference mStorageReference;
+    DatabaseReference mDatabaseReference;
 
     //Creando el URI
     Uri mFilePathUri;
@@ -161,33 +174,70 @@ public class EnviarImagenUbicacion extends AppCompatActivity {
 
 
     public void subirdatosLocaciones(){
-        /*Instanciando el firebase*/
-        FirebaseDatabase mFirebaseDatabase;
-        DatabaseReference mRef;
-        mFirebaseDatabase=FirebaseDatabase.getInstance();
-        mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
+        //asignando la instancia de firebasestorage a un objeto de storage
+        mStorageReference= FirebaseStorage.getInstance().getReference();
+
+        //verificando que filepathyuri esta vacio o no
+        if(mFilePathUri!=null){
+            StorageReference storageReference2nd=mStorageReference.child(mStoragePath+System.currentTimeMillis()+"."+getFileExtension(mFilePathUri));
+
+            //adicionando un suceso a storagereference2nd
+            storageReference2nd.putFile(mFilePathUri)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            /*Instanciando el firebase*/
+                            FirebaseDatabase mFirebaseDatabase;
+                            DatabaseReference mRef;
+                            mFirebaseDatabase=FirebaseDatabase.getInstance();
+                            mRef=mFirebaseDatabase.getReference("Mascotas/Locaciones");
 
 
-        mnombre=getIntent().getStringExtra("nombreMas");
-        mcodDueno=getIntent().getStringExtra("codDueno");
-        mcodMascota=getIntent().getStringExtra("codMascota");
-        mCaracteristicas=getIntent().getStringExtra("caracteristica");
-        mdatosper=getIntent().getStringExtra("perdida");
-        image=getIntent().getStringExtra("image");
-        quien=getIntent().getStringExtra("quien");
+                            mnombre=getIntent().getStringExtra("nombreMas");
+                            mcodDueno=getIntent().getStringExtra("codDueno");
+                            mcodMascota=getIntent().getStringExtra("codMascota");
+                            mCaracteristicas=getIntent().getStringExtra("caracteristica");
+                            mdatosper=getIntent().getStringExtra("perdida");
+                            image=getIntent().getStringExtra("image");
+                            quien=getIntent().getStringExtra("quien");
 
 
-        /*Subiendo los datos de donde se vio a la mascota*/
-        Map<String,Object> locationupdate=new HashMap<>();
-        locationupdate.put("latitude",mlatitud);
-        locationupdate.put("longitud",mlongitud);
-        locationupdate.put("nombreMas",mnombre);
-        locationupdate.put("direccion",mdireccion);
-        locationupdate.put("codigoDueno",mcodDueno);
-        locationupdate.put("codigoMascota",mcodMascota);
-        locationupdate.put("fecha",gethora_fecha());
-        mRef.push().setValue(locationupdate);
-        Toast.makeText(EnviarImagenUbicacion.this,"Ubicacion enviada correctamente",Toast.LENGTH_SHORT).show();
+                            Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
+                            while(!uri.isComplete());
+                            Uri url = uri.getResult();
+                            /*Subiendo los datos de donde se vio a la mascota*/
+                            Map<String,Object> locationupdate=new HashMap<>();
+                            locationupdate.put("latitude",mlatitud);
+                            locationupdate.put("longitud",mlongitud);
+                            locationupdate.put("nombreMas",mnombre);
+                            locationupdate.put("direccion",mdireccion);
+                            locationupdate.put("codigoDueno",mcodDueno);
+                            locationupdate.put("codigoMascota",mcodMascota);
+                            locationupdate.put("fecha",gethora_fecha());
+                            locationupdate.put("url",url.toString());
+                            mRef.push().setValue(locationupdate);
+                            Toast.makeText(EnviarImagenUbicacion.this,"Ubicacion enviada correctamente",Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    //por si existe al error en la red al subir
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(EnviarImagenUbicacion.this,e.getMessage(),Toast.LENGTH_SHORT);
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+
+                        }
+                    });
+        }
+        else {
+            Toast.makeText(this,"Por favor selecciona una imagen",Toast.LENGTH_SHORT).show();
+        }
+
+
     }
     public String gethora_fecha(){
         Calendar calendar= Calendar.getInstance();

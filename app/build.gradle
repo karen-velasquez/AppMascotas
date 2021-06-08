@@ -104,6 +104,7 @@ dependencies {
 
 
 
+
     /*adicionando las clases del IA*/
     implementation 'org.tensorflow:tensorflow-android:1.8.0'
     implementation 'org.tensorflow:tensorflow-lite:+'

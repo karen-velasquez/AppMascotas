@@ -1,7 +1,7 @@
 package com.example.mascotasproject;
 
 public class locationMascota {
-    String direccion, latitude,longitud,nombreMas,codigoDueno,codigoMascota,fecha;
+    String direccion, latitude,longitud,nombreMas,codigoDueno,codigoMascota,fecha,url;
 
     public locationMascota(){}
 
@@ -22,7 +22,15 @@ public class locationMascota {
         this.fecha = fecha;
     }
 
-    public locationMascota(String direccion, String latitude, String longitud, String nombreMas, String codigoDueno, String codigoMascota, String fecha) {
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public locationMascota(String direccion, String latitude, String longitud, String nombreMas, String codigoDueno, String codigoMascota, String fecha, String url) {
         this.fecha=fecha;
         this.direccion=direccion;
         this.latitude=latitude;
@@ -30,6 +38,7 @@ public class locationMascota {
         this.nombreMas=nombreMas;
         this.codigoDueno=codigoDueno;
         this.codigoMascota=codigoMascota;
+        this.url=url;
     }
 
 

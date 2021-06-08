@@ -75,9 +75,19 @@ com/example/mascotasproject/model.java
 com/example/mascotasproject/login/LoggingInActivity.java
  com.example.mascotasproject.login.LoggingInActivity
  com.example.mascotasproject.login.LoggingInActivity$1
+ com.example.mascotasproject.login.LoggingInActivity$10
+ com.example.mascotasproject.login.LoggingInActivity$11
+ com.example.mascotasproject.login.LoggingInActivity$12
+ com.example.mascotasproject.login.LoggingInActivity$13
+ com.example.mascotasproject.login.LoggingInActivity$14
  com.example.mascotasproject.login.LoggingInActivity$2
  com.example.mascotasproject.login.LoggingInActivity$3
  com.example.mascotasproject.login.LoggingInActivity$4
+ com.example.mascotasproject.login.LoggingInActivity$5
+ com.example.mascotasproject.login.LoggingInActivity$6
+ com.example.mascotasproject.login.LoggingInActivity$7
+ com.example.mascotasproject.login.LoggingInActivity$8
+ com.example.mascotasproject.login.LoggingInActivity$9
 com/example/mascotasproject/OpcionesIngreso.java
  com.example.mascotasproject.OpcionesIngreso
 com/example/mascotasproject/LocationAdapter.java
@@ -145,4 +155,7 @@ com/example/mascotasproject/EnviarImagenUbicacion.java
  com.example.mascotasproject.EnviarImagenUbicacion$2
  com.example.mascotasproject.EnviarImagenUbicacion$3
  com.example.mascotasproject.EnviarImagenUbicacion$4
+ com.example.mascotasproject.EnviarImagenUbicacion$5
+ com.example.mascotasproject.EnviarImagenUbicacion$6
+ com.example.mascotasproject.EnviarImagenUbicacion$7
  com.example.mascotasproject.EnviarImagenUbicacion$InferenceTask

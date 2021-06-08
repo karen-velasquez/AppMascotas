@@ -191,6 +191,14 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr c_background_color
+attr c_border
+attr c_border_color
+attr c_border_width
+attr c_shadow
+attr c_shadow_color
+attr c_shadow_gravity
+attr c_shadow_radius
 attr cameraBearing
 attr cameraMaxZoomPreference
 attr cameraMinZoomPreference
@@ -1794,6 +1802,7 @@ drawable ic_action_add
 drawable ic_change_language
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
+drawable ic_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
@@ -1802,6 +1811,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable login
 drawable map
+drawable mapa
 drawable mapblank
 drawable mapse
 drawable marker
@@ -1964,8 +1974,6 @@ id btn_segundo
 id btn_seperdio
 id buttonGetCurrentLocation
 id buttonPanel
-id button_first
-id button_second
 id buttonupdate
 id buttonupload
 id cache_measures
@@ -2349,8 +2357,6 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id texture
-id textview_first
-id textview_second
 id time
 id title
 id titleDividerNoCustom
@@ -2485,8 +2491,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_desfragment
-layout fragment_first
-layout fragment_second
 layout lang_dialog
 layout list_group
 layout list_item
@@ -3486,6 +3490,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircularImageView c_background_color c_border c_border_color c_border_width c_shadow c_shadow_color c_shadow_gravity c_shadow_radius
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

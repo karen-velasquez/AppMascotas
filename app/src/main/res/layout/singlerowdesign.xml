@@ -6,25 +6,31 @@
     app:cardCornerRadius="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        android:layout_height="match_parent"/>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="15dp">
+        android:padding="10dp">
 
-        <ImageView
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
             android:id="@+id/img1"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
             android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -32,32 +38,32 @@
                 android:id="@+id/nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/img1"
-                android:text="   Nombre Mascota"
+                android:layout_marginTop="15dp"
+                android:text="Nombre Mascota"
                 android:textColor="#000"
-                android:textSize="25sp"
+                android:textSize="20dp"
+                android:textAllCaps="true"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/caracteristica"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
-                android:text="   Caracteristicas"
+                android:layout_gravity="left"
+                android:text="Caracteristicas"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="15dp" />
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/datos_perdida"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
-                android:text="   datos perdida"
+                android:layout_gravity="left"
+                android:text="Datos perdida"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="15dp" />
 
             <ImageButton
                 android:id="@+id/usuario_maslocation"

@@ -1,6 +1,3 @@
-com/example/mascotasproject/FirstFragment.java
- com.example.mascotasproject.FirstFragment
- com.example.mascotasproject.FirstFragment$1
 com/example/mascotasproject/IA/CameraConnectionFragment.java
  com.example.mascotasproject.IA.CameraConnectionFragment
  com.example.mascotasproject.IA.CameraConnectionFragment$1
@@ -138,6 +135,3 @@ com/example/mascotasproject/modeltemporal.java
  com.example.mascotasproject.modeltemporal
 com/example/mascotasproject/OpcionesIngreso.java
  com.example.mascotasproject.OpcionesIngreso
-com/example/mascotasproject/SecondFragment.java
- com.example.mascotasproject.SecondFragment
- com.example.mascotasproject.SecondFragment$1

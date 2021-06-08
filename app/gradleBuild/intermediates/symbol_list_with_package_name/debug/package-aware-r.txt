@@ -2013,7 +2013,6 @@ id content
 id contentPanel
 id contiguous
 id continuousInferenceButton
-id coordenadas
 id coordinator
 id cos
 id counterclockwise
@@ -2064,6 +2063,12 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id enviarCamaraFoto
+id enviarGalleryFoto
+id enviarcoordenadas
+id enviardireccion
+id enviarimagenescogida
+id enviarinformacion
 id enviarubicacion
 id exitUntilCollapsed
 id expand_activities_button
@@ -2457,6 +2462,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_data
 layout activity_camera
+layout activity_enviar_imagen_ubicacion
 layout activity_get_location
 layout activity_list
 layout activity_log_in
@@ -2648,6 +2654,8 @@ string exit_menu
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string facebook_app_id
+string fb_login_protocol_scheme
 string first_fragment_label
 string from_gallery
 string gcm_defaultSenderId
@@ -2731,6 +2739,7 @@ string search_menu_title
 string second_fragment_label
 string share_with
 string status_bar_notification_info_overflow
+string title_activity_enviar_imagen_ubicacion
 string title_activity_localizaciones
 string title_activity_main2
 string title_activity_maps1
@@ -3613,6 +3622,7 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 xml filepaths
+xml provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

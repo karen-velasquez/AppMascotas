@@ -276,9 +276,6 @@ public abstract class CameraActivity extends FragmentActivity
                 requestPermission(PERMISSION_CAMERA);
                 return;
             }
-
-            vigenciaafalse(getCodigo());
-
             final View pnlFlash = findViewById(R.id.pnlFlash);
 
             cameraButton.setEnabled(false);

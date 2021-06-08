@@ -1,11 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MascotasProject</string>
-    <string name="facebook_app_id">4288966244467373</string> <string name="fb_login_protocol_scheme">fb4288966244467373</string>
-
-
-
-
-
+    <string name="facebook_app_id">4288966244467373</string>
+    <string name="fb_login_protocol_scheme">fb4288966244467373</string>
 
 
     <string name="action_settings">Settings</string>
@@ -54,6 +50,7 @@
     <string name="title_activity_localizaciones">Map</string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="title_activity_mapsuser">Map</string>
+    <string name="title_activity_enviar_imagen_ubicacion">EnviarImagenUbicacion</string>
     <string-array name="breeds_array">
         <item>Affenpinscher</item>
         <item>Afghan Hound</item>

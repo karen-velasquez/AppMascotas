@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mascotasproject.login.LogInActivity;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
@@ -61,7 +62,8 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
     private GoogleMap mMap;
     private Marker InfoWindow;
-    TextView direccion,coordenadas;
+    TextView direccion;
+    String direction;
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     Button enviarubicacion;
     LocationManager mlocManager;
@@ -78,7 +80,6 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         setContentView(R.layout.activity_maps1);
 
         direccion=findViewById(R.id.direccion);
-        coordenadas=findViewById(R.id.coordenadas);
 
         enviarubicacion=findViewById(R.id.enviarubicacion);
 
@@ -93,21 +94,23 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
         enviarubicacion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                subirdatosLocaciones();
-                Intent intent=new Intent(MapsActivity1.this,OpcionesIngreso.class);
+                Intent intent=new Intent(MapsActivity1.this, EnviarImagenUbicacion.class);
+                intent.putExtra("nombreMas",getIntent().getStringExtra("nombreMas"));
+                intent.putExtra("codDueno",getIntent().getStringExtra("codDueno"));
+                intent.putExtra("codMascota",getIntent().getStringExtra("codMascota"));
+                intent.putExtra("caracteristica",getIntent().getStringExtra("caracteristica"));
+                intent.putExtra("perdida",getIntent().getStringExtra("perdida"));
+                intent.putExtra("image",getIntent().getStringExtra("image"));
+                intent.putExtra("quien",getIntent().getStringExtra("quien"));
+                intent.putExtra("direccion",direction);
+                intent.putExtra("latitude",lat+"");
+                intent.putExtra("longitud",longi+"");
+                //subirdatosLocaciones();
                 startActivity(intent);
                 finish();
 
             }
         });
-/*        if(quien.equals("Usuario")){
-
-
-        }*/
-
-
-
-
 
 
     }
@@ -204,9 +207,8 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
                 if(!list.isEmpty()){
                     Address DirCalle=list.get(0);
                     mdireccion=DirCalle.getAddressLine(0)+"";
+                    direction=""+DirCalle.getAddressLine(0);
                     direccion.setText("DIRECCION: "+DirCalle.getAddressLine(0));
-
-
                 }
 
             } catch (IOException e) {
@@ -267,11 +269,10 @@ public class MapsActivity1 extends FragmentActivity implements GoogleMap.OnInfoW
 
             location.getLatitude();
             location.getLongitude();
-            String text="Tu ubicacion actual es: "+"\n Lat="+
+            String text="Tu ubicación actual es: "+"\n Lat="+
                     location.getLatitude()+"\n Long="+location.getLongitude();
             lat=location.getLatitude();
             longi=location.getLongitude();
-            coordenadas.setText(text);
             this.mapsActivity1.setLocation(location);
 
         }

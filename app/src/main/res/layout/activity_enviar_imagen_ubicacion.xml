@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnviarImagenUbicacion">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:text="DIRECCION"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@color/design_default_color_primary_dark"
+            android:textColor="@color/white" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:id="@+id/enviardireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:hint="direccion"
+            android:padding="15dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:text="COORDENADAS"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@color/design_default_color_primary_dark"
+            android:textColor="@color/white" />
+        <com.codesgood.views.JustifiedTextView
+            android:id="@+id/enviarcoordenadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:hint="Coordenadas"
+            android:padding="15dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Escoga alguna foto para que sea mostrada con la dirección que esta dando"
+            android:textAlignment="center"
+            android:textColor="#9A9494"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/enviarGalleryFoto"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/roundedbutton"
+            android:src="@mipmap/ic_action_gallery_icon"
+            />
+
+        <ImageButton
+            android:id="@+id/enviarCamaraFoto"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/roundedbutton"
+            android:src="@mipmap/camera_icon"
+            />
+
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/enviarimagenescogida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/enviarinformacion"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="ENVIAR UBICACION"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            />
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

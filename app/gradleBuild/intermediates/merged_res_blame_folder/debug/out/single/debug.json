@@ -312,6 +312,10 @@
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\mipmap-mdpi\\ic_action_gallery_icon.png"
     },
     {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_button_background_selector.xml.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\drawable\\button_background_selector.xml"
     },
@@ -394,6 +398,10 @@
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_logging_in.xml.flat",
         "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\activity_logging_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_enviar_imagen_ubicacion.xml.flat",
+        "source": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\src\\main\\res\\layout\\activity_enviar_imagen_ubicacion.xml"
     },
     {
         "merged": "C:\\Users\\asus\\Downloads\\AgendaS\\AppMascotas\\app\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_maps1.xml.flat",

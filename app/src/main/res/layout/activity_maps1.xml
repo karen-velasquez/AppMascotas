@@ -31,14 +31,6 @@
 
 
             <com.codesgood.views.JustifiedTextView
-                android:id="@+id/coordenadas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="coordenadas"
-                android:textColor="#000"
-                android:textSize="20dp" />
-
-            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,14 +40,6 @@
 
 
 
-            <ImageButton
-                android:id="@+id/usuario_maslocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#FBFBFB"
-                android:layout_marginLeft="50dp"
-                android:visibility="gone"
-                android:src="@drawable/more" />
 
             <Button
                 android:id="@+id/enviarubicacion"
@@ -65,22 +49,6 @@
                 android:background="@color/white"
                 android:text="ENVIAR MI UBICACION" />
 
-            <ImageButton
-                android:id="@+id/chooseGalleryAdd"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_gravity="center"
-                android:background="@drawable/roundedbutton"
-                android:src="@mipmap/ic_action_gallery_icon"
-                />
-
-            <ImageView
-                android:id="@+id/imagenAdd"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                android:background="@mipmap/ic_action_gallery_icon" />
 
         </LinearLayout>
 
